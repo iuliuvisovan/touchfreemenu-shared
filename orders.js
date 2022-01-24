@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.availableSubscriptions = exports.availableHolders = exports.HolderCode = exports.SubscriptionCode = exports.PaymentType = exports.ProductType = exports.BillingType = exports.OrderStatus = void 0;
+exports.computeIntentPrice = exports.availableSubscriptions = exports.availableHolders = exports.HolderCode = exports.SubscriptionCode = exports.PaymentType = exports.ProductType = exports.BillingType = exports.OrderStatus = void 0;
 var OrderStatus;
 (function (OrderStatus) {
     OrderStatus["Initiated"] = "INITIATED";
@@ -69,3 +69,13 @@ exports.availableSubscriptions = [
         durationInDays: 365
     },
 ];
+var computeIntentPrice = function (orderIntent) {
+    var _a, _b, _c;
+    var _d = orderIntent.plexiglassHolderCount, plexiglassHolderCount = _d === void 0 ? 0 : _d, _e = orderIntent.laminatedHolderCount, laminatedHolderCount = _e === void 0 ? 0 : _e, _f = orderIntent.subscriptionCode, subscriptionCode = _f === void 0 ? '' : _f;
+    var plexiglassPrice = ((_a = exports.availableHolders.find(function (x) { return x.code === HolderCode.Plexiglass; })) === null || _a === void 0 ? void 0 : _a.price) || 0;
+    var laminatedPrice = ((_b = exports.availableHolders.find(function (x) { return x.code === HolderCode.Laminated; })) === null || _b === void 0 ? void 0 : _b.price) || 0;
+    var currentSubscriptionPrice = ((_c = exports.availableSubscriptions.find(function (x) { return x.code === subscriptionCode; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
+    var totalPrice = plexiglassHolderCount * plexiglassPrice + laminatedHolderCount * laminatedPrice + currentSubscriptionPrice;
+    return totalPrice;
+};
+exports.computeIntentPrice = computeIntentPrice;

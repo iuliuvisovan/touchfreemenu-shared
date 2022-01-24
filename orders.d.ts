@@ -94,3 +94,4 @@ export declare type PaymentRequest = {
 };
 export declare const availableHolders: Holder[];
 export declare const availableSubscriptions: Subscription[];
+export declare const computeIntentPrice: (orderIntent: OrderIntent) => number;

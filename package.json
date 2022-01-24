@@ -4,7 +4,8 @@
   "description": "This repository contains the shared (common) code between touchfreemenu-client and touchfreemenu-server such as types, utility functions and constants.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/*.ts --declaration --outDir . --lib esnext"
   },
   "author": "Iuliu Vișovan",
   "license": "ISC"
