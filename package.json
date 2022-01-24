@@ -1,0 +1,11 @@
+{
+  "name": "touchfreemenu-shared",
+  "version": "1.0.0",
+  "description": "This repository contains the shared (common) code between touchfreemenu-client and touchfreemenu-server such as types, utility functions and constants.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iuliu Vișovan",
+  "license": "ISC"
+}
