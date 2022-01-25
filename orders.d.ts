@@ -4,7 +4,8 @@ export declare enum OrderStatus {
     Failed = "FAILED",
     Paid = "PAID",
     CurrentlyFulfilling = "CURRENTLY_FULLFILLING",
-    Fulfilled = "FULFILLED"
+    Fulfilled = "FULFILLED",
+    Activated = "ACTIVATED"
 }
 export declare enum BillingType {
     Company = "company",
@@ -43,6 +44,7 @@ export declare type OrderProduct = {
     quantity: number;
 };
 export declare type Order = {
+    id: string;
     products: OrderProduct[];
     userId: string;
     status: OrderStatus;

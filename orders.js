@@ -9,6 +9,7 @@ var OrderStatus;
     OrderStatus["Paid"] = "PAID";
     OrderStatus["CurrentlyFulfilling"] = "CURRENTLY_FULLFILLING";
     OrderStatus["Fulfilled"] = "FULFILLED";
+    OrderStatus["Activated"] = "ACTIVATED";
 })(OrderStatus = exports.OrderStatus || (exports.OrderStatus = {}));
 var BillingType;
 (function (BillingType) {
