@@ -92,6 +92,6 @@ export declare type PaymentRequest = {
     data: any;
     url: string;
 };
-export declare const availableHolders: Holder[];
-export declare const availableSubscriptions: Subscription[];
+export declare const AVAILABLE_HOLDERS: Holder[];
+export declare const AVAILABLE_SUBSCRIPTIONS: Subscription[];
 export declare const computeIntentPrice: (orderIntent: OrderIntent) => number;

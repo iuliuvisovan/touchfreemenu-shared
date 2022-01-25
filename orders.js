@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.computeIntentPrice = exports.availableSubscriptions = exports.availableHolders = exports.HolderCode = exports.SubscriptionCode = exports.PaymentType = exports.ProductType = exports.BillingType = exports.OrderStatus = void 0;
+exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE_HOLDERS = exports.HolderCode = exports.SubscriptionCode = exports.PaymentType = exports.ProductType = exports.BillingType = exports.OrderStatus = void 0;
 var OrderStatus;
 (function (OrderStatus) {
     OrderStatus["Initiated"] = "INITIATED";
@@ -36,7 +36,7 @@ var HolderCode;
     HolderCode["Plexiglass"] = "QRH-PLEX";
     HolderCode["Laminated"] = "QRH-LAM";
 })(HolderCode = exports.HolderCode || (exports.HolderCode = {}));
-exports.availableHolders = [
+exports.AVAILABLE_HOLDERS = [
     {
         code: HolderCode.Plexiglass,
         name: 'Holder vertical plexiglas - A6',
@@ -49,7 +49,7 @@ exports.availableHolders = [
         priceIncreaseSegment: 10
     },
 ];
-exports.availableSubscriptions = [
+exports.AVAILABLE_SUBSCRIPTIONS = [
     {
         code: SubscriptionCode.TFMC1,
         name: 'Touch-Free Menu Complet - o lună',
@@ -72,9 +72,9 @@ exports.availableSubscriptions = [
 var computeIntentPrice = function (orderIntent) {
     var _a, _b, _c;
     var _d = orderIntent.plexiglassHolderCount, plexiglassHolderCount = _d === void 0 ? 0 : _d, _e = orderIntent.laminatedHolderCount, laminatedHolderCount = _e === void 0 ? 0 : _e, _f = orderIntent.subscriptionCode, subscriptionCode = _f === void 0 ? '' : _f;
-    var plexiglassPrice = ((_a = exports.availableHolders.find(function (x) { return x.code === HolderCode.Plexiglass; })) === null || _a === void 0 ? void 0 : _a.price) || 0;
-    var laminatedPrice = ((_b = exports.availableHolders.find(function (x) { return x.code === HolderCode.Laminated; })) === null || _b === void 0 ? void 0 : _b.price) || 0;
-    var currentSubscriptionPrice = ((_c = exports.availableSubscriptions.find(function (x) { return x.code === subscriptionCode; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
+    var plexiglassPrice = ((_a = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Plexiglass; })) === null || _a === void 0 ? void 0 : _a.price) || 0;
+    var laminatedPrice = ((_b = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Laminated; })) === null || _b === void 0 ? void 0 : _b.price) || 0;
+    var currentSubscriptionPrice = ((_c = exports.AVAILABLE_SUBSCRIPTIONS.find(function (x) { return x.code === subscriptionCode; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
     var totalPrice = plexiglassHolderCount * plexiglassPrice + laminatedHolderCount * laminatedPrice + currentSubscriptionPrice;
     return totalPrice;
 };
