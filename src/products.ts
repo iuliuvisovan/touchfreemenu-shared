@@ -1,6 +1,6 @@
 export type MenuProduct = {
-  userId: string
   id: string
+  userId: string
   categoryId: string
   name: string
   nameEn?: string

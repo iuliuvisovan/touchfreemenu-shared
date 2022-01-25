@@ -5,6 +5,7 @@ export enum OrderStatus {
   Paid = 'PAID',
   CurrentlyFulfilling = 'CURRENTLY_FULLFILLING',
   Fulfilled = 'FULFILLED',
+  Activated = 'ACTIVATED',
 }
 
 export enum BillingType {
@@ -51,6 +52,7 @@ export type OrderProduct = {
 }
 
 export type Order = {
+  id: string
   products: OrderProduct[]
   userId: string
   status: OrderStatus
