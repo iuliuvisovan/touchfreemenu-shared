@@ -1,4 +1,5 @@
 export declare type MenuCategory = {
+    userId: string;
     id: string;
     name: string;
     nameEn: string;
