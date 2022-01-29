@@ -26,6 +26,7 @@ export declare type ShippingInfo = {
     address: string;
     city: string;
     county: string;
+    zipCode: string;
     country: string;
     phoneNumber: string;
     extraInfo: string;
