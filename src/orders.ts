@@ -50,6 +50,7 @@ export type OrderProduct = {
   type: ProductType
   code: ProductCode
   quantity: number
+  currentPrice?: number
 }
 
 export type Order = {

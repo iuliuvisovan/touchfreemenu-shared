@@ -43,6 +43,7 @@ export declare type OrderProduct = {
     type: ProductType;
     code: ProductCode;
     quantity: number;
+    currentPrice?: number;
 };
 export declare type Order = {
     id: string;
