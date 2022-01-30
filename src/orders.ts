@@ -108,7 +108,7 @@ export type Holder = {
 
 export type PaymentRequest = {
   env_key: string
-  data: any
+  data: string
   url: string
 }
 

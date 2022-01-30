@@ -93,7 +93,7 @@ export declare type Holder = {
 };
 export declare type PaymentRequest = {
     env_key: string;
-    data: any;
+    data: string;
     url: string;
 };
 export declare const AVAILABLE_HOLDERS: Holder[];
