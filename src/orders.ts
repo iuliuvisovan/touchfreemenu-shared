@@ -147,8 +147,6 @@ export const AVAILABLE_SUBSCRIPTIONS: Subscription[] = [
   },
 ]
 
-// TODOGAB 4: Enhance this method to support shipping cost.
-// If there's any holder ordered, add +15 RON to total price.
 export const computeIntentPrice = (orderIntent: OrderIntent) => {
   const { plexiglassHolderCount = 0, laminatedHolderCount = 0, subscriptionCode = '' } = orderIntent
 
