@@ -59,6 +59,8 @@ export declare type Order = {
     mobilPayResponse?: string;
     localError?: string;
     extraCommentsFromUser?: string;
+    orderNumber?: string;
+    proformaInvoiceId?: string;
 };
 export declare type OrderIntent = {
     laminatedHolderCount?: number;
