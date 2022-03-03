@@ -67,6 +67,8 @@ export type Order = {
   mobilPayResponse?: string
   localError?: string
   extraCommentsFromUser?: string
+  orderNumber?: string;
+  proformaInvoiceId?: string;
 }
 
 export type OrderIntent = {
