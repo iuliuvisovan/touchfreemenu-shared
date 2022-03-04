@@ -5,6 +5,7 @@ export type MenuCategory = {
   nameEn: string
   description?: string
   descriptionEn: string
-  index: number,
-  isHidden: boolean,
+  index: number
+  isHidden: boolean
+  someRandomProp: number
 }
