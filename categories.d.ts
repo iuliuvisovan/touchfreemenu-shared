@@ -6,4 +6,5 @@ export declare type MenuCategory = {
     description?: string;
     descriptionEn: string;
     index: number;
+    isHidden: boolean;
 };
