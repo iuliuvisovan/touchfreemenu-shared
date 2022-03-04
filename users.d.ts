@@ -23,5 +23,4 @@ export declare type User = {
     };
     usesDemoProducts: boolean;
     shouldNotSendNavigationEmails: boolean;
-    hasAPendingSubscription: boolean;
 };

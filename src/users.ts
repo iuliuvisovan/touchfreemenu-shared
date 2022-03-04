@@ -23,5 +23,4 @@ export type User = {
   }
   usesDemoProducts: boolean
   shouldNotSendNavigationEmails: boolean
-  hasAPendingSubscription: boolean
 }
