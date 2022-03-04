@@ -5,5 +5,6 @@ export type MenuCategory = {
   nameEn: string
   description?: string
   descriptionEn: string
-  index: number
+  index: number,
+  isHidden: boolean,
 }

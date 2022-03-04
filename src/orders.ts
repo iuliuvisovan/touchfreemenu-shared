@@ -69,6 +69,7 @@ export type Order = {
   extraCommentsFromUser?: string
   orderNumber?: string;
   proformaInvoiceId?: string;
+  finalInvoiceId?: string;
 }
 
 export type OrderIntent = {
