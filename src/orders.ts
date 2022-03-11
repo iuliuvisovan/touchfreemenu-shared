@@ -8,9 +8,9 @@ export enum OrderStatus {
   Activated = 'ACTIVATED',
 }
 
-export enum BillingType {
-  Company = 'company',
-  NaturalPerson = 'natural_person',
+export declare enum BillingType {
+  Company = "Company",
+  NaturalPerson = "NaturalPerson"
 }
 
 export type BillingInfo = {
