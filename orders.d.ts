@@ -8,8 +8,8 @@ export declare enum OrderStatus {
     Activated = "ACTIVATED"
 }
 export declare enum BillingType {
-    Company = "company",
-    NaturalPerson = "natural_person"
+    Company = "Company",
+    NaturalPerson = "NaturalPerson"
 }
 export declare type BillingInfo = {
     billingType: BillingType;

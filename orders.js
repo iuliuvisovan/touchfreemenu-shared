@@ -13,8 +13,8 @@ var OrderStatus;
 })(OrderStatus = exports.OrderStatus || (exports.OrderStatus = {}));
 var BillingType;
 (function (BillingType) {
-    BillingType["Company"] = "company";
-    BillingType["NaturalPerson"] = "natural_person";
+    BillingType["Company"] = "Company";
+    BillingType["NaturalPerson"] = "NaturalPerson";
 })(BillingType = exports.BillingType || (exports.BillingType = {}));
 var ProductType;
 (function (ProductType) {
@@ -77,10 +77,7 @@ var computeIntentPrice = function (orderIntent) {
     var laminatedPrice = ((_b = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Laminated; })) === null || _b === void 0 ? void 0 : _b.price) || 0;
     var currentSubscriptionPrice = ((_c = exports.AVAILABLE_SUBSCRIPTIONS.find(function (x) { return x.code === subscriptionCode; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
     var deliveryPrice = plexiglassHolderCount + laminatedHolderCount > 0 ? 15 : 0;
-    var totalPrice = plexiglassHolderCount * plexiglassPrice +
-        laminatedHolderCount * laminatedPrice +
-        currentSubscriptionPrice +
-        deliveryPrice;
+    var totalPrice = plexiglassHolderCount * plexiglassPrice + laminatedHolderCount * laminatedPrice + currentSubscriptionPrice + deliveryPrice;
     return totalPrice;
 };
 exports.computeIntentPrice = computeIntentPrice;

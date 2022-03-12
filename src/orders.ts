@@ -8,9 +8,9 @@ export enum OrderStatus {
   Activated = 'ACTIVATED',
 }
 
-export declare enum BillingType {
-  Company = "Company",
-  NaturalPerson = "NaturalPerson"
+export enum BillingType {
+  Company = 'Company',
+  NaturalPerson = 'NaturalPerson',
 }
 
 export type BillingInfo = {
@@ -67,9 +67,9 @@ export type Order = {
   mobilPayResponse?: string
   localError?: string
   extraCommentsFromUser?: string
-  orderNumber?: string;
-  proformaInvoiceId?: string;
-  finalInvoiceId?: string;
+  orderNumber?: string
+  proformaInvoiceId?: string
+  finalInvoiceId?: string
 }
 
 export type OrderIntent = {
@@ -160,10 +160,7 @@ export const computeIntentPrice = (orderIntent: OrderIntent) => {
   const deliveryPrice = plexiglassHolderCount + laminatedHolderCount > 0 ? 15 : 0
 
   const totalPrice =
-    plexiglassHolderCount * plexiglassPrice +
-    laminatedHolderCount * laminatedPrice +
-    currentSubscriptionPrice +
-    deliveryPrice
+    plexiglassHolderCount * plexiglassPrice + laminatedHolderCount * laminatedPrice + currentSubscriptionPrice + deliveryPrice
 
   return totalPrice
 }
