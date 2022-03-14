@@ -4,7 +4,7 @@ export enum OrderStatus {
   Failed = 'FAILED',
   Paid = 'PAID',
   CurrentlyFulfilling = 'CURRENTLY_FULLFILLING',
-  Fulfilled = 'FULFILLED',
+  PendingActivation = 'FULFILLED',
   Activated = 'ACTIVATED',
 }
 
