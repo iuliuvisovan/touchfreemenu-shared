@@ -1,11 +1,10 @@
 export declare enum OrderStatus {
     Initiated = "INITIATED",
-    InProgress = "IN_PROGRESS",
-    Failed = "FAILED",
     Paid = "PAID",
     CurrentlyFulfilling = "CURRENTLY_FULLFILLING",
-    PendingActivation = "FULFILLED",
-    Activated = "ACTIVATED"
+    PendingActivation = "PENDING_ACTIVATION",
+    Activated = "ACTIVATED",
+    Failed = "FAILED"
 }
 export declare enum BillingType {
     Company = "Company",

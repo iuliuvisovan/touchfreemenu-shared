@@ -4,12 +4,11 @@ exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE
 var OrderStatus;
 (function (OrderStatus) {
     OrderStatus["Initiated"] = "INITIATED";
-    OrderStatus["InProgress"] = "IN_PROGRESS";
-    OrderStatus["Failed"] = "FAILED";
     OrderStatus["Paid"] = "PAID";
     OrderStatus["CurrentlyFulfilling"] = "CURRENTLY_FULLFILLING";
-    OrderStatus["PendingActivation"] = "FULFILLED";
+    OrderStatus["PendingActivation"] = "PENDING_ACTIVATION";
     OrderStatus["Activated"] = "ACTIVATED";
+    OrderStatus["Failed"] = "FAILED";
 })(OrderStatus = exports.OrderStatus || (exports.OrderStatus = {}));
 var BillingType;
 (function (BillingType) {

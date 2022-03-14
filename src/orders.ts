@@ -1,11 +1,10 @@
 export enum OrderStatus {
   Initiated = 'INITIATED',
-  InProgress = 'IN_PROGRESS',
-  Failed = 'FAILED',
   Paid = 'PAID',
   CurrentlyFulfilling = 'CURRENTLY_FULLFILLING',
-  PendingActivation = 'FULFILLED',
+  PendingActivation = 'PENDING_ACTIVATION',
   Activated = 'ACTIVATED',
+  Failed = 'FAILED',
 }
 
 export enum BillingType {
