@@ -24,3 +24,9 @@ export type User = {
   usesDemoProducts: boolean
   shouldNotSendNavigationEmails: boolean
 }
+
+export enum UserAction {
+  ProformaInvoicePaid = 'ProformaInvoicePaid',
+  Registration = 'Registration',
+  SetLogo = 'SetLogo'
+}
