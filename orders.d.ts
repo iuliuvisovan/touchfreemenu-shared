@@ -53,7 +53,6 @@ export declare type Order = {
     requestedAmount: number;
     billingInfo: BillingInfo;
     shippingInfo: ShippingInfo;
-    capturedAmount?: number;
     paidWithCardMask?: string;
     mobilPayResponse?: string;
     localError?: string;
