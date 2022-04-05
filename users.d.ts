@@ -25,7 +25,8 @@ export declare type User = {
     shouldNotSendNavigationEmails: boolean;
 };
 export declare enum UserAction {
-    ProformaInvoicePaid = "ProformaInvoicePaid",
-    Registration = "Registration",
-    SetLogo = "SetLogo"
+    Register = "Register",
+    ConfirmAndCreateAccount = "ConfirmAndCreateAccount",
+    SetLogo = "SetLogo",
+    PayProformaInvoice = "PayProformaInvoice"
 }

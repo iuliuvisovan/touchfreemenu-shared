@@ -26,7 +26,8 @@ export type User = {
 }
 
 export enum UserAction {
-  ProformaInvoicePaid = 'ProformaInvoicePaid',
-  Registration = 'Registration',
-  SetLogo = 'SetLogo'
+  Register = 'Register',
+  ConfirmAndCreateAccount = 'ConfirmAndCreateAccount',
+  SetLogo = 'SetLogo',
+  PayProformaInvoice = 'PayProformaInvoice',
 }
