@@ -31,3 +31,11 @@ export enum UserAction {
   SetLogo = 'SetLogo',
   PayProformaInvoice = 'PayProformaInvoice',
 }
+
+export type CreateAccountRequestBody = {
+  confirmationToken: string
+  name: string
+  username: string
+  city: string
+  password: string
+}
