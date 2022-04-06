@@ -24,12 +24,6 @@ export declare type User = {
     usesDemoProducts: boolean;
     shouldNotSendNavigationEmails: boolean;
 };
-export declare enum UserAction {
-    Register = "Register",
-    ConfirmAndCreateAccount = "ConfirmAndCreateAccount",
-    SetLogo = "SetLogo",
-    PayProformaInvoice = "PayProformaInvoice"
-}
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;
     name: string;

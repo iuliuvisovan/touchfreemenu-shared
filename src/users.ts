@@ -25,13 +25,6 @@ export type User = {
   shouldNotSendNavigationEmails: boolean
 }
 
-export enum UserAction {
-  Register = 'Register',
-  ConfirmAndCreateAccount = 'ConfirmAndCreateAccount',
-  SetLogo = 'SetLogo',
-  PayProformaInvoice = 'PayProformaInvoice',
-}
-
 export type CreateAccountRequestBody = {
   confirmationToken: string
   name: string
