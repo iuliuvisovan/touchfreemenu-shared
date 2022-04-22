@@ -4,6 +4,8 @@ exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE
 var OrderStatus;
 (function (OrderStatus) {
     OrderStatus["Initiated"] = "INITIATED";
+    OrderStatus["WaitingForOnlinePayment"] = "WAITING_FOR_ONLINE_PAYMENT";
+    OrderStatus["WaitingForBankPayment"] = "WAITING_FOR_BANK_PAYMENT";
     OrderStatus["Paid"] = "PAID";
     OrderStatus["CurrentlyFulfilling"] = "CURRENTLY_FULLFILLING";
     OrderStatus["PendingActivation"] = "PENDING_ACTIVATION";

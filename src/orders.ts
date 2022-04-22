@@ -1,5 +1,7 @@
 export enum OrderStatus {
   Initiated = 'INITIATED',
+  WaitingForOnlinePayment = 'WAITING_FOR_ONLINE_PAYMENT',
+  WaitingForBankPayment = 'WAITING_FOR_BANK_PAYMENT',
   Paid = 'PAID',
   CurrentlyFulfilling = 'CURRENTLY_FULLFILLING',
   PendingActivation = 'PENDING_ACTIVATION',
