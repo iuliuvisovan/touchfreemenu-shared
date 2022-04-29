@@ -1,7 +1,9 @@
 export declare type MenuProduct = {
     id: string;
     userId: string;
+    username?: string;
     categoryId: string;
+    categoryName?: string;
     name: string;
     nameEn?: string;
     description?: string;
