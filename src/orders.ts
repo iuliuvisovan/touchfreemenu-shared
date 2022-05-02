@@ -58,6 +58,7 @@ export type Order = {
   id: string
   products: OrderProduct[]
   userId: string
+  username?: string
   status: OrderStatus
   paymentType: PaymentType
   requestedAmount: number
