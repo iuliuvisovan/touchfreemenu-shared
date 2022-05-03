@@ -8,6 +8,7 @@ export declare type User = {
     coverPhotoUrl?: string;
     joinDate: Date;
     subscriptionExpiresAt?: Date;
+    isSuperAdmin?: boolean;
     city: string;
     phoneNumber?: string;
     coords?: {
