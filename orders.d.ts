@@ -63,6 +63,7 @@ export declare type Order = {
     orderNumber?: string;
     proformaInvoiceId?: string;
     finalInvoiceId?: string;
+    createdAt?: Date;
 };
 export declare type OrderIntent = {
     laminatedHolderCount?: number;

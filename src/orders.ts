@@ -71,6 +71,7 @@ export type Order = {
   orderNumber?: string
   proformaInvoiceId?: string
   finalInvoiceId?: string
+  createdAt?: Date
 }
 
 export type OrderIntent = {
