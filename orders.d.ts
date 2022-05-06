@@ -64,6 +64,8 @@ export declare type Order = {
     proformaInvoiceId?: string;
     finalInvoiceId?: string;
     createdAt?: Date;
+    courierCompany?: CourierCompany;
+    awb?: string;
 };
 export declare type OrderIntent = {
     laminatedHolderCount?: number;
@@ -74,6 +76,14 @@ export declare type OrderIntent = {
     paymentType?: PaymentType;
     extraCommentsFromUser?: string;
 };
+export declare enum CourierCompany {
+    Cargus = "cargus",
+    FanCourier = "fan_courier",
+    Sameday = "sameday",
+    Dpd = "dpd",
+    NemoExpress = "nemo_express",
+    Gls = "gls"
+}
 export declare enum SubscriptionCode {
     TFMC1 = "TFM-C-1",
     TFMC6 = "TFM-C-6",

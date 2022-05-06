@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE_HOLDERS = exports.HolderCode = exports.SubscriptionCode = exports.PaymentType = exports.ProductType = exports.BillingType = exports.OrderStatus = void 0;
+exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE_HOLDERS = exports.HolderCode = exports.SubscriptionCode = exports.CourierCompany = exports.PaymentType = exports.ProductType = exports.BillingType = exports.OrderStatus = void 0;
 var OrderStatus;
 (function (OrderStatus) {
     OrderStatus["Initiated"] = "INITIATED";
@@ -27,6 +27,15 @@ var PaymentType;
     PaymentType["BankTransfer"] = "BankTransfer";
     PaymentType["OnlineCard"] = "OnlineCard";
 })(PaymentType = exports.PaymentType || (exports.PaymentType = {}));
+var CourierCompany;
+(function (CourierCompany) {
+    CourierCompany["Cargus"] = "cargus";
+    CourierCompany["FanCourier"] = "fan_courier";
+    CourierCompany["Sameday"] = "sameday";
+    CourierCompany["Dpd"] = "dpd";
+    CourierCompany["NemoExpress"] = "nemo_express";
+    CourierCompany["Gls"] = "gls";
+})(CourierCompany = exports.CourierCompany || (exports.CourierCompany = {}));
 var SubscriptionCode;
 (function (SubscriptionCode) {
     SubscriptionCode["TFMC1"] = "TFM-C-1";

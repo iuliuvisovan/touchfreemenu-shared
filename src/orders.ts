@@ -72,6 +72,8 @@ export type Order = {
   proformaInvoiceId?: string
   finalInvoiceId?: string
   createdAt?: Date
+  courierCompany?: CourierCompany
+  awb?: string
 }
 
 export type OrderIntent = {
@@ -82,6 +84,15 @@ export type OrderIntent = {
   shippingInfo?: ShippingInfo
   paymentType?: PaymentType
   extraCommentsFromUser?: string
+}
+
+export enum CourierCompany {
+  Cargus = 'cargus',
+  FanCourier = 'fan_courier',
+  Sameday = 'sameday',
+  Dpd = 'dpd',
+  NemoExpress = 'nemo_express',
+  Gls = 'gls',
 }
 
 export enum SubscriptionCode {
