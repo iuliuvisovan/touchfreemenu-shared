@@ -18,3 +18,11 @@ export declare type MenuProduct = {
     allergens?: string[];
     index: number;
 };
+export declare const AVAILABLE_ALLERGENS: {
+    id: string;
+    letter: string;
+    shortName: string;
+    longName: string;
+    shortNameEn: string;
+    longNameEn: string;
+}[];
