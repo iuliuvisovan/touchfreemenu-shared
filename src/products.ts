@@ -15,5 +15,6 @@ export type MenuProduct = {
   isAvailable?: Boolean
   discountedPrice?: number
   quantities?: string
+  allergens?: string[]
   index: number
 }
