@@ -24,6 +24,7 @@ export type User = {
   }
   usesDemoProducts: boolean
   shouldNotSendNavigationEmails: boolean
+  lastRemindedAboutExpiryAt?: Date
 }
 
 export type CreateAccountRequestBody = {
