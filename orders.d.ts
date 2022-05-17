@@ -70,6 +70,7 @@ export declare type Order = {
 export declare type OrderIntent = {
     laminatedHolderCount?: number;
     plexiglassHolderCount?: number;
+    stickerHolderCount?: number;
     subscriptionCode?: SubscriptionCode;
     billingInfo?: BillingInfo;
     shippingInfo?: ShippingInfo;
@@ -91,7 +92,8 @@ export declare enum SubscriptionCode {
 }
 export declare enum HolderCode {
     Plexiglass = "QRH-PLEX",
-    Laminated = "QRH-LAM"
+    Laminated = "QRH-LAM",
+    Sticker = "QRH-STICK"
 }
 export declare type ProductCode = SubscriptionCode | HolderCode;
 export declare type Subscription = {

@@ -79,6 +79,7 @@ export type Order = {
 export type OrderIntent = {
   laminatedHolderCount?: number
   plexiglassHolderCount?: number
+  stickerHolderCount?: number
   subscriptionCode?: SubscriptionCode
   billingInfo?: BillingInfo
   shippingInfo?: ShippingInfo
@@ -104,6 +105,7 @@ export enum SubscriptionCode {
 export enum HolderCode {
   Plexiglass = 'QRH-PLEX',
   Laminated = 'QRH-LAM',
+  Sticker = 'QRH-STICK',
 }
 
 export type ProductCode = SubscriptionCode | HolderCode
@@ -136,9 +138,15 @@ export const AVAILABLE_HOLDERS: Holder[] = [
   },
   {
     code: HolderCode.Laminated,
-    name: 'Holder orizontal laminat - A6',
+    name: 'Card orizontal laminat - A6',
     price: 3,
     priceIncreaseSegment: 10,
+  },
+  {
+    code: HolderCode.Sticker,
+    name: 'Sticker personalizat - 10x7cm',
+    price: 2,
+    priceIncreaseSegment: 16,
   },
 ]
 
@@ -164,16 +172,20 @@ export const AVAILABLE_SUBSCRIPTIONS: Subscription[] = [
 ]
 
 export const computeIntentPrice = (orderIntent: OrderIntent) => {
-  const { plexiglassHolderCount = 0, laminatedHolderCount = 0, subscriptionCode = '' } = orderIntent
+  const { plexiglassHolderCount = 0, laminatedHolderCount = 0, stickerHolderCount = 0, subscriptionCode = '' } = orderIntent
 
   const plexiglassPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Plexiglass)?.price || 0
   const laminatedPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Laminated)?.price || 0
+  const stickerPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Sticker)?.price || 0
   const currentSubscriptionPrice = AVAILABLE_SUBSCRIPTIONS.find(x => x.code === subscriptionCode)?.price || 0
 
-  const deliveryPrice = plexiglassHolderCount + laminatedHolderCount > 0 ? 15 : 0
+  const deliveryPrice = plexiglassHolderCount + laminatedHolderCount + stickerHolderCount > 0 ? 15 : 0
 
   const totalPrice =
-    plexiglassHolderCount * plexiglassPrice + laminatedHolderCount * laminatedPrice + currentSubscriptionPrice + deliveryPrice
+    plexiglassHolderCount * plexiglassPrice + 
+    laminatedHolderCount * laminatedPrice + 
+    stickerHolderCount * stickerPrice + 
+    currentSubscriptionPrice + deliveryPrice
 
   return totalPrice
 }

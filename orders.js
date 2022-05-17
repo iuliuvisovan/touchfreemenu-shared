@@ -46,6 +46,7 @@ var HolderCode;
 (function (HolderCode) {
     HolderCode["Plexiglass"] = "QRH-PLEX";
     HolderCode["Laminated"] = "QRH-LAM";
+    HolderCode["Sticker"] = "QRH-STICK";
 })(HolderCode = exports.HolderCode || (exports.HolderCode = {}));
 exports.AVAILABLE_HOLDERS = [
     {
@@ -55,9 +56,15 @@ exports.AVAILABLE_HOLDERS = [
     },
     {
         code: HolderCode.Laminated,
-        name: 'Holder orizontal laminat - A6',
+        name: 'Card orizontal laminat - A6',
         price: 3,
         priceIncreaseSegment: 10
+    },
+    {
+        code: HolderCode.Sticker,
+        name: 'Sticker personalizat - 10x7cm',
+        price: 2,
+        priceIncreaseSegment: 16
     },
 ];
 exports.AVAILABLE_SUBSCRIPTIONS = [
@@ -81,13 +88,17 @@ exports.AVAILABLE_SUBSCRIPTIONS = [
     },
 ];
 var computeIntentPrice = function (orderIntent) {
-    var _a, _b, _c;
-    var _d = orderIntent.plexiglassHolderCount, plexiglassHolderCount = _d === void 0 ? 0 : _d, _e = orderIntent.laminatedHolderCount, laminatedHolderCount = _e === void 0 ? 0 : _e, _f = orderIntent.subscriptionCode, subscriptionCode = _f === void 0 ? '' : _f;
+    var _a, _b, _c, _d;
+    var _e = orderIntent.plexiglassHolderCount, plexiglassHolderCount = _e === void 0 ? 0 : _e, _f = orderIntent.laminatedHolderCount, laminatedHolderCount = _f === void 0 ? 0 : _f, _g = orderIntent.stickerHolderCount, stickerHolderCount = _g === void 0 ? 0 : _g, _h = orderIntent.subscriptionCode, subscriptionCode = _h === void 0 ? '' : _h;
     var plexiglassPrice = ((_a = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Plexiglass; })) === null || _a === void 0 ? void 0 : _a.price) || 0;
     var laminatedPrice = ((_b = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Laminated; })) === null || _b === void 0 ? void 0 : _b.price) || 0;
-    var currentSubscriptionPrice = ((_c = exports.AVAILABLE_SUBSCRIPTIONS.find(function (x) { return x.code === subscriptionCode; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
-    var deliveryPrice = plexiglassHolderCount + laminatedHolderCount > 0 ? 15 : 0;
-    var totalPrice = plexiglassHolderCount * plexiglassPrice + laminatedHolderCount * laminatedPrice + currentSubscriptionPrice + deliveryPrice;
+    var stickerPrice = ((_c = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Sticker; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
+    var currentSubscriptionPrice = ((_d = exports.AVAILABLE_SUBSCRIPTIONS.find(function (x) { return x.code === subscriptionCode; })) === null || _d === void 0 ? void 0 : _d.price) || 0;
+    var deliveryPrice = plexiglassHolderCount + laminatedHolderCount + stickerHolderCount > 0 ? 15 : 0;
+    var totalPrice = plexiglassHolderCount * plexiglassPrice +
+        laminatedHolderCount * laminatedPrice +
+        stickerHolderCount * stickerPrice +
+        currentSubscriptionPrice + deliveryPrice;
     return totalPrice;
 };
 exports.computeIntentPrice = computeIntentPrice;
