@@ -56,7 +56,7 @@ exports.AVAILABLE_HOLDERS = [
     },
     {
         code: HolderCode.Laminated,
-        name: 'Card orizontal laminat - A6',
+        name: 'Card laminat - A6',
         price: 3,
         priceIncreaseSegment: 10
     },

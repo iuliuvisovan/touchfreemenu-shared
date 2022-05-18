@@ -138,7 +138,7 @@ export const AVAILABLE_HOLDERS: Holder[] = [
   },
   {
     code: HolderCode.Laminated,
-    name: 'Card orizontal laminat - A6',
+    name: 'Card laminat - A6',
     price: 3,
     priceIncreaseSegment: 10,
   },
