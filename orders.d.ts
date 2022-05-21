@@ -115,4 +115,13 @@ export declare type PaymentRequest = {
 };
 export declare const AVAILABLE_HOLDERS: Holder[];
 export declare const AVAILABLE_SUBSCRIPTIONS: Subscription[];
-export declare const computeIntentPrice: (orderIntent: OrderIntent) => number;
+export declare const DELIVERY_PRICE = 15;
+export declare const computeIntentSummary: (orderIntent: OrderIntent) => {
+    totalPrice: number;
+    holderPrice: number;
+    deliveryPrice: number;
+    subscriptionPrice: number;
+    hasDelivery: boolean;
+    hasHolders: boolean;
+    hasSubscription: boolean;
+};

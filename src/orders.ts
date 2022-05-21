@@ -190,3 +190,34 @@ export const computeIntentPrice = (orderIntent: OrderIntent) => {
 
   return totalPrice
 }
+
+export const DELIVERY_PRICE = 15
+
+export const computeIntentSummary = (orderIntent: OrderIntent) => {
+  const { plexiglassHolderCount = 0, laminatedHolderCount = 0, stickerHolderCount = 0, subscriptionCode = '' } = orderIntent
+
+  const plexiglassPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Plexiglass)?.price || 0
+  const laminatedPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Laminated)?.price || 0
+  const stickerPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Sticker)?.price || 0
+  const currentSubscriptionPrice = AVAILABLE_SUBSCRIPTIONS.find(x => x.code === subscriptionCode)?.price || 0
+
+  const holderPrice = +plexiglassHolderCount + +laminatedHolderCount + +stickerHolderCount
+  const deliveryPrice = holderPrice > 0 ? DELIVERY_PRICE : 0
+
+  const totalPrice =
+    plexiglassHolderCount * plexiglassPrice +
+    laminatedHolderCount * laminatedPrice +
+    stickerHolderCount * stickerPrice +
+    currentSubscriptionPrice +
+    deliveryPrice
+
+  return {
+    totalPrice,
+    holderPrice,
+    deliveryPrice,
+    subscriptionPrice: currentSubscriptionPrice,
+    hasDelivery: deliveryPrice > 0,
+    hasHolders: holderPrice > 0,
+    hasSubscription: subscriptionCode.length > 0,
+  }
+}
