@@ -94,11 +94,12 @@ var computeIntentPrice = function (orderIntent) {
     var laminatedPrice = ((_b = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Laminated; })) === null || _b === void 0 ? void 0 : _b.price) || 0;
     var stickerPrice = ((_c = exports.AVAILABLE_HOLDERS.find(function (x) { return x.code === HolderCode.Sticker; })) === null || _c === void 0 ? void 0 : _c.price) || 0;
     var currentSubscriptionPrice = ((_d = exports.AVAILABLE_SUBSCRIPTIONS.find(function (x) { return x.code === subscriptionCode; })) === null || _d === void 0 ? void 0 : _d.price) || 0;
-    var deliveryPrice = plexiglassHolderCount + laminatedHolderCount + stickerHolderCount > 0 ? 15 : 0;
+    var deliveryPrice = +plexiglassHolderCount + +laminatedHolderCount + +stickerHolderCount > 0 ? 15 : 0;
     var totalPrice = plexiglassHolderCount * plexiglassPrice +
         laminatedHolderCount * laminatedPrice +
         stickerHolderCount * stickerPrice +
-        currentSubscriptionPrice + deliveryPrice;
+        currentSubscriptionPrice +
+        deliveryPrice;
     return totalPrice;
 };
 exports.computeIntentPrice = computeIntentPrice;

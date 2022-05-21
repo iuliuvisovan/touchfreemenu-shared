@@ -179,13 +179,14 @@ export const computeIntentPrice = (orderIntent: OrderIntent) => {
   const stickerPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Sticker)?.price || 0
   const currentSubscriptionPrice = AVAILABLE_SUBSCRIPTIONS.find(x => x.code === subscriptionCode)?.price || 0
 
-  const deliveryPrice = plexiglassHolderCount + laminatedHolderCount + stickerHolderCount > 0 ? 15 : 0
+  const deliveryPrice = +plexiglassHolderCount + +laminatedHolderCount + +stickerHolderCount > 0 ? 15 : 0
 
   const totalPrice =
-    plexiglassHolderCount * plexiglassPrice + 
-    laminatedHolderCount * laminatedPrice + 
-    stickerHolderCount * stickerPrice + 
-    currentSubscriptionPrice + deliveryPrice
+    plexiglassHolderCount * plexiglassPrice +
+    laminatedHolderCount * laminatedPrice +
+    stickerHolderCount * stickerPrice +
+    currentSubscriptionPrice +
+    deliveryPrice
 
   return totalPrice
 }
