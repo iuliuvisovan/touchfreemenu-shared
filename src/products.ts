@@ -23,10 +23,10 @@ export const AVAILABLE_ALLERGENS = [
   {
     id: 'cereals',
     letter: 'A',
-    shortName: 'Cereale',
+    shortName: 'Cereale cu Gluten',
     longName:
       'Cereale care conțin gluten obținute din grâu, secară, orz, grâu spelt, grâu dur sau hibrizi ai acestora și produse derivate',
-    shortNameEn: 'Cereals',
+    shortNameEn: 'Cereals with Gluten',
     longNameEn:
       'Cereals containing gluten: namely wheat (including specific varieties like spelt and Khorasan), rye, barley, oats and their hybridised strains) and products thereof',
   },
