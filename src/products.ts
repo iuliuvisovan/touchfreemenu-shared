@@ -23,7 +23,7 @@ export const AVAILABLE_ALLERGENS = [
   {
     id: 'cereals',
     letter: 'A',
-    shortName: 'Cereale cu Gluten',
+    shortName: 'Gluten',
     longName:
       'Cereale care conțin gluten obținute din grâu, secară, orz, grâu spelt, grâu dur sau hibrizi ai acestora și produse derivate',
     shortNameEn: 'Cereals with Gluten',
