@@ -12,6 +12,7 @@ export type User = {
   isSuperAdmin?: boolean
   city: string
   phoneNumber?: string
+  customDomain?: string
   coords?: {
     latitude: number
     longitude: number
