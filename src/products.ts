@@ -13,6 +13,7 @@ export type MenuProduct = {
   price?: number
   isDiscounted?: Boolean
   isAvailable?: Boolean
+  priceDuringEvent?: number
   discountedPrice?: number
   quantities?: string
   allergens?: string[]
