@@ -10,6 +10,7 @@ export declare type User = {
     joinDate: Date;
     subscriptionExpiresAt?: Date;
     isSuperAdmin?: boolean;
+    inPartyMode?: boolean;
     city: string;
     phoneNumber?: string;
     customDomain?: string;
