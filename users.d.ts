@@ -19,6 +19,7 @@ export declare type User = {
         longitude: number;
     };
     factureazaClientId?: string;
+    facebookClientId?: string;
     styling: {
         themeColor: string;
         logoScale: number;
