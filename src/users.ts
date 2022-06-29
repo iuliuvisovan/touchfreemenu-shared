@@ -19,7 +19,9 @@ export type User = {
     longitude: number
   }
   factureazaClientId?: string
-  facebookClientId?: string
+  facebookUserId?: string
+  googleUserId?: string
+  appleUserId?: string
   styling: {
     themeColor: string
     logoScale: number
