@@ -31,6 +31,7 @@ export declare type User = {
     usesDemoProducts: boolean;
     shouldNotSendNavigationEmails: boolean;
     lastRemindedAboutExpiryAt?: Date;
+    hasNoPassword?: boolean;
 };
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;

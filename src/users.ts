@@ -31,6 +31,7 @@ export type User = {
   usesDemoProducts: boolean
   shouldNotSendNavigationEmails: boolean
   lastRemindedAboutExpiryAt?: Date
+  hasNoPassword?: boolean
 }
 
 export type CreateAccountRequestBody = {
