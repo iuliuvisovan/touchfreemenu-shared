@@ -27,3 +27,15 @@ export declare const AVAILABLE_ALLERGENS: {
     shortNameEn: string;
     longNameEn: string;
 }[];
+export declare const ALLERGENS: {
+    id: string;
+    letter: string;
+    shortNames: {
+        ro: string;
+        en: string;
+    };
+    longNames: {
+        ro: string;
+        en: string;
+    };
+}[];
