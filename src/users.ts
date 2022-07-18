@@ -32,6 +32,7 @@ export type User = {
   shouldNotSendNavigationEmails: boolean
   lastRemindedAboutExpiryAt?: Date
   hasNoPassword?: boolean
+  menuLanguages?: string[]
 }
 
 export type CreateAccountRequestBody = {
