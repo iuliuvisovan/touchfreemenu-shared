@@ -8,6 +8,27 @@ export enum LanguageCode {
   Hungarian = 'hu',
   Dutch = 'nl',
 }
+export const RomanianLanguageName = {
+  [LanguageCode.Romanian]: 'română',
+  [LanguageCode.English]: 'engleză',
+  [LanguageCode.German]: 'germană',
+  [LanguageCode.Spanish]: 'spaniolă',
+  [LanguageCode.Italian]: 'italiană',
+  [LanguageCode.French]: 'franceză',
+  [LanguageCode.Hungarian]: 'maghiară',
+  [LanguageCode.Dutch]: 'olandeză',
+}
+
+export const LocalLanguageName = {
+  [LanguageCode.Romanian]: 'română',
+  [LanguageCode.English]: 'english',
+  [LanguageCode.German]: 'deutsch',
+  [LanguageCode.Spanish]: 'español',
+  [LanguageCode.Italian]: 'italiano',
+  [LanguageCode.French]: 'français',
+  [LanguageCode.Hungarian]: 'magyar',
+  [LanguageCode.Dutch]: 'nederlandse',
+}
 
 export type MenuProduct = {
   id: string

@@ -8,6 +8,24 @@ export declare enum LanguageCode {
     Hungarian = "hu",
     Dutch = "nl"
 }
+export declare const RomanianLanguageName: {
+    ro: string;
+    de: string;
+    es: string;
+    it: string;
+    fr: string;
+    hu: string;
+    nl: string;
+};
+export declare const LocalLanguageName: {
+    ro: string;
+    de: string;
+    es: string;
+    it: string;
+    fr: string;
+    hu: string;
+    nl: string;
+};
 export declare type MenuProduct = {
     id: string;
     userId: string;

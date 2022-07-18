@@ -1,6 +1,7 @@
 "use strict";
+var _a, _b;
 exports.__esModule = true;
-exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LanguageCode = void 0;
+exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = void 0;
 var LanguageCode;
 (function (LanguageCode) {
     LanguageCode["Romanian"] = "ro";
@@ -12,6 +13,26 @@ var LanguageCode;
     LanguageCode["Hungarian"] = "hu";
     LanguageCode["Dutch"] = "nl";
 })(LanguageCode = exports.LanguageCode || (exports.LanguageCode = {}));
+exports.RomanianLanguageName = (_a = {},
+    _a[LanguageCode.Romanian] = 'română',
+    _a[LanguageCode.English] = 'engleză',
+    _a[LanguageCode.German] = 'germană',
+    _a[LanguageCode.Spanish] = 'spaniolă',
+    _a[LanguageCode.Italian] = 'italiană',
+    _a[LanguageCode.French] = 'franceză',
+    _a[LanguageCode.Hungarian] = 'maghiară',
+    _a[LanguageCode.Dutch] = 'olandeză',
+    _a);
+exports.LocalLanguageName = (_b = {},
+    _b[LanguageCode.Romanian] = 'română',
+    _b[LanguageCode.English] = 'english',
+    _b[LanguageCode.German] = 'deutsch',
+    _b[LanguageCode.Spanish] = 'español',
+    _b[LanguageCode.Italian] = 'italiano',
+    _b[LanguageCode.French] = 'français',
+    _b[LanguageCode.Hungarian] = 'magyar',
+    _b[LanguageCode.Dutch] = 'nederlandse',
+    _b);
 exports.AVAILABLE_ALLERGENS = [
     {
         id: 'cereals',
