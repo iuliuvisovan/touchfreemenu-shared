@@ -1,6 +1,6 @@
 export declare enum LanguageCode {
     Romanian = "ro",
-    English = "ro",
+    English = "en",
     German = "de",
     Spanish = "es",
     Italian = "it",

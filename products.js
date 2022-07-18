@@ -5,7 +5,7 @@ exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LocalLanguageName = ex
 var LanguageCode;
 (function (LanguageCode) {
     LanguageCode["Romanian"] = "ro";
-    LanguageCode["English"] = "ro";
+    LanguageCode["English"] = "en";
     LanguageCode["German"] = "de";
     LanguageCode["Spanish"] = "es";
     LanguageCode["Italian"] = "it";
