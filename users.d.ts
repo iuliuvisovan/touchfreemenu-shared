@@ -32,6 +32,7 @@ export declare type User = {
     shouldNotSendNavigationEmails: boolean;
     lastRemindedAboutExpiryAt?: Date;
     hasNoPassword?: boolean;
+    menuLanguages?: string[];
 };
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;
