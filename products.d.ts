@@ -15,17 +15,13 @@ export declare const LocalLanguageName: {
     [key in LanguageCode]: string;
 };
 export declare type MenuProduct = {
+    names: Record<string, string>;
+    descriptions: Record<string, string>;
     id: string;
     userId: string;
     username?: string;
     categoryId: string;
     categoryName?: string;
-    name: string;
-    nameEn?: string;
-    description?: string;
-    descriptionEn?: string;
-    names: Record<string, string>;
-    descriptions: Record<string, string>;
     imageKey?: string;
     imageUrl?: string;
     price?: number;
