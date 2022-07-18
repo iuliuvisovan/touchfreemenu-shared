@@ -1,6 +1,17 @@
 "use strict";
 exports.__esModule = true;
-exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = void 0;
+exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LanguageCode = void 0;
+var LanguageCode;
+(function (LanguageCode) {
+    LanguageCode["Romanian"] = "ro";
+    LanguageCode["English"] = "ro";
+    LanguageCode["German"] = "de";
+    LanguageCode["Spanish"] = "es";
+    LanguageCode["Italian"] = "it";
+    LanguageCode["French"] = "fr";
+    LanguageCode["Hungarian"] = "hu";
+    LanguageCode["Dutch"] = "nl";
+})(LanguageCode = exports.LanguageCode || (exports.LanguageCode = {}));
 exports.AVAILABLE_ALLERGENS = [
     {
         id: 'cereals',

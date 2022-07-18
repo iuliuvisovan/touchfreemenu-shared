@@ -1,3 +1,13 @@
+export declare enum LanguageCode {
+    Romanian = "ro",
+    English = "ro",
+    German = "de",
+    Spanish = "es",
+    Italian = "it",
+    French = "fr",
+    Hungarian = "hu",
+    Dutch = "nl"
+}
 export declare type MenuProduct = {
     id: string;
     userId: string;
@@ -8,6 +18,8 @@ export declare type MenuProduct = {
     nameEn?: string;
     description?: string;
     descriptionEn?: string;
+    names: Record<string, string>;
+    descriptions: Record<string, string>;
     imageKey?: string;
     imageUrl?: string;
     price?: number;
