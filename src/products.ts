@@ -8,7 +8,8 @@ export enum LanguageCode {
   Hungarian = 'hu',
   Dutch = 'nl',
 }
-export const RomanianLanguageName = {
+
+export const RomanianLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Romanian]: 'română',
   [LanguageCode.English]: 'engleză',
   [LanguageCode.German]: 'germană',
@@ -19,7 +20,7 @@ export const RomanianLanguageName = {
   [LanguageCode.Dutch]: 'olandeză',
 }
 
-export const LocalLanguageName = {
+export const LocalLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Romanian]: 'română',
   [LanguageCode.English]: 'english',
   [LanguageCode.German]: 'deutsch',

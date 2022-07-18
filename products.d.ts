@@ -9,22 +9,10 @@ export declare enum LanguageCode {
     Dutch = "nl"
 }
 export declare const RomanianLanguageName: {
-    ro: string;
-    de: string;
-    es: string;
-    it: string;
-    fr: string;
-    hu: string;
-    nl: string;
+    [key in LanguageCode]: string;
 };
 export declare const LocalLanguageName: {
-    ro: string;
-    de: string;
-    es: string;
-    it: string;
-    fr: string;
-    hu: string;
-    nl: string;
+    [key in LanguageCode]: string;
 };
 export declare type MenuProduct = {
     id: string;
