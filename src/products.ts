@@ -34,7 +34,7 @@ export const LocalLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Russian]: 'русский',
 }
 
-export const LanguageFlag: { [key in LanguageCode]: { title: string; src: string; alt: string } } = {
+export const LanguageFlag2: { [key in LanguageCode]: { title: string; src: string; alt: string } } = {
   [LanguageCode.Romanian]: {
     title: 'Română',
     src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/48/flag-for-romania_1f1f7-1f1f4.png',

@@ -15,7 +15,7 @@ export declare const RomanianLanguageName: {
 export declare const LocalLanguageName: {
     [key in LanguageCode]: string;
 };
-export declare const LanguageFlag: {
+export declare const LanguageFlag2: {
     [key in LanguageCode]: {
         title: string;
         src: string;

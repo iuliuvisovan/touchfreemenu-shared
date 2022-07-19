@@ -1,7 +1,7 @@
 "use strict";
 var _a, _b, _c;
 exports.__esModule = true;
-exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LanguageFlag = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = void 0;
+exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LanguageFlag2 = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = void 0;
 var LanguageCode;
 (function (LanguageCode) {
     LanguageCode["Romanian"] = "ro";
@@ -36,7 +36,7 @@ exports.LocalLanguageName = (_b = {},
     _b[LanguageCode.Ukrainian] = 'українська',
     _b[LanguageCode.Russian] = 'русский',
     _b);
-exports.LanguageFlag = (_c = {},
+exports.LanguageFlag2 = (_c = {},
     _c[LanguageCode.Romanian] = {
         title: 'Română',
         src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/48/flag-for-romania_1f1f7-1f1f4.png',
