@@ -19,7 +19,7 @@ export const RomanianLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Italian]: 'italiană',
   [LanguageCode.French]: 'franceză',
   [LanguageCode.Ukrainian]: 'ucraineană',
-  [LanguageCode.Russian]: 'russian',
+  [LanguageCode.Russian]: 'rusă',
 }
 
 export const LocalLanguageName: { [key in LanguageCode]: string } = {

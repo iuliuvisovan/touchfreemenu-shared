@@ -23,7 +23,7 @@ exports.RomanianLanguageName = (_a = {},
     _a[LanguageCode.Italian] = 'italiană',
     _a[LanguageCode.French] = 'franceză',
     _a[LanguageCode.Ukrainian] = 'ucraineană',
-    _a[LanguageCode.Russian] = 'russian',
+    _a[LanguageCode.Russian] = 'rusă',
     _a);
 exports.LocalLanguageName = (_b = {},
     _b[LanguageCode.Romanian] = 'română',
