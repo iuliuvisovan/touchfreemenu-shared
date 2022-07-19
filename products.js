@@ -1,38 +1,88 @@
 "use strict";
-var _a, _b;
+var _a, _b, _c;
 exports.__esModule = true;
-exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = void 0;
+exports.ALLERGENS = exports.AVAILABLE_ALLERGENS = exports.LanguageFlag = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = void 0;
 var LanguageCode;
 (function (LanguageCode) {
     LanguageCode["Romanian"] = "ro";
     LanguageCode["English"] = "en";
     LanguageCode["German"] = "de";
+    LanguageCode["Hungarian"] = "hu";
     LanguageCode["Spanish"] = "es";
     LanguageCode["Italian"] = "it";
     LanguageCode["French"] = "fr";
-    LanguageCode["Hungarian"] = "hu";
-    LanguageCode["Dutch"] = "nl";
+    LanguageCode["Ukrainian"] = "ua";
+    LanguageCode["Russian"] = "ru";
 })(LanguageCode = exports.LanguageCode || (exports.LanguageCode = {}));
 exports.RomanianLanguageName = (_a = {},
     _a[LanguageCode.Romanian] = 'română',
     _a[LanguageCode.English] = 'engleză',
     _a[LanguageCode.German] = 'germană',
+    _a[LanguageCode.Hungarian] = 'maghiară',
     _a[LanguageCode.Spanish] = 'spaniolă',
     _a[LanguageCode.Italian] = 'italiană',
     _a[LanguageCode.French] = 'franceză',
-    _a[LanguageCode.Hungarian] = 'maghiară',
-    _a[LanguageCode.Dutch] = 'olandeză',
+    _a[LanguageCode.Ukrainian] = 'ucraineană',
+    _a[LanguageCode.Russian] = 'russian',
     _a);
 exports.LocalLanguageName = (_b = {},
     _b[LanguageCode.Romanian] = 'română',
     _b[LanguageCode.English] = 'english',
     _b[LanguageCode.German] = 'deutsch',
+    _b[LanguageCode.Hungarian] = 'magyar',
     _b[LanguageCode.Spanish] = 'español',
     _b[LanguageCode.Italian] = 'italiano',
     _b[LanguageCode.French] = 'français',
-    _b[LanguageCode.Hungarian] = 'magyar',
-    _b[LanguageCode.Dutch] = 'nederlandse',
+    _b[LanguageCode.Ukrainian] = 'українська',
+    _b[LanguageCode.Russian] = 'русский',
     _b);
+exports.LanguageFlag = (_c = {},
+    _c[LanguageCode.Romanian] = {
+        title: 'Română',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/48/flag-for-romania_1f1f7-1f1f4.png',
+        alt: 'Flag of Romania'
+    },
+    _c[LanguageCode.English] = {
+        title: 'Engleză',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/237/flag-for-united-kingdom_1f1ec-1f1e7.png',
+        alt: 'Flag of the United Kingdom'
+    },
+    _c[LanguageCode.German] = {
+        title: 'Germană',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-germany_1f1e9-1f1ea.png',
+        alt: 'Flag of Germany'
+    },
+    _c[LanguageCode.Hungarian] = {
+        title: 'Maghiară',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-hungary_1f1ed-1f1fa.png',
+        alt: 'Flag of Hungary'
+    },
+    _c[LanguageCode.Spanish] = {
+        title: 'Spaniolă',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-spain_1f1ea-1f1f8.png',
+        alt: 'Flag of Spain'
+    },
+    _c[LanguageCode.Italian] = {
+        title: 'Italiană',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-italy_1f1ee-1f1f9.png',
+        alt: 'Flag of Italy'
+    },
+    _c[LanguageCode.French] = {
+        title: 'Franceză',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-france_1f1eb-1f1f7.png',
+        alt: 'Flag of France'
+    },
+    _c[LanguageCode.Ukrainian] = {
+        title: 'Ucraineană',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-ukraine_1f1fa-1f1e6.png',
+        alt: 'Flag of Ukraine'
+    },
+    _c[LanguageCode.Russian] = {
+        title: 'Rusă',
+        src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-russia_1f1f7-1f1fa.png',
+        alt: 'Flag of Russia'
+    },
+    _c);
 exports.AVAILABLE_ALLERGENS = [
     {
         id: 'cereals',

@@ -2,17 +2,25 @@ export declare enum LanguageCode {
     Romanian = "ro",
     English = "en",
     German = "de",
+    Hungarian = "hu",
     Spanish = "es",
     Italian = "it",
     French = "fr",
-    Hungarian = "hu",
-    Dutch = "nl"
+    Ukrainian = "ua",
+    Russian = "ru"
 }
 export declare const RomanianLanguageName: {
     [key in LanguageCode]: string;
 };
 export declare const LocalLanguageName: {
     [key in LanguageCode]: string;
+};
+export declare const LanguageFlag: {
+    [key in LanguageCode]: {
+        title: string;
+        src: string;
+        alt: string;
+    };
 };
 export declare type MenuProduct = {
     names: Record<string, string>;
