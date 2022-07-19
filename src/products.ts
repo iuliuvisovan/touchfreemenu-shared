@@ -6,7 +6,8 @@ export enum LanguageCode {
   Spanish = 'es',
   Italian = 'it',
   French = 'fr',
-  Ukrainian = 'ua',
+  // This is how Google Translate wants it
+  Ukrainian = 'uk',
   Russian = 'ru',
 }
 

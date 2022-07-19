@@ -6,7 +6,7 @@ export declare enum LanguageCode {
     Spanish = "es",
     Italian = "it",
     French = "fr",
-    Ukrainian = "ua",
+    Ukrainian = "uk",
     Russian = "ru"
 }
 export declare const RomanianLanguageName: {

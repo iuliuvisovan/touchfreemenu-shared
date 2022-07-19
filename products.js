@@ -11,7 +11,8 @@ var LanguageCode;
     LanguageCode["Spanish"] = "es";
     LanguageCode["Italian"] = "it";
     LanguageCode["French"] = "fr";
-    LanguageCode["Ukrainian"] = "ua";
+    // This is how Google Translate wants it
+    LanguageCode["Ukrainian"] = "uk";
     LanguageCode["Russian"] = "ru";
 })(LanguageCode = exports.LanguageCode || (exports.LanguageCode = {}));
 exports.RomanianLanguageName = (_a = {},
