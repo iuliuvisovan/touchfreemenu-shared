@@ -1,3 +1,4 @@
+import { LanguageCode } from './products';
 export declare type User = {
     id: string;
     _id?: string;
@@ -32,7 +33,7 @@ export declare type User = {
     shouldNotSendNavigationEmails: boolean;
     lastRemindedAboutExpiryAt?: Date;
     hasNoPassword?: boolean;
-    menuLanguages?: string[];
+    menuLanguages?: LanguageCode[];
 };
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;

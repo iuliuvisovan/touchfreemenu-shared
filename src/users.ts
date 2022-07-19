@@ -1,3 +1,5 @@
+import { LanguageCode } from './products'
+
 export type User = {
   id: string
   _id?: string
@@ -32,7 +34,7 @@ export type User = {
   shouldNotSendNavigationEmails: boolean
   lastRemindedAboutExpiryAt?: Date
   hasNoPassword?: boolean
-  menuLanguages?: string[]
+  menuLanguages?: LanguageCode[]
 }
 
 export type CreateAccountRequestBody = {
