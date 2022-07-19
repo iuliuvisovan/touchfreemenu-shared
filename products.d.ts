@@ -33,8 +33,8 @@ export declare type MenuProduct = {
     imageKey?: string;
     imageUrl?: string;
     price?: number;
-    isDiscounted?: Boolean;
-    isAvailable?: Boolean;
+    isDiscounted?: boolean;
+    isAvailable?: boolean;
     priceDuringEvent?: number;
     discountedPrice?: number;
     quantities?: string;
