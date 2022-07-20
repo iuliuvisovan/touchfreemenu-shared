@@ -2,37 +2,38 @@ export enum LanguageCode {
   Romanian = 'ro',
   English = 'en',
   German = 'de',
-  Hungarian = 'hu',
+  // Hungarian is bugged
+  // Hungarian = 'hu',
   Spanish = 'es',
   Italian = 'it',
-  French = 'fr',
-  // This is how Google Translate wants it
-  Ukrainian = 'uk',
-  Russian = 'ru',
+  // French = 'fr',
+  // // This is how Google Translate wants it
+  // Ukrainian = 'uk',
+  // Russian = 'ru',
 }
 
 export const RomanianLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Romanian]: 'română',
   [LanguageCode.English]: 'engleză',
   [LanguageCode.German]: 'germană',
-  [LanguageCode.Hungarian]: 'maghiară',
+  // [LanguageCode.Hungarian]: 'maghiară',
   [LanguageCode.Spanish]: 'spaniolă',
   [LanguageCode.Italian]: 'italiană',
-  [LanguageCode.French]: 'franceză',
-  [LanguageCode.Ukrainian]: 'ucraineană',
-  [LanguageCode.Russian]: 'rusă',
+  // [LanguageCode.French]: 'franceză',
+  // [LanguageCode.Ukrainian]: 'ucraineană',
+  // [LanguageCode.Russian]: 'rusă',
 }
 
 export const LocalLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Romanian]: 'română',
   [LanguageCode.English]: 'english',
   [LanguageCode.German]: 'deutsch',
-  [LanguageCode.Hungarian]: 'magyar',
+  // [LanguageCode.Hungarian]: 'magyar',
   [LanguageCode.Spanish]: 'español',
   [LanguageCode.Italian]: 'italiano',
-  [LanguageCode.French]: 'français',
-  [LanguageCode.Ukrainian]: 'українська',
-  [LanguageCode.Russian]: 'русский',
+  // [LanguageCode.French]: 'français',
+  // [LanguageCode.Ukrainian]: 'українська',
+  // [LanguageCode.Russian]: 'русский',
 }
 
 export const LanguageFlag: { [key in LanguageCode]: { title: string; src: string; alt: string } } = {
@@ -51,11 +52,11 @@ export const LanguageFlag: { [key in LanguageCode]: { title: string; src: string
     src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-germany_1f1e9-1f1ea.png',
     alt: 'Flag of Germany',
   },
-  [LanguageCode.Hungarian]: {
-    title: 'Maghiară',
-    src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-hungary_1f1ed-1f1fa.png',
-    alt: 'Flag of Hungary',
-  },
+  // [LanguageCode.Hungarian]: {
+  //   title: 'Maghiară',
+  //   src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-hungary_1f1ed-1f1fa.png',
+  //   alt: 'Flag of Hungary',
+  // },
   [LanguageCode.Spanish]: {
     title: 'Spaniolă',
     src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-spain_1f1ea-1f1f8.png',
@@ -66,21 +67,21 @@ export const LanguageFlag: { [key in LanguageCode]: { title: string; src: string
     src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-italy_1f1ee-1f1f9.png',
     alt: 'Flag of Italy',
   },
-  [LanguageCode.French]: {
-    title: 'Franceză',
-    src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-france_1f1eb-1f1f7.png',
-    alt: 'Flag of France',
-  },
-  [LanguageCode.Ukrainian]: {
-    title: 'Ucraineană',
-    src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-ukraine_1f1fa-1f1e6.png',
-    alt: 'Flag of Ukraine',
-  },
-  [LanguageCode.Russian]: {
-    title: 'Rusă',
-    src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-russia_1f1f7-1f1fa.png',
-    alt: 'Flag of Russia',
-  },
+  // [LanguageCode.French]: {
+  //   title: 'Franceză',
+  //   src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-france_1f1eb-1f1f7.png',
+  //   alt: 'Flag of France',
+  // },
+  // [LanguageCode.Ukrainian]: {
+  //   title: 'Ucraineană',
+  //   src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-ukraine_1f1fa-1f1e6.png',
+  //   alt: 'Flag of Ukraine',
+  // },
+  // [LanguageCode.Russian]: {
+  //   title: 'Rusă',
+  //   src: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-russia_1f1f7-1f1fa.png',
+  //   alt: 'Flag of Russia',
+  // },
 }
 
 export type MenuProduct = {
