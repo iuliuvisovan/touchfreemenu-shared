@@ -37,23 +37,58 @@ export declare type MenuProduct = {
     allergens?: string[];
     index: number;
 };
-export declare const AVAILABLE_ALLERGENS: {
-    id: string;
-    letter: string;
-    shortName: string;
-    longName: string;
-    shortNameEn: string;
-    longNameEn: string;
-}[];
-export declare const ALLERGENS: {
+export declare const ALLERGENS: ({
     id: string;
     letter: string;
     shortNames: {
         ro: string;
         en: string;
+        de: string;
+        es: string;
+        it: string;
+        fr: string;
+        hu: string;
+        nl: string;
+        uk: string;
+        ru: string;
     };
     longNames: {
         ro: string;
         en: string;
+        de: string;
+        es: string;
+        it: string;
+        fr: string;
+        hu: string;
+        nl: string;
+        uk: string;
+        ru: string;
     };
-}[];
+} | {
+    id: string;
+    letter: string;
+    shortNames: {
+        ro: string;
+        en: string;
+        de: string;
+        it: string;
+        fr: string;
+        hu: string;
+        nl: string;
+        uk: string;
+        ru: string;
+        es?: undefined;
+    };
+    longNames: {
+        ro: string;
+        en: string;
+        de: string;
+        es: string;
+        it: string;
+        fr: string;
+        hu: string;
+        nl: string;
+        uk: string;
+        ru: string;
+    };
+})[];
