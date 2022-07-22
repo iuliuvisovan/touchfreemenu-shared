@@ -112,7 +112,7 @@ exports.ALLERGENS = [
             ro: 'Crustacee și produse derivate',
             en: 'Crustaceans and products thereof (for example prawns, lobster, crabs and crayfish)',
             de: 'Krebstiere und Krebstiererzeugnisse',
-            es: 'Crustáceos:Cangrejos, langosta, gambas, langostinos, carabineros, cigalas etc. y también salsas, cremas, platos preparados...',
+            es: 'Crustáceos: Cangrejos, langosta, gambas, langostinos, carabineros, cigalas etc. y también salsas, cremas, platos preparados...',
             it: 'Crostacei',
             fr: 'Crustacés et produits à base de crustacés',
             hu: 'Rákfélék és azokból készült termékek (kagylót is kérem feltüntetni) ',
