@@ -35,6 +35,7 @@ export type User = {
   lastRemindedAboutExpiryAt?: Date
   hasNoPassword?: boolean
   menuLanguages?: LanguageCode[]
+  newAuthToken?: string
 }
 
 export type CreateAccountRequestBody = {

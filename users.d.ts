@@ -34,6 +34,7 @@ export declare type User = {
     lastRemindedAboutExpiryAt?: Date;
     hasNoPassword?: boolean;
     menuLanguages?: LanguageCode[];
+    newAuthToken?: string;
 };
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;
