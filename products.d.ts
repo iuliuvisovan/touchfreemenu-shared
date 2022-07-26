@@ -5,6 +5,7 @@ export declare enum LanguageCode {
     Spanish = "es",
     Italian = "it",
     French = "fr",
+    Dutch = "nl",
     Hungarian = "hu",
     Ukrainian = "uk",
     Russian = "ru"

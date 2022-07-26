@@ -10,6 +10,7 @@ var LanguageCode;
     LanguageCode["Spanish"] = "es";
     LanguageCode["Italian"] = "it";
     LanguageCode["French"] = "fr";
+    LanguageCode["Dutch"] = "nl";
     LanguageCode["Hungarian"] = "hu";
     LanguageCode["Ukrainian"] = "uk";
     LanguageCode["Russian"] = "ru";
@@ -22,6 +23,7 @@ exports.RomanianLanguageName = (_a = {},
     _a[LanguageCode.Italian] = 'italiană',
     _a[LanguageCode.French] = 'franceză',
     _a[LanguageCode.Hungarian] = 'maghiară',
+    _a[LanguageCode.Dutch] = 'olandeză',
     _a[LanguageCode.Ukrainian] = 'ucraineană',
     _a[LanguageCode.Russian] = 'rusă',
     _a);
@@ -33,6 +35,7 @@ exports.LocalLanguageName = (_b = {},
     _b[LanguageCode.Italian] = 'italiano',
     _b[LanguageCode.French] = 'français',
     _b[LanguageCode.Hungarian] = 'magyar',
+    _b[LanguageCode.Dutch] = 'nederlands',
     _b[LanguageCode.Ukrainian] = 'українська',
     _b[LanguageCode.Russian] = 'русский',
     _b);

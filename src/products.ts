@@ -5,6 +5,7 @@ export enum LanguageCode {
   Spanish = 'es',
   Italian = 'it',
   French = 'fr',
+  Dutch = 'nl',
   Hungarian = 'hu',
   Ukrainian = 'uk',
   Russian = 'ru',
@@ -18,6 +19,7 @@ export const RomanianLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Italian]: 'italiană',
   [LanguageCode.French]: 'franceză',
   [LanguageCode.Hungarian]: 'maghiară',
+  [LanguageCode.Dutch]: 'olandeză',
   [LanguageCode.Ukrainian]: 'ucraineană',
   [LanguageCode.Russian]: 'rusă',
 }
@@ -30,6 +32,7 @@ export const LocalLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Italian]: 'italiano',
   [LanguageCode.French]: 'français',
   [LanguageCode.Hungarian]: 'magyar',
+  [LanguageCode.Dutch]: 'nederlands',
   [LanguageCode.Ukrainian]: 'українська',
   [LanguageCode.Russian]: 'русский',
 }
