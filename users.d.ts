@@ -37,11 +37,6 @@ export declare type User = {
     newAuthToken?: string;
     businessInfo?: BusinessMedium[];
 };
-export declare type BusinessMedium = {
-    url: string;
-    isVisible: boolean;
-    type: BusinessMediumType;
-};
 export declare enum BusinessMediumType {
     Facebook = "facebook",
     Instagram = "instagram",
@@ -51,6 +46,11 @@ export declare enum BusinessMediumType {
     Email = "email",
     PhoneNumber = "phoneNumber"
 }
+export declare type BusinessMedium = {
+    url: string;
+    isVisible: boolean;
+    type: BusinessMediumType;
+};
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;
     name: string;
