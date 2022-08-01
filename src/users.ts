@@ -36,22 +36,25 @@ export type User = {
   hasNoPassword?: boolean
   menuLanguages?: LanguageCode[]
   newAuthToken?: string
-  businessInfo?: BusinessInfo
+  businessInfo?: BusinessMedium[]
 }
 
-export type BusinessInfo = {
-  facebookUsername?: string
-  instagramUsername?: string
-  youtubeUsername?: string
-  googleMapsUrl?: string
-  coordinates?: string
-  websiteUrl?: string
-  phoneNumber?: string
-  emailAddress?: string
-  // TODO: coming soon
-  // openingHours?: OpeningHours
+export type BusinessMedium = {
+  url: string
+  isVisible: boolean
+  type: BusinessMediumType
 }
 
+export enum BusinessMediumType {
+  Facebook = 'facebook',
+  Instagram = 'instagram',
+  GoogleMaps = 'googleMaps',
+  Coordinates = 'coordinates',
+  Website = 'website',
+  Email = 'email',
+  PhoneNumber = 'phoneNumber',
+}
+ 
 export type CreateAccountRequestBody = {
   confirmationToken: string
   name: string

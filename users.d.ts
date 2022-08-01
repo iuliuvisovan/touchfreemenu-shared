@@ -35,18 +35,22 @@ export declare type User = {
     hasNoPassword?: boolean;
     menuLanguages?: LanguageCode[];
     newAuthToken?: string;
-    businessInfo?: BusinessInfo;
+    businessInfo?: BusinessMedium[];
 };
-export declare type BusinessInfo = {
-    facebookUsername?: string;
-    instagramUsername?: string;
-    youtubeUsername?: string;
-    googleMapsUrl?: string;
-    coordinates?: string;
-    websiteUrl?: string;
-    phoneNumber?: string;
-    emailAddress?: string;
+export declare type BusinessMedium = {
+    url: string;
+    isVisible: boolean;
+    type: BusinessMediumType;
 };
+export declare enum BusinessMediumType {
+    Facebook = "facebook",
+    Instagram = "instagram",
+    GoogleMaps = "googleMaps",
+    Coordinates = "coordinates",
+    Website = "website",
+    Email = "email",
+    PhoneNumber = "phoneNumber"
+}
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;
     name: string;
