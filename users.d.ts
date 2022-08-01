@@ -35,6 +35,17 @@ export declare type User = {
     hasNoPassword?: boolean;
     menuLanguages?: LanguageCode[];
     newAuthToken?: string;
+    businessInfo?: BusinessInfo;
+};
+export declare type BusinessInfo = {
+    facebookUsername?: string;
+    instagramUsername?: string;
+    youtubeUsername?: string;
+    googleMapsUrl?: string;
+    coordinates?: string;
+    websiteUrl?: string;
+    phoneNumber?: string;
+    emailAddress?: string;
 };
 export declare type CreateAccountRequestBody = {
     confirmationToken: string;
