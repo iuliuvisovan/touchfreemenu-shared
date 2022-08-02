@@ -1,4 +1,4 @@
-import { LanguageCode } from './products';
+import { LanguageCode, MenuProduct } from './products';
 export declare type User = {
     id: string;
     _id?: string;
@@ -36,6 +36,7 @@ export declare type User = {
     menuLanguages?: LanguageCode[];
     newAuthToken?: string;
     businessInfo?: BusinessMedium[];
+    activeProductSuggestion?: ProductSuggestion;
 };
 export declare enum BusinessMediumType {
     Facebook = "facebook",
@@ -46,6 +47,11 @@ export declare enum BusinessMediumType {
     Email = "email",
     PhoneNumber = "phoneNumber"
 }
+export declare type ProductSuggestion = {
+    isActive: true;
+    productId: string;
+    product?: MenuProduct;
+};
 export declare type BusinessMedium = {
     url: string;
     isVisible: boolean;

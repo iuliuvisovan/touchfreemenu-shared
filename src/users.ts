@@ -1,4 +1,4 @@
-import { LanguageCode } from './products'
+import { LanguageCode, MenuProduct } from './products'
 
 export type User = {
   id: string
@@ -37,6 +37,7 @@ export type User = {
   menuLanguages?: LanguageCode[]
   newAuthToken?: string
   businessInfo?: BusinessMedium[]
+  activeProductSuggestion?: ProductSuggestion
 }
 
 export enum BusinessMediumType {
@@ -47,6 +48,12 @@ export enum BusinessMediumType {
   Website = 'website',
   Email = 'email',
   PhoneNumber = 'phoneNumber',
+}
+
+export type ProductSuggestion = {
+  isActive: true
+  productId: string
+  product?: MenuProduct
 }
 
 export type BusinessMedium = {
