@@ -48,7 +48,7 @@ export declare enum BusinessMediumType {
     PhoneNumber = "phoneNumber"
 }
 export declare type ProductSuggestion = {
-    isActive: true;
+    isActive: boolean;
     productId: string;
     product?: MenuProduct;
 };

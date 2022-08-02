@@ -51,7 +51,7 @@ export enum BusinessMediumType {
 }
 
 export type ProductSuggestion = {
-  isActive: true
+  isActive: boolean
   productId: string
   product?: MenuProduct
 }
