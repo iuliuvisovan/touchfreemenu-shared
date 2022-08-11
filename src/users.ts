@@ -38,6 +38,13 @@ export type User = {
   newAuthToken?: string
   businessInfo?: BusinessMedium[]
   activeProductSuggestion?: ProductSuggestion
+  referralSource?: ReferralSource
+}
+
+export enum ReferralSource {
+  Facebook = 'facebook',
+  Google = 'google',
+  None = 'none',
 }
 
 export enum BusinessMediumType {

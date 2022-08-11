@@ -37,7 +37,13 @@ export declare type User = {
     newAuthToken?: string;
     businessInfo?: BusinessMedium[];
     activeProductSuggestion?: ProductSuggestion;
+    referralSource?: ReferralSource;
 };
+export declare enum ReferralSource {
+    Facebook = "facebook",
+    Google = "google",
+    None = "none"
+}
 export declare enum BusinessMediumType {
     Facebook = "facebook",
     Instagram = "instagram",
