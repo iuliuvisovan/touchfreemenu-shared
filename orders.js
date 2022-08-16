@@ -70,19 +70,19 @@ exports.AVAILABLE_HOLDERS = [
 exports.AVAILABLE_SUBSCRIPTIONS = [
     {
         code: SubscriptionCode.TFMC1,
-        name: 'Touch-Free Menu Complet - o lună',
+        name: 'MeniuDigital Complet - o lună',
         price: 49,
         durationInDays: 30
     },
     {
         code: SubscriptionCode.TFMC6,
-        name: 'Touch-Free Menu Complet - 6 luni',
+        name: 'MeniuDigital Complet - 6 luni',
         price: 289,
         durationInDays: 180
     },
     {
         code: SubscriptionCode.TFMC12,
-        name: 'Touch-Free Menu Complet - 12 luni',
+        name: 'MeniuDigital Complet - 12 luni',
         price: 499,
         durationInDays: 365
     },
