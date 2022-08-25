@@ -47,6 +47,7 @@ export type MenuProduct = {
   categoryName?: string
   imageKey?: string
   imageUrl?: string
+  thumbnailUrl?: string
   price?: number
   isDiscounted?: boolean
   isAvailable?: boolean
