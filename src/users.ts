@@ -71,6 +71,7 @@ export type BusinessMedium = {
 }
 
 export type CreateAccountRequestBody = {
+  email: string
   name: string
   username: string
   city: string
