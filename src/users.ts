@@ -71,7 +71,7 @@ export type BusinessMedium = {
 }
 
 export type CreateAccountRequestBody = {
-  confirmationToken: string
+  registrationRequestToken: string
   name: string
   username: string
   city: string
