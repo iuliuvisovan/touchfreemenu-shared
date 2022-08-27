@@ -39,6 +39,7 @@ export type User = {
   businessInfo?: BusinessMedium[]
   activeProductSuggestion?: ProductSuggestion
   referralSource?: ReferralSource
+  isEmailConfirmed?: boolean
 }
 
 export enum ReferralSource {

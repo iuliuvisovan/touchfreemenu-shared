@@ -38,6 +38,7 @@ export declare type User = {
     businessInfo?: BusinessMedium[];
     activeProductSuggestion?: ProductSuggestion;
     referralSource?: ReferralSource;
+    isEmailConfirmed?: boolean;
 };
 export declare enum ReferralSource {
     Facebook = "facebook",
