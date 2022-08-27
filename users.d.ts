@@ -65,7 +65,6 @@ export declare type BusinessMedium = {
     type: BusinessMediumType;
 };
 export declare type CreateAccountRequestBody = {
-    registrationRequestId: string;
     name: string;
     username: string;
     city: string;
