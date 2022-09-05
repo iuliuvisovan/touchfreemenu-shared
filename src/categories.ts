@@ -5,5 +5,5 @@ export type MenuCategory = {
   userId: string
   username?: string
   index: number
-  isHidden: boolean
+  isHidden?: boolean
 }
