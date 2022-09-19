@@ -76,4 +76,5 @@ export type CreateAccountRequestBody = {
   username: string
   city: string
   password: string
+  captchaToken: string
 }

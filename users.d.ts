@@ -70,4 +70,5 @@ export declare type CreateAccountRequestBody = {
     username: string;
     city: string;
     password: string;
+    captchaToken: string;
 };
