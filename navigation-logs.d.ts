@@ -6,5 +6,6 @@ export declare type NavigationLog = {
     geoIpLocation: string;
     browser: string;
     device: string;
+    ip: string;
     fullInfo: string;
 };
