@@ -1,9 +1,8 @@
 export type ActivityLog = {
   createdAt: string
-  userId: string
+  isVisitor?: boolean
+  userId?: string
   username: string
-  visitorId: string
-
   actionName: UserAction
   geoIpLocation: string
   browser: string
