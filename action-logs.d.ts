@@ -20,6 +20,9 @@ export declare enum ActionType {
     ResendActivationEmail = "ResendActivationEmail",
     ConfirmEmailAddress = "ConfirmEmailAddress",
     SetLogo = "SetLogo",
+    SetLogoScale = "SetLogoScale",
+    SetCoverPhoto = "SetCoverPhoto",
+    SetCoverPhotoScale = "SetCoverPhotoScale",
     PayOrderViaOnlineCard = "PayOrderViaOnlineCard",
     Login = "Login",
     LoginWithFacebook = "LoginWithFacebook",
@@ -33,6 +36,11 @@ export declare enum ActionType {
     CreateProduct = "CreateProduct",
     EditCategory = "EditCategory",
     EditProduct = "EditProduct",
+    RemoveCategory = "RemoveCategory",
+    RemoveProduct = "RemoveProduct",
+    MoveCategory = "MoveCategory",
+    MoveProduct = "MoveProduct",
+    TransferProduct = "TransferProduct",
     ToggleProductStock = "ToggleProductStock",
     CancelOrder = "CancelOrder",
     GetCurrentUser = "GetCurrentUser",
@@ -42,5 +50,6 @@ export declare enum ActionType {
     ViewArticle = "ViewArticle",
     RequestNewLanguages = "RequestNewLanguages",
     RequestSetLanguages = "RequestSetLanguages",
-    SucceedSetLanguages = "SucceedSetLanguages"
+    SucceedSetLanguages = "SucceedSetLanguages",
+    ChangePassword = "ChangePassword"
 }
