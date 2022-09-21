@@ -1,4 +1,4 @@
-export declare type ActivityLogs = {
+export declare type ActivityLog = {
     createdAt: string;
     userId: string;
     username: string;

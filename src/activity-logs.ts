@@ -1,4 +1,4 @@
-export type ActivityLogs = {
+export type ActivityLog = {
   createdAt: string
   userId: string
   username: string
