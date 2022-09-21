@@ -6,6 +6,7 @@ export declare type ActionLog = {
     username: string;
     geoIpLocation: string;
     browser: string;
+    referrer: string;
     device: string;
     ip: string;
     actionData: Object;
