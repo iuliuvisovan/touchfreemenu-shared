@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.UserAction = void 0;
+exports.ActionType= void 0;
 var UserAction;
 (function (UserAction) {
     UserAction["CreateRegistrationRequest"] = "CreateRegistrationRequest";
@@ -33,4 +33,4 @@ var UserAction;
     UserAction["RequestNewLanguages"] = "RequestNewLanguages";
     UserAction["RequestSetLanguages"] = "RequestSetLanguages";
     UserAction["SucceedSetLanguages"] = "SucceedSetLanguages";
-})(UserAction = exports.UserAction || (exports.UserAction = {}));
+})(ActionType= exports.ActionType|| (exports.ActionType= {}));

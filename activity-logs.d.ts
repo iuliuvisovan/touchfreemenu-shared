@@ -3,14 +3,14 @@ export declare type ActivityLog = {
     isVisitor?: boolean;
     userId?: string;
     username: string;
-    actionName: UserAction;
+    actionName: ActionType;
     geoIpLocation: string;
     browser: string;
     device: string;
     ip: string;
     actionData: Object;
 };
-export declare enum UserAction {
+export declare enum ActionType{
     CreateRegistrationRequest = "CreateRegistrationRequest",
     RegisterWithFacebook = "RegisterWithFacebook",
     FinalizeAccountFromSocial = "FinalizeAccountFromSocial",
