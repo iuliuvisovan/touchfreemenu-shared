@@ -15,4 +15,4 @@ __exportStar(require("./products"), exports);
 __exportStar(require("./categories"), exports);
 __exportStar(require("./users"), exports);
 __exportStar(require("./navigation-logs"), exports);
-__exportStar(require("./activity-logs"), exports);
+__exportStar(require("./action-logs"), exports);

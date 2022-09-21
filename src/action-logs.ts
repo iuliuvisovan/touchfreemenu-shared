@@ -1,9 +1,9 @@
-export type ActivityLog = {
+export type ActionLog = {
+  type: ActionType
   createdAt: string
   isVisitor?: boolean
   userId?: string
   username: string
-  actionName: UserAction
   geoIpLocation: string
   browser: string
   device: string
@@ -11,7 +11,7 @@ export type ActivityLog = {
   actionData: Object
 }
 
-export enum UserAction {
+export enum ActionType {
   CreateRegistrationRequest = 'CreateRegistrationRequest',
   RegisterWithFacebook = 'RegisterWithFacebook',
   FinalizeAccountFromSocial = 'FinalizeAccountFromSocial',
