@@ -8,7 +8,7 @@ export declare type ActivityLog = {
     browser: string;
     device: string;
     ip: string;
-    jsonData: string;
+    actionData: Object;
 };
 export declare enum UserAction {
     CreateRegistrationRequest = "CreateRegistrationRequest",

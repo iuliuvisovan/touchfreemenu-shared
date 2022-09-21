@@ -8,7 +8,7 @@ export type ActivityLog = {
   browser: string
   device: string
   ip: string
-  jsonData: string
+  actionData: Object
 }
 
 export enum UserAction {
