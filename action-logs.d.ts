@@ -9,6 +9,7 @@ export declare type ActionLog = {
     referrer: string;
     device: string;
     ip: string;
+    timestamp: number;
     actionData: Object;
 };
 export declare enum ActionType {

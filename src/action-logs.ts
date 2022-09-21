@@ -9,6 +9,7 @@ export type ActionLog = {
   referrer: string
   device: string
   ip: string
+  timestamp: number,
   actionData: Object
 }
 

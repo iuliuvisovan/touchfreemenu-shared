@@ -7,5 +7,6 @@ export declare type NavigationLog = {
     browser: string;
     device: string;
     ip: string;
+    timestamp: number;
     fullInfo: string;
 };
