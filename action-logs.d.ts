@@ -43,6 +43,7 @@ export declare enum ActionType {
     MoveProduct = "MoveProduct",
     TransferProduct = "TransferProduct",
     ToggleProductStock = "ToggleProductStock",
+    TogglePartyMode = "TogglePartyMode",
     CancelOrder = "CancelOrder",
     GetCurrentUser = "GetCurrentUser",
     AdminConfirmBankPayment = "AdminConfirmBankPayment",

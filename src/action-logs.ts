@@ -9,7 +9,7 @@ export type ActionLog = {
   referrer: string
   device: string
   ip: string
-  timestamp: number,
+  timestamp: number
   actionData: Object
 }
 
@@ -44,6 +44,7 @@ export enum ActionType {
   MoveProduct = 'MoveProduct',
   TransferProduct = 'TransferProduct',
   ToggleProductStock = 'ToggleProductStock',
+  TogglePartyMode = 'TogglePartyMode',
   CancelOrder = 'CancelOrder',
   GetCurrentUser = 'GetCurrentUser',
   AdminConfirmBankPayment = 'AdminConfirmBankPayment',
