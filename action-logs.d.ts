@@ -23,6 +23,7 @@ export declare enum ActionType {
     SetLogoScale = "SetLogoScale",
     SetCoverPhoto = "SetCoverPhoto",
     SetCoverPhotoScale = "SetCoverPhotoScale",
+    CreateOrder = "CreateOrder",
     PayOrderViaOnlineCard = "PayOrderViaOnlineCard",
     Login = "Login",
     LoginWithFacebook = "LoginWithFacebook",

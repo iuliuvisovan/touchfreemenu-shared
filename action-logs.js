@@ -13,6 +13,7 @@ var ActionType;
     ActionType["SetLogoScale"] = "SetLogoScale";
     ActionType["SetCoverPhoto"] = "SetCoverPhoto";
     ActionType["SetCoverPhotoScale"] = "SetCoverPhotoScale";
+    ActionType["CreateOrder"] = "CreateOrder";
     ActionType["PayOrderViaOnlineCard"] = "PayOrderViaOnlineCard";
     ActionType["Login"] = "Login";
     ActionType["LoginWithFacebook"] = "LoginWithFacebook";
