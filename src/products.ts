@@ -56,6 +56,10 @@ export type MenuProduct = {
   quantities?: string
   allergens?: string[]
   index: number
+  // If product is child
+  childVariantName?: string,
+  parentProductId?: string,
+  childProducts?: MenuProduct[]
 }
 
 export const ALLERGENS = [

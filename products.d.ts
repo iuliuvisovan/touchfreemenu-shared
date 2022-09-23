@@ -35,6 +35,9 @@ export declare type MenuProduct = {
     quantities?: string;
     allergens?: string[];
     index: number;
+    childVariantName?: string;
+    parentProductId?: string;
+    childProducts?: MenuProduct[];
 };
 export declare const ALLERGENS: ({
     id: string;
