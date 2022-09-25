@@ -38,6 +38,8 @@ export enum ActionType {
   CreateProduct = 'CreateProduct',
   EditCategory = 'EditCategory',
   EditProduct = 'EditProduct',
+  AddChildProduct = 'AddChildProduct',
+  EditChildProduct = 'EditChildProduct',
   RemoveCategory = 'RemoveCategory',
   RemoveProduct = 'RemoveProduct',
   MoveCategory = 'MoveCategory',

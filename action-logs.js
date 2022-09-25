@@ -27,6 +27,8 @@ var ActionType;
     ActionType["CreateProduct"] = "CreateProduct";
     ActionType["EditCategory"] = "EditCategory";
     ActionType["EditProduct"] = "EditProduct";
+    ActionType["AddChildProduct"] = "AddChildProduct";
+    ActionType["EditChildProduct"] = "EditChildProduct";
     ActionType["RemoveCategory"] = "RemoveCategory";
     ActionType["RemoveProduct"] = "RemoveProduct";
     ActionType["MoveCategory"] = "MoveCategory";
