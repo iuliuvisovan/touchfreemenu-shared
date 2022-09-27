@@ -47,6 +47,7 @@ export enum ActionType {
   TransferProduct = 'TransferProduct',
   ToggleProductStock = 'ToggleProductStock',
   TogglePartyMode = 'TogglePartyMode',
+  ToggleIsUsingPartyMode = 'ToggleIsUsingPartyMode',
   CancelOrder = 'CancelOrder',
   GetCurrentUser = 'GetCurrentUser',
   AdminConfirmBankPayment = 'AdminConfirmBankPayment',

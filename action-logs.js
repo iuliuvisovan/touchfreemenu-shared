@@ -36,6 +36,7 @@ var ActionType;
     ActionType["TransferProduct"] = "TransferProduct";
     ActionType["ToggleProductStock"] = "ToggleProductStock";
     ActionType["TogglePartyMode"] = "TogglePartyMode";
+    ActionType["ToggleIsUsingPartyMode"] = "ToggleIsUsingPartyMode";
     ActionType["CancelOrder"] = "CancelOrder";
     ActionType["GetCurrentUser"] = "GetCurrentUser";
     ActionType["AdminConfirmBankPayment"] = "AdminConfirmBankPayment";
