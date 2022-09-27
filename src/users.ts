@@ -40,6 +40,7 @@ export type User = {
   activeProductSuggestion?: ProductSuggestion
   referralSource?: ReferralSource
   isEmailConfirmed?: boolean
+  isUsingPartyMode?: boolean
 }
 
 export enum ReferralSource {
