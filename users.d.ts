@@ -6,7 +6,9 @@ export declare type User = {
     password: string;
     name: string;
     email: string;
+    logoKey?: string;
     logoUrl?: string;
+    coverPhotoKey?: string;
     coverPhotoUrl?: string;
     joinDate: Date;
     subscriptionExpiresAt?: Date;
