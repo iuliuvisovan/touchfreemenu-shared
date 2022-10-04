@@ -9,4 +9,6 @@ export declare type NavigationLog = {
     ip: string;
     timestamp: number;
     fullInfo: string;
+    isIos?: boolean;
+    isAndroid?: boolean;
 };
