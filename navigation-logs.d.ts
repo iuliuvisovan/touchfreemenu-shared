@@ -1,5 +1,5 @@
 export declare type NavigationLog = {
-    createdAt: string;
+    createdAt: Date;
     targetUsername: string;
     referrer: string;
     fullUrl: string;
