@@ -4,3 +4,4 @@ export * from './categories';
 export * from './users';
 export * from './navigation-logs';
 export * from './action-logs';
+export * from './attributions';
