@@ -43,6 +43,14 @@ export type User = {
   referralSource?: ReferralSource
   isEmailConfirmed?: boolean
   isUsingPartyMode?: boolean
+  devices: UserDevice[]
+}
+
+export type UserDevice = {
+  deviceId: string,
+  waiterName: string,
+  deviceType: string,
+  addedAt: Date,
 }
 
 export enum ReferralSource {

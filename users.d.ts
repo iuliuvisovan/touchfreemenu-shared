@@ -42,6 +42,13 @@ export declare type User = {
     referralSource?: ReferralSource;
     isEmailConfirmed?: boolean;
     isUsingPartyMode?: boolean;
+    devices: UserDevice[];
+};
+export declare type UserDevice = {
+    deviceId: string;
+    waiterName: string;
+    deviceType: string;
+    addedAt: Date;
 };
 export declare enum ReferralSource {
     Facebook = "facebook",
