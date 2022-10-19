@@ -17,3 +17,4 @@ __exportStar(require("./users"), exports);
 __exportStar(require("./navigation-logs"), exports);
 __exportStar(require("./action-logs"), exports);
 __exportStar(require("./attributions"), exports);
+__exportStar(require("./waiter-calls"), exports);
