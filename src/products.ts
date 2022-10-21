@@ -239,7 +239,7 @@ export const ALLERGENS = [
       de: 'Milch',
       es: 'Leche',
       it: 'Latte',
-      fr: 'Lait et produits à base de lait (y compris de lactose)',
+      fr: 'Lait',
       hu: 'Tej',
       nl: 'Melk',
       uk: 'Молоко',
