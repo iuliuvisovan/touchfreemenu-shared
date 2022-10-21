@@ -44,6 +44,7 @@ export type User = {
   isEmailConfirmed?: boolean
   isUsingPartyMode?: boolean
   devices: UserDevice[]
+  isCallWaiterEnabled?: boolean
 }
 
 export type UserDevice = {

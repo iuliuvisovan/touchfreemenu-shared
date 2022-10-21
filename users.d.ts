@@ -43,6 +43,7 @@ export declare type User = {
     isEmailConfirmed?: boolean;
     isUsingPartyMode?: boolean;
     devices: UserDevice[];
+    isCallWaiterEnabled?: boolean;
 };
 export declare type UserDevice = {
     deviceId: string;
