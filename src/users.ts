@@ -45,6 +45,12 @@ export type User = {
   isUsingPartyMode?: boolean
   devices: UserDevice[]
   isCallWaiterEnabled?: boolean
+  defaultCurrency?: Currency
+}
+
+export enum Currency {
+  Ron = 'ron',
+  Mdl = 'mdl',
 }
 
 export type UserDevice = {

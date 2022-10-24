@@ -1,6 +1,11 @@
 "use strict";
 exports.__esModule = true;
-exports.BusinessMediumType = exports.ReferralSource = void 0;
+exports.BusinessMediumType = exports.ReferralSource = exports.Currency = void 0;
+var Currency;
+(function (Currency) {
+    Currency["Ron"] = "ron";
+    Currency["Mdl"] = "mdl";
+})(Currency = exports.Currency || (exports.Currency = {}));
 var ReferralSource;
 (function (ReferralSource) {
     ReferralSource["Facebook"] = "facebook";

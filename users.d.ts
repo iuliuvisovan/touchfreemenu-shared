@@ -44,7 +44,12 @@ export declare type User = {
     isUsingPartyMode?: boolean;
     devices: UserDevice[];
     isCallWaiterEnabled?: boolean;
+    defaultCurrency?: Currency;
 };
+export declare enum Currency {
+    Ron = "ron",
+    Mdl = "mdl"
+}
 export declare type UserDevice = {
     deviceId: string;
     waiterName: string;
