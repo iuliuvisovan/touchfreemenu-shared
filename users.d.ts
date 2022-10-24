@@ -44,12 +44,16 @@ export declare type User = {
     isUsingPartyMode?: boolean;
     devices: UserDevice[];
     isCallWaiterEnabled?: boolean;
-    defaultCurrency?: Currency;
+    defaultCurrency?: CurrencyCode;
 };
-export declare enum Currency {
+export declare enum CurrencyCode {
     Ron = "ron",
     Mdl = "mdl"
 }
+export declare const EuroEquivalences: {
+    ron: number;
+    mdl: number;
+};
 export declare type UserDevice = {
     deviceId: string;
     waiterName: string;

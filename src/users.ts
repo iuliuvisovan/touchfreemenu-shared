@@ -45,19 +45,24 @@ export type User = {
   isUsingPartyMode?: boolean
   devices: UserDevice[]
   isCallWaiterEnabled?: boolean
-  defaultCurrency?: Currency
+  defaultCurrency?: CurrencyCode
 }
 
-export enum Currency {
+export enum CurrencyCode {
   Ron = 'ron',
   Mdl = 'mdl',
 }
 
+export const EuroEquivalences = {
+  [CurrencyCode.Ron]: 4.91,
+  [CurrencyCode.Mdl]: 19.02,
+}
+
 export type UserDevice = {
-  deviceId: string,
-  waiterName: string,
-  deviceType: string,
-  addedAt: Date,
+  deviceId: string
+  waiterName: string
+  deviceType: string
+  addedAt: Date
 }
 
 export enum ReferralSource {

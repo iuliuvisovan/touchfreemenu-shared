@@ -1,11 +1,16 @@
 "use strict";
+var _a;
 exports.__esModule = true;
-exports.BusinessMediumType = exports.ReferralSource = exports.Currency = void 0;
-var Currency;
-(function (Currency) {
-    Currency["Ron"] = "ron";
-    Currency["Mdl"] = "mdl";
-})(Currency = exports.Currency || (exports.Currency = {}));
+exports.BusinessMediumType = exports.ReferralSource = exports.EuroEquivalences = exports.CurrencyCode = void 0;
+var CurrencyCode;
+(function (CurrencyCode) {
+    CurrencyCode["Ron"] = "ron";
+    CurrencyCode["Mdl"] = "mdl";
+})(CurrencyCode = exports.CurrencyCode || (exports.CurrencyCode = {}));
+exports.EuroEquivalences = (_a = {},
+    _a[CurrencyCode.Ron] = 4.91,
+    _a[CurrencyCode.Mdl] = 19.02,
+    _a);
 var ReferralSource;
 (function (ReferralSource) {
     ReferralSource["Facebook"] = "facebook";
