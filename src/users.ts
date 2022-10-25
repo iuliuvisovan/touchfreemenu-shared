@@ -53,7 +53,7 @@ export enum CurrencyCode {
   Mdl = 'mdl',
 }
 
-export const EuroEquivalences = {
+export const EuroEquivalences: { [key in CurrencyCode]: number } = {
   [CurrencyCode.Ron]: 4.91,
   [CurrencyCode.Mdl]: 19.02,
 }

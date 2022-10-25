@@ -51,8 +51,7 @@ export declare enum CurrencyCode {
     Mdl = "mdl"
 }
 export declare const EuroEquivalences: {
-    ron: number;
-    mdl: number;
+    [key in CurrencyCode]: number;
 };
 export declare type UserDevice = {
     deviceId: string;
