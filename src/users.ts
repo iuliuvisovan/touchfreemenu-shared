@@ -61,6 +61,7 @@ export const EuroEquivalences: { [key in CurrencyCode]: number } = {
 export type UserDevice = {
   deviceId: string
   waiterName: string
+  isPushNotificationsEnabled: boolean
   deviceType: string
   addedAt: Date
 }

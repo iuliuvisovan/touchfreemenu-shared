@@ -56,6 +56,7 @@ export declare const EuroEquivalences: {
 export declare type UserDevice = {
     deviceId: string;
     waiterName: string;
+    isPushNotificationsEnabled: boolean;
     deviceType: string;
     addedAt: Date;
 };
