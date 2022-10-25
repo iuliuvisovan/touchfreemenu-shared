@@ -55,9 +55,10 @@ export declare const EuroEquivalences: {
 };
 export declare type UserDevice = {
     deviceId: string;
+    deviceType: string;
+    deviceName: string;
     waiterName: string;
     isPushNotificationsEnabled: boolean;
-    deviceType: string;
     addedAt: Date;
 };
 export declare enum ReferralSource {
