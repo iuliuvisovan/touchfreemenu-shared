@@ -62,6 +62,7 @@ export type UserDevice = {
   deviceId: string
   deviceType: string
   deviceName: string
+  pushNotificationsToken: string
   waiterName: string
   isPushNotificationsEnabled: boolean
   addedAt: Date
