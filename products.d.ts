@@ -94,3 +94,9 @@ export declare const ALLERGENS: ({
         ru: string;
     };
 })[];
+export declare type TranslatedAllergen = {
+    id: string;
+    letter: string;
+    longName: string;
+    shortName: string;
+};
