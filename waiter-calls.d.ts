@@ -10,7 +10,10 @@ export declare type WaiterCall = {
         latitude: number;
         longitude: number;
     };
-    hasRepliedWithOmw: boolean;
+    waiterRepliedWithOmw: {
+        deviceId: string;
+        waiterName: string;
+    };
     timestamp: number;
     createdAt: Date;
 };

@@ -7,7 +7,10 @@ export type WaiterCall = {
   deviceType: string
   deviceName: string
   coordinates: { latitude: number; longitude: number }
-  hasRepliedWithOmw: boolean
+  waiterRepliedWithOmw: {
+    deviceId: string
+    waiterName: string
+  }
   timestamp: number
   createdAt: Date
 }
