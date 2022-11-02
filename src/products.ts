@@ -29,6 +29,8 @@ export enum ProductProperty {
   Hot = 'hot',
   New = 'new',
   Defrosted = 'defrosted',
+  Vegan = 'vegan',
+  Vegetarian = 'vegetarian',
 }
 export enum LanguageCode {
   Romanian = 'ro',

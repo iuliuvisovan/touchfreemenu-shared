@@ -8,6 +8,8 @@ var ProductProperty;
     ProductProperty["Hot"] = "hot";
     ProductProperty["New"] = "new";
     ProductProperty["Defrosted"] = "defrosted";
+    ProductProperty["Vegan"] = "vegan";
+    ProductProperty["Vegetarian"] = "vegetarian";
 })(ProductProperty = exports.ProductProperty || (exports.ProductProperty = {}));
 var LanguageCode;
 (function (LanguageCode) {
