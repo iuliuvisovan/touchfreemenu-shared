@@ -1,3 +1,29 @@
+export type MenuProduct = {
+  names: Record<string, string>
+  descriptions: Record<string, string>
+  id: string
+  userId: string
+  username?: string
+  categoryId: string
+  categoryName?: string
+  imageKey?: string
+  imageUrl?: string
+  thumbnailUrl?: string
+  price?: number
+  isDiscounted?: boolean
+  isAvailable?: boolean
+  priceDuringEvent?: number
+  discountedPrice?: number
+  quantities?: string
+  allergens?: string[]
+  properties?: string[]
+  index: number
+  // If product is child
+  childVariantName?: string
+  parentProductId?: string
+  childProducts?: MenuProduct[]
+}
+
 export enum LanguageCode {
   Romanian = 'ro',
   English = 'en',
@@ -35,31 +61,6 @@ export const LocalLanguageName: { [key in LanguageCode]: string } = {
   [LanguageCode.Dutch]: 'nederlands',
   [LanguageCode.Ukrainian]: 'українська',
   [LanguageCode.Russian]: 'русский',
-}
-
-export type MenuProduct = {
-  names: Record<string, string>
-  descriptions: Record<string, string>
-  id: string
-  userId: string
-  username?: string
-  categoryId: string
-  categoryName?: string
-  imageKey?: string
-  imageUrl?: string
-  thumbnailUrl?: string
-  price?: number
-  isDiscounted?: boolean
-  isAvailable?: boolean
-  priceDuringEvent?: number
-  discountedPrice?: number
-  quantities?: string
-  allergens?: string[]
-  index: number
-  // If product is child
-  childVariantName?: string
-  parentProductId?: string
-  childProducts?: MenuProduct[]
 }
 
 export const ALLERGENS = [

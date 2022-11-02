@@ -1,21 +1,3 @@
-export declare enum LanguageCode {
-    Romanian = "ro",
-    English = "en",
-    German = "de",
-    Spanish = "es",
-    Italian = "it",
-    French = "fr",
-    Dutch = "nl",
-    Hungarian = "hu",
-    Ukrainian = "uk",
-    Russian = "ru"
-}
-export declare const RomanianLanguageName: {
-    [key in LanguageCode]: string;
-};
-export declare const LocalLanguageName: {
-    [key in LanguageCode]: string;
-};
 export declare type MenuProduct = {
     names: Record<string, string>;
     descriptions: Record<string, string>;
@@ -34,10 +16,29 @@ export declare type MenuProduct = {
     discountedPrice?: number;
     quantities?: string;
     allergens?: string[];
+    properties?: string[];
     index: number;
     childVariantName?: string;
     parentProductId?: string;
     childProducts?: MenuProduct[];
+};
+export declare enum LanguageCode {
+    Romanian = "ro",
+    English = "en",
+    German = "de",
+    Spanish = "es",
+    Italian = "it",
+    French = "fr",
+    Dutch = "nl",
+    Hungarian = "hu",
+    Ukrainian = "uk",
+    Russian = "ru"
+}
+export declare const RomanianLanguageName: {
+    [key in LanguageCode]: string;
+};
+export declare const LocalLanguageName: {
+    [key in LanguageCode]: string;
 };
 export declare const ALLERGENS: ({
     id: string;
