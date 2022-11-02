@@ -30,6 +30,13 @@ export declare enum ProductProperty {
     Vegan = "vegan",
     Vegetarian = "vegetarian"
 }
+export declare type ProductPropertyDisplay = {
+    type: ProductProperty;
+    name: string;
+    color: string;
+    iconName: string;
+};
+export declare const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[];
 export declare enum LanguageCode {
     Romanian = "ro",
     English = "en",

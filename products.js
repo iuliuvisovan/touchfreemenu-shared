@@ -1,7 +1,7 @@
 "use strict";
 var _a, _b;
 exports.__esModule = true;
-exports.ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = exports.ProductProperty = void 0;
+exports.ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = exports.ALL_PRODUCT_PROPERTIES = exports.ProductProperty = void 0;
 var ProductProperty;
 (function (ProductProperty) {
     ProductProperty["Spicy"] = "spicy";
@@ -11,6 +11,20 @@ var ProductProperty;
     ProductProperty["Vegan"] = "vegan";
     ProductProperty["Vegetarian"] = "vegetarian";
 })(ProductProperty = exports.ProductProperty || (exports.ProductProperty = {}));
+exports.ALL_PRODUCT_PROPERTIES = [
+    {
+        type: ProductProperty.Spicy,
+        name: 'Picant',
+        color: 'red',
+        iconName: "pepper"
+    },
+    {
+        type: ProductProperty.Defrosted,
+        name: 'Dezghețat',
+        color: 'blue',
+        iconName: "snowflake"
+    },
+];
 var LanguageCode;
 (function (LanguageCode) {
     LanguageCode["Romanian"] = "ro";

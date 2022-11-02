@@ -32,6 +32,30 @@ export enum ProductProperty {
   Vegan = 'vegan',
   Vegetarian = 'vegetarian',
 }
+
+export type ProductPropertyDisplay = {
+  type: ProductProperty
+  name: string
+  color: string
+  iconName: string
+}
+
+
+export const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[] = [
+  {
+    type: ProductProperty.Spicy,
+    name: 'Picant',
+    color: 'red',
+    iconName: `pepper`,
+  },
+  {
+    type: ProductProperty.Defrosted,
+    name: 'Dezghețat',
+    color: 'blue',
+    iconName: `snowflake`,
+  },
+]
+
 export enum LanguageCode {
   Romanian = 'ro',
   English = 'en',
