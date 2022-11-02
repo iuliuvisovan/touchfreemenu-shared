@@ -22,6 +22,12 @@ export declare type MenuProduct = {
     parentProductId?: string;
     childProducts?: MenuProduct[];
 };
+export declare enum ProductProperty {
+    Spicy = "spicy",
+    Hot = "hot",
+    New = "new",
+    Defrosted = "defrosted"
+}
 export declare enum LanguageCode {
     Romanian = "ro",
     English = "en",

@@ -24,6 +24,12 @@ export type MenuProduct = {
   childProducts?: MenuProduct[]
 }
 
+export enum ProductProperty {
+  Spicy = 'spicy',
+  Hot = 'hot',
+  New = 'new',
+  Defrosted = 'defrosted',
+}
 export enum LanguageCode {
   Romanian = 'ro',
   English = 'en',

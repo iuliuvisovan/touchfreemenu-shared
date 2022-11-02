@@ -1,7 +1,14 @@
 "use strict";
 var _a, _b;
 exports.__esModule = true;
-exports.ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = void 0;
+exports.ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = exports.ProductProperty = void 0;
+var ProductProperty;
+(function (ProductProperty) {
+    ProductProperty["Spicy"] = "spicy";
+    ProductProperty["Hot"] = "hot";
+    ProductProperty["New"] = "new";
+    ProductProperty["Defrosted"] = "defrosted";
+})(ProductProperty = exports.ProductProperty || (exports.ProductProperty = {}));
 var LanguageCode;
 (function (LanguageCode) {
     LanguageCode["Romanian"] = "ro";
