@@ -15,6 +15,7 @@ export declare type MenuProduct = {
     priceDuringEvent?: number;
     discountedPrice?: number;
     quantities?: string;
+    kcalories?: string;
     allergens?: string[];
     properties?: string[];
     index: number;
