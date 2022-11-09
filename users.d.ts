@@ -101,8 +101,8 @@ export declare type CreateAccountRequestBody = {
     captchaToken: string;
 };
 export declare type UserPatchBody = {
-    type: UserPatchType;
-    data: Object | string | number;
+    type: UserPatchType.WifiInfo;
+    data: WifiInfo;
 };
 export declare enum UserPatchType {
     WifiInfo = 0,

@@ -113,8 +113,8 @@ export type CreateAccountRequestBody = {
 }
 
 export type UserPatchBody = {
-  type: UserPatchType
-  data: Object | string | number
+  type: UserPatchType.WifiInfo
+  data: WifiInfo
 }
 
 export enum UserPatchType {
