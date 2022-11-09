@@ -47,4 +47,5 @@ var ActionType;
     ActionType["RequestSetLanguages"] = "RequestSetLanguages";
     ActionType["SucceedSetLanguages"] = "SucceedSetLanguages";
     ActionType["ChangePassword"] = "ChangePassword";
+    ActionType["UpdateCurrentUser"] = "UpdateCurrentUser";
 })(ActionType = exports.ActionType || (exports.ActionType = {}));
