@@ -46,6 +46,7 @@ export type User = {
   devices: UserDevice[]
   isCallWaiterEnabled?: boolean
   defaultCurrency?: CurrencyCode
+  wifiInfo?: WifiInfo
 }
 
 export enum CurrencyCode {
@@ -94,6 +95,12 @@ export type BusinessMedium = {
   url: string
   isVisible: boolean
   type: BusinessMediumType
+}
+
+export type WifiInfo = {
+  networkName: string
+  password: string
+  isVisible: boolean
 }
 
 export type CreateAccountRequestBody = {

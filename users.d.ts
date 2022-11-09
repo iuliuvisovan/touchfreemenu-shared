@@ -45,6 +45,7 @@ export declare type User = {
     devices: UserDevice[];
     isCallWaiterEnabled?: boolean;
     defaultCurrency?: CurrencyCode;
+    wifiInfo?: WifiInfo;
 };
 export declare enum CurrencyCode {
     Ron = "ron",
@@ -85,6 +86,11 @@ export declare type BusinessMedium = {
     url: string;
     isVisible: boolean;
     type: BusinessMediumType;
+};
+export declare type WifiInfo = {
+    networkName: string;
+    password: string;
+    isVisible: boolean;
 };
 export declare type CreateAccountRequestBody = {
     email: string;
