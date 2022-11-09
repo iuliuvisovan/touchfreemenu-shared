@@ -27,3 +27,11 @@ var BusinessMediumType;
     BusinessMediumType["Email"] = "email";
     BusinessMediumType["PhoneNumber"] = "phoneNumber";
 })(BusinessMediumType = exports.BusinessMediumType || (exports.BusinessMediumType = {}));
+var UserPatchType;
+(function (UserPatchType) {
+    UserPatchType[UserPatchType["WifiInfo"] = 0] = "WifiInfo";
+    UserPatchType[UserPatchType["BusinessMedium"] = 1] = "BusinessMedium";
+    UserPatchType[UserPatchType["DefaultCurrency"] = 2] = "DefaultCurrency";
+    UserPatchType[UserPatchType["PartyMode"] = 3] = "PartyMode";
+    UserPatchType[UserPatchType["IsUsingPartyMode"] = 4] = "IsUsingPartyMode";
+})(UserPatchType || (UserPatchType = {}));
