@@ -104,11 +104,10 @@ export declare type UserPatchBody = {
     type: UserPatchType;
     data: Object | string | number;
 };
-declare enum UserPatchType {
+export declare enum UserPatchType {
     WifiInfo = 0,
     BusinessMedium = 1,
     DefaultCurrency = 2,
     PartyMode = 3,
     IsUsingPartyMode = 4
 }
-export {};

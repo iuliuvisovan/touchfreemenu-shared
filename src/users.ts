@@ -112,13 +112,12 @@ export type CreateAccountRequestBody = {
   captchaToken: string
 }
 
-
 export type UserPatchBody = {
   type: UserPatchType
   data: Object | string | number
 }
 
-enum UserPatchType {
+export enum UserPatchType {
   WifiInfo,
   BusinessMedium,
   DefaultCurrency,

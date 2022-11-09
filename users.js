@@ -1,7 +1,7 @@
 "use strict";
 var _a;
 exports.__esModule = true;
-exports.BusinessMediumType = exports.ReferralSource = exports.EuroEquivalences = exports.CurrencyCode = void 0;
+exports.UserPatchType = exports.BusinessMediumType = exports.ReferralSource = exports.EuroEquivalences = exports.CurrencyCode = void 0;
 var CurrencyCode;
 (function (CurrencyCode) {
     CurrencyCode["Ron"] = "ron";
@@ -34,4 +34,4 @@ var UserPatchType;
     UserPatchType[UserPatchType["DefaultCurrency"] = 2] = "DefaultCurrency";
     UserPatchType[UserPatchType["PartyMode"] = 3] = "PartyMode";
     UserPatchType[UserPatchType["IsUsingPartyMode"] = 4] = "IsUsingPartyMode";
-})(UserPatchType || (UserPatchType = {}));
+})(UserPatchType = exports.UserPatchType || (exports.UserPatchType = {}));
