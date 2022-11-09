@@ -88,9 +88,9 @@ export declare type BusinessMedium = {
     type: BusinessMediumType;
 };
 export declare type WifiInfo = {
-    networkName: string;
-    password: string;
-    isVisible: boolean;
+    networkName?: string;
+    password?: string;
+    isVisible?: boolean;
 };
 export declare type CreateAccountRequestBody = {
     email: string;

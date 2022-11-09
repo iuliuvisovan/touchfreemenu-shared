@@ -98,9 +98,9 @@ export type BusinessMedium = {
 }
 
 export type WifiInfo = {
-  networkName: string
-  password: string
-  isVisible: boolean
+  networkName?: string
+  password?: string
+  isVisible?: boolean
 }
 
 export type CreateAccountRequestBody = {
