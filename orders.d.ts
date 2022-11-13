@@ -65,6 +65,7 @@ export declare type Order = {
     finalInvoiceId?: string;
     createdAt?: Date;
     courierCompany?: CourierCompany;
+    withWifiInfo?: boolean;
     awb?: string;
 };
 export declare type OrderIntent = {
