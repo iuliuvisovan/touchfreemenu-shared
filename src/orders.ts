@@ -86,6 +86,7 @@ export type OrderIntent = {
   shippingInfo?: ShippingInfo
   paymentType?: PaymentType
   extraCommentsFromUser?: string
+  withWifiInfo?: boolean
 }
 
 export enum CourierCompany {

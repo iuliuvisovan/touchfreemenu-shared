@@ -77,6 +77,7 @@ export declare type OrderIntent = {
     shippingInfo?: ShippingInfo;
     paymentType?: PaymentType;
     extraCommentsFromUser?: string;
+    withWifiInfo?: boolean;
 };
 export declare enum CourierCompany {
     Cargus = "cargus",
