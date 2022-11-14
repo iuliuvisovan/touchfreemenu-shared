@@ -6,15 +6,15 @@ export declare type WaiterCall = {
     deviceId: string;
     deviceType: string;
     deviceName: string;
-    coordinates: {
+    clientCoordinates: {
         latitude: number;
         longitude: number;
     };
+    clientPushToken?: string;
     waiterRepliedWithOmw?: {
         deviceId: string;
         waiterName: string;
     };
-    clientPushToken?: string;
     timestamp: number;
     createdAt: Date;
 };
