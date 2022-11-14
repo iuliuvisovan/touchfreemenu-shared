@@ -11,6 +11,7 @@ export type WaiterCall = {
     deviceId: string
     waiterName: string
   }
+  clientPushToken?: string
   timestamp: number
   createdAt: Date
 }
