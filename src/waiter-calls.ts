@@ -14,3 +14,16 @@ export type WaiterCall = {
   timestamp: number
   createdAt: Date
 }
+
+export type WaiterCallPatchBody = {
+  type: WaiterCallPatchType.ClientPushToken
+  data: string
+} & {
+  type: WaiterCallPatchType.OnMyWay
+  data: undefined
+}
+
+export enum WaiterCallPatchType {
+  ClientPushToken,
+  OnMyWay,
+}
