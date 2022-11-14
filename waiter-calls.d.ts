@@ -20,7 +20,7 @@ export declare type WaiterCall = {
 export declare type WaiterCallPatchBody = {
     type: WaiterCallPatchType.ClientPushToken;
     data: string;
-} & {
+} | {
     type: WaiterCallPatchType.OnMyWay;
     data: undefined;
 };
