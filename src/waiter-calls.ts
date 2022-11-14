@@ -1,4 +1,5 @@
 export type WaiterCall = {
+  id: string
   targetUserId: string
   targetUsername: string
   tableNumber: string
