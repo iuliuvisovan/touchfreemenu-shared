@@ -10,6 +10,7 @@ export type WaiterCall = {
   clientCoordinates: { latitude: number; longitude: number }
   clientPushToken?: string
   waiterRepliedWithOmw?: {
+    timestamp: number
     deviceId: string
     waiterName: string
   }

@@ -13,6 +13,7 @@ export declare type WaiterCall = {
     };
     clientPushToken?: string;
     waiterRepliedWithOmw?: {
+        timestamp: number;
         deviceId: string;
         waiterName: string;
     };
