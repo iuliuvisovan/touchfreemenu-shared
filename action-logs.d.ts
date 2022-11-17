@@ -57,5 +57,8 @@ export declare enum ActionType {
     RequestSetLanguages = "RequestSetLanguages",
     SucceedSetLanguages = "SucceedSetLanguages",
     ChangePassword = "ChangePassword",
-    UpdateCurrentUser = "UpdateCurrentUser"
+    UpdateCurrentUser = "UpdateCurrentUser",
+    RemoveDevice = "RemoveDevice",
+    AddDevice = "AddDevice",
+    UpdateDevice = "UpdateDevice"
 }

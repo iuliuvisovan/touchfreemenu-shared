@@ -59,4 +59,7 @@ export enum ActionType {
   SucceedSetLanguages = 'SucceedSetLanguages',
   ChangePassword = 'ChangePassword',
   UpdateCurrentUser = 'UpdateCurrentUser',
+  RemoveDevice = 'RemoveDevice',
+  AddDevice = 'AddDevice',
+  UpdateDevice = 'UpdateDevice',
 }

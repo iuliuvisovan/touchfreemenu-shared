@@ -48,4 +48,7 @@ var ActionType;
     ActionType["SucceedSetLanguages"] = "SucceedSetLanguages";
     ActionType["ChangePassword"] = "ChangePassword";
     ActionType["UpdateCurrentUser"] = "UpdateCurrentUser";
+    ActionType["RemoveDevice"] = "RemoveDevice";
+    ActionType["AddDevice"] = "AddDevice";
+    ActionType["UpdateDevice"] = "UpdateDevice";
 })(ActionType = exports.ActionType || (exports.ActionType = {}));
