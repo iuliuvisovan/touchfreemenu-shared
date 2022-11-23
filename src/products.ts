@@ -52,7 +52,7 @@ export const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[] = [
   },
   {
     type: ProductProperty.Defrosted,
-    name: 'Cu ingredient(e) dezghețate',
+    name: 'Conține ingredient(e) dezghețate',
     color: 'blue',
     iconName: `snowflake`,
   },
