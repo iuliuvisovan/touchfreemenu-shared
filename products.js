@@ -20,7 +20,7 @@ exports.ALL_PRODUCT_PROPERTIES = [
     },
     {
         type: ProductProperty.Defrosted,
-        name: 'Dezghețat',
+        name: 'Cu ingredient(e) dezghețate',
         color: 'blue',
         iconName: "snowflake"
     },
