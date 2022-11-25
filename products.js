@@ -14,11 +14,13 @@ var ProductProperty;
 exports.ALL_PRODUCT_PROPERTIES = [
     {
         type: ProductProperty.Spicy,
+        name: 'Picant',
         color: 'red',
         iconName: "pepper"
     },
     {
         type: ProductProperty.Defrosted,
+        name: 'Conține ingredient(e) dezghețate',
         color: 'blue',
         iconName: "snowflake"
     },

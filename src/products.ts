@@ -37,6 +37,7 @@ export enum ProductProperty {
 
 export type ProductPropertyDisplay = {
   type: ProductProperty
+  name: string // Don't use this property, translate "type"
   color: string
   iconName: string
 }
@@ -45,11 +46,13 @@ export type ProductPropertyDisplay = {
 export const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[] = [
   {
     type: ProductProperty.Spicy,
+    name: 'Picant',
     color: 'red',
     iconName: `pepper`,
   },
   {
     type: ProductProperty.Defrosted,
+    name: 'Conține ingredient(e) dezghețate',
     color: 'blue',
     iconName: `snowflake`,
   },

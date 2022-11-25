@@ -34,6 +34,7 @@ export declare enum ProductProperty {
 }
 export declare type ProductPropertyDisplay = {
     type: ProductProperty;
+    name: string;
     color: string;
     iconName: string;
 };
