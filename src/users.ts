@@ -115,6 +115,12 @@ export type CreateAccountRequestBody = {
 export type UserPatchBody = {
   type: UserPatchType.WifiInfo
   data: WifiInfo
+} & {
+  type: UserPatchType.FromAdminInterface
+  data: {
+    name: string
+    city: string
+  }
 }
 
 export enum UserPatchType {

@@ -103,6 +103,12 @@ export declare type CreateAccountRequestBody = {
 export declare type UserPatchBody = {
     type: UserPatchType.WifiInfo;
     data: WifiInfo;
+} & {
+    type: UserPatchType.FromAdminInterface;
+    data: {
+        name: string;
+        city: string;
+    };
 };
 export declare enum UserPatchType {
     WifiInfo = 0,
