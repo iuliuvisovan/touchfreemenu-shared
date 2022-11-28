@@ -122,6 +122,10 @@ export type UserPatchBody =
       data: {
         name: string
         city: string
+        coords: { 
+          latitude: number,
+          longitude: number,
+        }
       }
     }
 
