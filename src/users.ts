@@ -123,4 +123,5 @@ export enum UserPatchType {
   DefaultCurrency,
   PartyMode,
   IsUsingPartyMode,
+  FromAdminInterface,
 }

@@ -109,5 +109,6 @@ export declare enum UserPatchType {
     BusinessMedium = 1,
     DefaultCurrency = 2,
     PartyMode = 3,
-    IsUsingPartyMode = 4
+    IsUsingPartyMode = 4,
+    FromAdminInterface = 5
 }
