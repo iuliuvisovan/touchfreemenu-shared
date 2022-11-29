@@ -6,4 +6,9 @@ export declare type MenuCategory = {
     username?: string;
     index: number;
     isHidden?: boolean;
+    type?: CategoryType;
 };
+export declare enum CategoryType {
+    Restaurant = "restaurant",
+    Bar = "bar"
+}

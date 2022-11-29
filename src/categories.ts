@@ -6,4 +6,10 @@ export type MenuCategory = {
   username?: string
   index: number
   isHidden?: boolean
+  type?: CategoryType
+}
+
+export enum CategoryType {
+  Restaurant = 'restaurant',
+  Bar = 'bar',
 }
