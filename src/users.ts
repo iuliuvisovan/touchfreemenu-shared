@@ -140,6 +140,6 @@ export enum UserPatchType {
   DefaultCurrency,
   PartyMode,
   IsUsingPartyMode,
-  IsUsingMenuSections,
   FromAdminInterface,
+  IsUsingMenuSections,
 }

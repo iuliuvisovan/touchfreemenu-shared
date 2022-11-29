@@ -124,6 +124,6 @@ export declare enum UserPatchType {
     DefaultCurrency = 2,
     PartyMode = 3,
     IsUsingPartyMode = 4,
-    IsUsingMenuSections = 5,
-    FromAdminInterface = 6
+    FromAdminInterface = 5,
+    IsUsingMenuSections = 6
 }
