@@ -47,7 +47,7 @@ export type User = {
   isCallWaiterEnabled?: boolean
   defaultCurrency?: CurrencyCode
   wifiInfo?: WifiInfo
-  isUsingSections?: boolean
+  isUsingMenuSections?: boolean
 }
 
 export enum CurrencyCode {

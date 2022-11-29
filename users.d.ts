@@ -46,7 +46,7 @@ export declare type User = {
     isCallWaiterEnabled?: boolean;
     defaultCurrency?: CurrencyCode;
     wifiInfo?: WifiInfo;
-    isUsingSections?: boolean;
+    isUsingMenuSections?: boolean;
 };
 export declare enum CurrencyCode {
     Ron = "ron",
