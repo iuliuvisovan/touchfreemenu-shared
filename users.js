@@ -34,5 +34,6 @@ var UserPatchType;
     UserPatchType[UserPatchType["DefaultCurrency"] = 2] = "DefaultCurrency";
     UserPatchType[UserPatchType["PartyMode"] = 3] = "PartyMode";
     UserPatchType[UserPatchType["IsUsingPartyMode"] = 4] = "IsUsingPartyMode";
-    UserPatchType[UserPatchType["FromAdminInterface"] = 5] = "FromAdminInterface";
+    UserPatchType[UserPatchType["IsUsingMenuSections"] = 5] = "IsUsingMenuSections";
+    UserPatchType[UserPatchType["FromAdminInterface"] = 6] = "FromAdminInterface";
 })(UserPatchType = exports.UserPatchType || (exports.UserPatchType = {}));
