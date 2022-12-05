@@ -11,6 +11,7 @@ export type MenuProduct = {
     width: number,
     height: number,
     sizeInKb: number,
+    uncompressedSizeInKb: number,
     isGeneric?: boolean
     genericImageKey?: string
     isWhiteBackground?: boolean
