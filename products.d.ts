@@ -7,6 +7,14 @@ export declare type MenuProduct = {
     categoryId: string;
     categoryName?: string;
     imageKey?: string;
+    imageInfo?: {
+        width?: number;
+        height?: number;
+        sizeInKb: number;
+        isGeneric?: boolean;
+        genericImageKey?: string;
+        isWhiteBackground?: boolean;
+    };
     imageUrl?: string;
     thumbnailUrl?: string;
     price?: number;
