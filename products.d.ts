@@ -14,7 +14,7 @@ export declare type MenuProduct = {
         uncompressedSizeInKb: number;
         isGeneric?: boolean;
         genericImageKey?: string;
-        isWhiteBackground?: boolean;
+        hasWhiteBackground?: boolean;
     };
     imageUrl?: string;
     thumbnailUrl?: string;
