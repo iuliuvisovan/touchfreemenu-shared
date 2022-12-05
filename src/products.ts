@@ -8,10 +8,10 @@ export type MenuProduct = {
   categoryName?: string
   imageKey?: string
   imageInfo?: {
-    width: number,
-    height: number,
-    sizeInKb: number,
-    uncompressedSizeInKb: number,
+    width?: number
+    height?: number
+    sizeInKb?: number
+    uncompressedSizeInKb?: number
     isGeneric?: boolean
     genericImageKey?: string
     hasWhiteBackground?: boolean
@@ -50,7 +50,6 @@ export type ProductPropertyDisplay = {
   color: string
   iconName: string
 }
-
 
 export const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[] = [
   {

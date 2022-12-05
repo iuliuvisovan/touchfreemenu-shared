@@ -8,10 +8,10 @@ export declare type MenuProduct = {
     categoryName?: string;
     imageKey?: string;
     imageInfo?: {
-        width: number;
-        height: number;
-        sizeInKb: number;
-        uncompressedSizeInKb: number;
+        width?: number;
+        height?: number;
+        sizeInKb?: number;
+        uncompressedSizeInKb?: number;
         isGeneric?: boolean;
         genericImageKey?: string;
         hasWhiteBackground?: boolean;
