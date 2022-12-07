@@ -1,4 +1,4 @@
-export enum OrderStatus {
+export enum HolderOrderStatus {
   Initiated = 'INITIATED',
   WaitingForOnlinePayment = 'WAITING_FOR_ONLINE_PAYMENT',
   WaitingForBankPayment = 'WAITING_FOR_BANK_PAYMENT',
@@ -47,19 +47,19 @@ export enum PaymentType {
   OnlineCard = 'OnlineCard',
 }
 
-export type OrderProduct = {
+export type HolderProduct = {
   type: ProductType
   code: ProductCode
   quantity: number
   currentPrice?: number
 }
 
-export type Order = {
+export type HolderOrder = {
   id: string
-  products: OrderProduct[]
+  products: HolderProduct[]
   userId: string
   username?: string
-  status: OrderStatus
+  status: HolderOrderStatus
   paymentType: PaymentType
   requestedAmount: number
   billingInfo: BillingInfo
@@ -77,7 +77,7 @@ export type Order = {
   awb?: string
 }
 
-export type OrderIntent = {
+export type HolderOrderIntent = {
   laminatedHolderCount?: number
   plexiglassHolderCount?: number
   stickerHolderCount?: number
@@ -173,7 +173,7 @@ export const AVAILABLE_SUBSCRIPTIONS: Subscription[] = [
   },
 ]
 
-export const computeIntentPrice = (orderIntent: OrderIntent) => {
+export const computeIntentPrice = (orderIntent: HolderOrderIntent) => {
   const { plexiglassHolderCount = 0, laminatedHolderCount = 0, stickerHolderCount = 0, subscriptionCode = '' } = orderIntent
 
   const plexiglassPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Plexiglass)?.price || 0
@@ -195,7 +195,7 @@ export const computeIntentPrice = (orderIntent: OrderIntent) => {
 
 export const DELIVERY_PRICE = 15
 
-export const computeIntentSummary = (orderIntent: OrderIntent) => {
+export const computeIntentSummary = (orderIntent: HolderOrderIntent) => {
   const { plexiglassHolderCount = 0, laminatedHolderCount = 0, stickerHolderCount = 0, subscriptionCode = '' } = orderIntent
 
   const plexiglassPrice = AVAILABLE_HOLDERS.find(x => x.code === HolderCode.Plexiglass)?.price || 0
