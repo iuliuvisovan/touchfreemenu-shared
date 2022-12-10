@@ -15,6 +15,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 exports.__esModule = true;
 __exportStar(require("./holder-orders"), exports);
+__exportStar(require("./consumer-orders"), exports);
 __exportStar(require("./products"), exports);
 __exportStar(require("./categories"), exports);
 __exportStar(require("./users"), exports);
