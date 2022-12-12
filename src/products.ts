@@ -505,3 +505,17 @@ export type TranslatedAllergen = {
   longName: string
   shortName: string
 }
+
+
+export type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
+  _id: string
+  name: string
+  description: string
+  isWhiteSquare: boolean
+  imageUrl?: string
+  categoryId: string
+  mappedAllergens?: any[]
+  isLast?: boolean
+  isInOddCategory?: boolean
+  childProducts?: ProcessedMenuProduct[]
+}

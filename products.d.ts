@@ -127,3 +127,15 @@ export declare type TranslatedAllergen = {
     longName: string;
     shortName: string;
 };
+export declare type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
+    _id: string;
+    name: string;
+    description: string;
+    isWhiteSquare: boolean;
+    imageUrl?: string;
+    categoryId: string;
+    mappedAllergens?: any[];
+    isLast?: boolean;
+    isInOddCategory?: boolean;
+    childProducts?: ProcessedMenuProduct[];
+};

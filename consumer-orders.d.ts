@@ -1,5 +1,5 @@
 import { BillingInfo, ShippingInfo } from './holder-orders';
-import { MenuProduct } from './products';
+import { ProcessedMenuProduct } from './products';
 export declare enum ConsumerOrderPaymentType {
     BankTransfer = "BankTransfer",
     OnlineCard = "OnlineCard",
@@ -7,7 +7,7 @@ export declare enum ConsumerOrderPaymentType {
 }
 export declare type ConsumerOrderProduct = {
     quantity: number;
-    product: MenuProduct;
+    product: ProcessedMenuProduct;
 };
 export declare type ConsumerOrder = {
     id: string;

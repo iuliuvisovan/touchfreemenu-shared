@@ -12,3 +12,11 @@ export declare enum CategoryType {
     Restaurant = "restaurant",
     Bar = "bar"
 }
+export declare type ProcessedMenuCategory = {
+    _id: string;
+    name: string;
+    index: number;
+    description: string;
+    type: CategoryType;
+    isOdd?: boolean;
+};
