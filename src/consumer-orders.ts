@@ -49,7 +49,7 @@ export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent) => 
     const { product, quantity } = productIntent
     const effectiveProductPrice = product.isDiscounted ? product.discountedPrice : product.price
 
-    return effectiveProductPrice! * quantity
+    return +effectiveProductPrice! * +quantity
   })
 
   return totalPrice

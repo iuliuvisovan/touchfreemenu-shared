@@ -17,7 +17,7 @@ var computeConsumerIntentPrice = function (orderIntent) {
     var totalPrice = orderIntent.products.map(function (productIntent) {
         var product = productIntent.product, quantity = productIntent.quantity;
         var effectiveProductPrice = product.isDiscounted ? product.discountedPrice : product.price;
-        return effectiveProductPrice * quantity;
+        return +effectiveProductPrice * +quantity;
     });
     return totalPrice;
 };
