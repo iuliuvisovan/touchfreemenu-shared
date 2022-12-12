@@ -1,5 +1,5 @@
 import { BillingInfo, ShippingInfo } from './holder-orders'
-import { ProcessedMenuProduct } from './products'
+import { MenuProduct, ProcessedMenuProduct } from './products'
 
 export enum ConsumerOrderPaymentType {
   BankTransfer = 'BankTransfer',
@@ -7,16 +7,16 @@ export enum ConsumerOrderPaymentType {
   Cash = 'Cash',
 }
 
-export type ConsumerOrderProduct = {
+export type ConsumerOrderProduct<T> = {
   quantity: number
-  product: ProcessedMenuProduct
+  product: T
 }
 
 export type ConsumerOrder = {
   id: string
   orderNumber?: string
   totalValue: number
-  products: ConsumerOrderProduct[]
+  products: ConsumerOrderProduct<MenuProduct>[]
   targetUserId: string
   targetUsername?: string
   paymentType: ConsumerOrderPaymentType
@@ -39,7 +39,7 @@ export enum ConsumerOrderType {
 
 export type ConsumerOrderIntent = {
   type: ConsumerOrderType
-  products: ConsumerOrderProduct[]
+  products: ConsumerOrderProduct<ProcessedMenuProduct>[]
 }
 
 export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent) => {
