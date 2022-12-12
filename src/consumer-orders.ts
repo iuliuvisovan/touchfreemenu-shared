@@ -1,5 +1,6 @@
 import { BillingInfo, ShippingInfo } from './holder-orders'
 import { MenuProduct, ProcessedMenuProduct } from './products'
+import { CurrencyCode } from './users'
 
 export enum ConsumerOrderPaymentType {
   BankTransfer = 'BankTransfer',
@@ -9,6 +10,7 @@ export enum ConsumerOrderPaymentType {
 
 export type ConsumerOrderProduct<T> = {
   quantity: number
+  currency: CurrencyCode
   product: T
 }
 
