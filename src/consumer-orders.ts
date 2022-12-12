@@ -11,6 +11,7 @@ export enum ConsumerOrderPaymentType {
 export type ConsumerOrderProduct<T> = {
   quantity: number
   currency: CurrencyCode
+  addedInOrderAt: number
   product: T
 }
 

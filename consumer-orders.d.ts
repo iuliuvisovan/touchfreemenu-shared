@@ -9,6 +9,7 @@ export declare enum ConsumerOrderPaymentType {
 export declare type ConsumerOrderProduct<T> = {
     quantity: number;
     currency: CurrencyCode;
+    addedInOrderAt: number;
     product: T;
 };
 export declare type ConsumerOrder = {
