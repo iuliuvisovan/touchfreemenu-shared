@@ -45,12 +45,14 @@ export type ConsumerOrderIntent = {
 }
 
 export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent) => {
-  const totalPrice = orderIntent.products.map(productIntent => {
-    const { product, quantity } = productIntent
-    const effectiveProductPrice = product.isDiscounted ? product.discountedPrice : product.price
+  const totalPrice = orderIntent.products
+    .map(productIntent => {
+      const { product, quantity } = productIntent
+      const effectiveProductPrice = product.isDiscounted ? product.discountedPrice : product.price
 
-    return +effectiveProductPrice! * +quantity
-  })
+      return +effectiveProductPrice! * +quantity
+    })
+    .reduce((a, b) => a + b)
 
   return totalPrice
 }

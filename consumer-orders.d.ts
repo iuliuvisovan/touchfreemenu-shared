@@ -38,4 +38,4 @@ export declare type ConsumerOrderIntent = {
     type: ConsumerOrderType;
     products: ConsumerOrderProduct<ProcessedMenuProduct>[];
 };
-export declare const computeConsumerIntentPrice: (orderIntent: ConsumerOrderIntent) => number[];
+export declare const computeConsumerIntentPrice: (orderIntent: ConsumerOrderIntent) => number;
