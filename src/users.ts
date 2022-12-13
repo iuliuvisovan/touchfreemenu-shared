@@ -18,10 +18,7 @@ export type User = {
   city: string
   phoneNumber?: string
   customDomain?: string
-  coords?: {
-    latitude: number
-    longitude: number
-  }
+  coords?: LocationInfo
   factureazaClientId?: string
   facebookUserId?: string
   googleUserId?: string
@@ -104,6 +101,12 @@ export type WifiInfo = {
   isVisible?: boolean
 }
 
+export type LocationInfo = {
+  latitude: number
+  longitude: number
+  isVisible: boolean
+}
+
 export type CreateAccountRequestBody = {
   email: string
   name: string
@@ -119,6 +122,10 @@ export type UserPatchBody =
       data: WifiInfo
     }
   | {
+      type: UserPatchType.Location
+      data: LocationInfo
+    }
+  | {
       type: UserPatchType.IsUsingMenuSections
       data: boolean
     }
@@ -127,15 +134,16 @@ export type UserPatchBody =
       data: {
         name: string
         city: string
-        coords?: { 
-          latitude: number,
-          longitude: number,
+        coords?: {
+          latitude: number
+          longitude: number
         }
       }
     }
 
 export enum UserPatchType {
   WifiInfo,
+  Location,
   BusinessMedium,
   DefaultCurrency,
   PartyMode,

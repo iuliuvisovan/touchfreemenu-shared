@@ -17,10 +17,7 @@ export declare type User = {
     city: string;
     phoneNumber?: string;
     customDomain?: string;
-    coords?: {
-        latitude: number;
-        longitude: number;
-    };
+    coords?: LocationInfo;
     factureazaClientId?: string;
     facebookUserId?: string;
     googleUserId?: string;
@@ -93,6 +90,11 @@ export declare type WifiInfo = {
     password?: string;
     isVisible?: boolean;
 };
+export declare type LocationInfo = {
+    latitude: number;
+    longitude: number;
+    isVisible: boolean;
+};
 export declare type CreateAccountRequestBody = {
     email: string;
     name: string;
@@ -104,6 +106,9 @@ export declare type CreateAccountRequestBody = {
 export declare type UserPatchBody = {
     type: UserPatchType.WifiInfo;
     data: WifiInfo;
+} | {
+    type: UserPatchType.Location;
+    data: LocationInfo;
 } | {
     type: UserPatchType.IsUsingMenuSections;
     data: boolean;
@@ -120,10 +125,11 @@ export declare type UserPatchBody = {
 };
 export declare enum UserPatchType {
     WifiInfo = 0,
-    BusinessMedium = 1,
-    DefaultCurrency = 2,
-    PartyMode = 3,
-    IsUsingPartyMode = 4,
-    FromAdminInterface = 5,
-    IsUsingMenuSections = 6
+    Location = 1,
+    BusinessMedium = 2,
+    DefaultCurrency = 3,
+    PartyMode = 4,
+    IsUsingPartyMode = 5,
+    FromAdminInterface = 6,
+    IsUsingMenuSections = 7
 }

@@ -13,3 +13,12 @@ export enum CategoryType {
   Restaurant = 'restaurant',
   Bar = 'bar',
 }
+
+export type ProcessedMenuCategory = {
+  _id: string
+  name: string
+  index: number
+  description: string
+  type: CategoryType
+  isOdd?: boolean
+}

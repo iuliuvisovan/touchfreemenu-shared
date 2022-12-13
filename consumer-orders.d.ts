@@ -1,21 +1,28 @@
-import { MenuProduct } from "./products";
-import { CurrencyCode } from "./users";
-export declare type OrderProduct = {
-    productId: string;
-    price: number;
+import { BillingInfo, ShippingInfo } from './holder-orders';
+import { MenuProduct, ProcessedMenuProduct } from './products';
+import { CurrencyCode } from './users';
+export declare enum ConsumerOrderPaymentType {
+    BankTransfer = "BankTransfer",
+    OnlineCard = "OnlineCard",
+    Cash = "Cash"
+}
+export declare type ConsumerOrderProduct<T> = {
     quantity: number;
-    asSeenByConsumer: MenuProduct;
+    price: number;
+    addedInOrderAt: number;
+    asSeenByConsumer: T;
 };
 export declare type ConsumerOrder = {
     id: string;
+    orderNumber?: string;
     targetUserId: string;
-    targetUsername: string;
+    targetUsername?: string;
     ip: string;
     deviceId: string;
     deviceType: string;
     deviceName: string;
     tableNumber: string;
-    products: OrderProduct[];
+    products: ConsumerOrderProduct<MenuProduct>[];
     currency: CurrencyCode;
     clientCoordinates: {
         latitude: number;
@@ -28,16 +35,30 @@ export declare type ConsumerOrder = {
         deviceId: string;
         waiterName: string;
     };
+    totalValue?: number;
+    paymentType?: ConsumerOrderPaymentType;
+    billingInfo?: BillingInfo;
+    shippingInfo?: ShippingInfo;
+    paidWithCardMask?: string;
+    paymentProcessorResponse?: string;
+    localError?: string;
+    extraCommentsFromUser?: string;
+    proformaInvoiceId?: string;
+    finalInvoiceId?: string;
     timestamp: number;
-    createdAt: Date;
+    createdAt?: Date;
 };
-export declare enum WaiterResponseType {
-    Accepted = "accepted",
-    AcceptedWithModifications = "acceptedWithModifications",
-    Confirmed = "confirmed",
-    Rejected = "rejected"
+export declare enum ConsumerOrderType {
+    AtTable = "AT_TABLE",
+    Delivery = "DELIVERY",
+    PickUp = "PICK_UP"
 }
-export declare type ConsumerOrderPostBody = {
+export declare type ConsumerOrderIntentProduct<T> = {
+    quantity: number;
+    product: T;
+};
+export declare type ConsumerOrderIntent = {
+    type: ConsumerOrderType;
     targetUserId: string;
     targetUsername: string;
     tableNumber: string;
@@ -48,18 +69,12 @@ export declare type ConsumerOrderPostBody = {
         latitude: number;
         longitude: number;
     };
-    products: {
-        productId: string;
-        quantity: number;
-    }[];
+    products: ConsumerOrderIntentProduct<ProcessedMenuProduct>[];
 };
-export declare type ConsumerOrderPatchBody = {
-    type: ClientPushTokenType.ClientPushToken;
-    data: string;
-} | {
-    type: WaiterResponseType;
-    data: undefined;
-};
-export declare enum ClientPushTokenType {
-    ClientPushToken = "clientPushToken"
+export declare enum WaiterResponseType {
+    Accepted = "ACCEPTED",
+    AcceptedWithModifications = "ACCEPTED_WITH_MODIFICATIONS",
+    Confirmed = "CONFIRMED",
+    Rejected = "REJECTED"
 }
+export declare const computeConsumerIntentPrice: (orderIntent: ConsumerOrderIntent, isUserPartyMode?: boolean) => number;

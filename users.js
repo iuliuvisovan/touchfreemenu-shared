@@ -30,10 +30,11 @@ var BusinessMediumType;
 var UserPatchType;
 (function (UserPatchType) {
     UserPatchType[UserPatchType["WifiInfo"] = 0] = "WifiInfo";
-    UserPatchType[UserPatchType["BusinessMedium"] = 1] = "BusinessMedium";
-    UserPatchType[UserPatchType["DefaultCurrency"] = 2] = "DefaultCurrency";
-    UserPatchType[UserPatchType["PartyMode"] = 3] = "PartyMode";
-    UserPatchType[UserPatchType["IsUsingPartyMode"] = 4] = "IsUsingPartyMode";
-    UserPatchType[UserPatchType["FromAdminInterface"] = 5] = "FromAdminInterface";
-    UserPatchType[UserPatchType["IsUsingMenuSections"] = 6] = "IsUsingMenuSections";
+    UserPatchType[UserPatchType["Location"] = 1] = "Location";
+    UserPatchType[UserPatchType["BusinessMedium"] = 2] = "BusinessMedium";
+    UserPatchType[UserPatchType["DefaultCurrency"] = 3] = "DefaultCurrency";
+    UserPatchType[UserPatchType["PartyMode"] = 4] = "PartyMode";
+    UserPatchType[UserPatchType["IsUsingPartyMode"] = 5] = "IsUsingPartyMode";
+    UserPatchType[UserPatchType["FromAdminInterface"] = 6] = "FromAdminInterface";
+    UserPatchType[UserPatchType["IsUsingMenuSections"] = 7] = "IsUsingMenuSections";
 })(UserPatchType = exports.UserPatchType || (exports.UserPatchType = {}));
