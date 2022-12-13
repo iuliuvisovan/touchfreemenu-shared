@@ -107,6 +107,9 @@ export declare type UserPatchBody = {
     type: UserPatchType.WifiInfo;
     data: WifiInfo;
 } | {
+    type: UserPatchType.Location;
+    data: LocationInfo;
+} | {
     type: UserPatchType.IsUsingMenuSections;
     data: boolean;
 } | {
@@ -122,10 +125,11 @@ export declare type UserPatchBody = {
 };
 export declare enum UserPatchType {
     WifiInfo = 0,
-    BusinessMedium = 1,
-    DefaultCurrency = 2,
-    PartyMode = 3,
-    IsUsingPartyMode = 4,
-    FromAdminInterface = 5,
-    IsUsingMenuSections = 6
+    Location = 1,
+    BusinessMedium = 2,
+    DefaultCurrency = 3,
+    PartyMode = 4,
+    IsUsingPartyMode = 5,
+    FromAdminInterface = 6,
+    IsUsingMenuSections = 7
 }

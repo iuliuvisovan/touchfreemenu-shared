@@ -122,6 +122,10 @@ export type UserPatchBody =
       data: WifiInfo
     }
   | {
+      type: UserPatchType.Location
+      data: LocationInfo
+    }
+  | {
       type: UserPatchType.IsUsingMenuSections
       data: boolean
     }
@@ -139,6 +143,7 @@ export type UserPatchBody =
 
 export enum UserPatchType {
   WifiInfo,
+  Location,
   BusinessMedium,
   DefaultCurrency,
   PartyMode,
