@@ -17,10 +17,7 @@ export declare type User = {
     city: string;
     phoneNumber?: string;
     customDomain?: string;
-    coords?: {
-        latitude: number;
-        longitude: number;
-    };
+    coords?: LocationInfo;
     factureazaClientId?: string;
     facebookUserId?: string;
     googleUserId?: string;
@@ -92,6 +89,11 @@ export declare type WifiInfo = {
     networkName?: string;
     password?: string;
     isVisible?: boolean;
+};
+export declare type LocationInfo = {
+    latitude: number;
+    longitude: number;
+    isVisible: boolean;
 };
 export declare type CreateAccountRequestBody = {
     email: string;
