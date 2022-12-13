@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.computeConsumerIntentPrice = exports.WaiterResponseType = exports.ConsumerOrderType = exports.ConsumerOrderPaymentType = void 0;
+exports.computeConsumerIntentPrice = exports.ClientPushTokenType = exports.WaiterResponseType = exports.ConsumerOrderType = exports.ConsumerOrderPaymentType = void 0;
 var ConsumerOrderPaymentType;
 (function (ConsumerOrderPaymentType) {
     ConsumerOrderPaymentType["BankTransfer"] = "BankTransfer";
@@ -20,6 +20,10 @@ var WaiterResponseType;
     WaiterResponseType["Confirmed"] = "CONFIRMED";
     WaiterResponseType["Rejected"] = "REJECTED";
 })(WaiterResponseType = exports.WaiterResponseType || (exports.WaiterResponseType = {}));
+var ClientPushTokenType;
+(function (ClientPushTokenType) {
+    ClientPushTokenType["ClientPushToken"] = "clientPushToken";
+})(ClientPushTokenType = exports.ClientPushTokenType || (exports.ClientPushTokenType = {}));
 var computeConsumerIntentPrice = function (orderIntent, isUserPartyMode) {
     if (isUserPartyMode === void 0) { isUserPartyMode = false; }
     var totalPrice = orderIntent.products

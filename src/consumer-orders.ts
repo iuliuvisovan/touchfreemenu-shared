@@ -79,6 +79,20 @@ export enum WaiterResponseType {
   Rejected = 'REJECTED',
 }
 
+export type ConsumerOrderPatchBody =
+  | {
+    type: ClientPushTokenType.ClientPushToken
+    data: string
+  }
+  | {
+    type: WaiterResponseType
+    data: undefined
+  }
+
+export enum ClientPushTokenType {
+  ClientPushToken = 'clientPushToken'
+}
+
 export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent, isUserPartyMode = false) => {
   const totalPrice = orderIntent.products
     .map(productIntent => {

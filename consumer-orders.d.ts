@@ -77,4 +77,14 @@ export declare enum WaiterResponseType {
     Confirmed = "CONFIRMED",
     Rejected = "REJECTED"
 }
+export declare type ConsumerOrderPatchBody = {
+    type: ClientPushTokenType.ClientPushToken;
+    data: string;
+} | {
+    type: WaiterResponseType;
+    data: undefined;
+};
+export declare enum ClientPushTokenType {
+    ClientPushToken = "clientPushToken"
+}
 export declare const computeConsumerIntentPrice: (orderIntent: ConsumerOrderIntent, isUserPartyMode?: boolean) => number;
