@@ -124,12 +124,12 @@ export declare type UserPatchBody = {
     };
 };
 export declare enum UserPatchType {
-    WifiInfo = 0,
-    Location = 1,
-    BusinessMedium = 2,
-    DefaultCurrency = 3,
-    PartyMode = 4,
-    IsUsingPartyMode = 5,
-    FromAdminInterface = 6,
-    IsUsingMenuSections = 7
+    WifiInfo = "wifiInfo",
+    Location = "location",
+    BusinessMedium = "businessMedium",
+    DefaultCurrency = "defaultCurrency",
+    PartyMode = "partyMode",
+    IsUsingPartyMode = "isUsingPartyMode",
+    FromAdminInterface = "fromAdminInterface",
+    IsUsingMenuSections = "isUsingMenuSections"
 }
