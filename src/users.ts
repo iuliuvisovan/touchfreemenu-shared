@@ -104,7 +104,7 @@ export type WifiInfo = {
 export type LocationInfo = {
   latitude: number
   longitude: number
-  isVisible: boolean
+  isVisible?: boolean
 }
 
 export type CreateAccountRequestBody = {

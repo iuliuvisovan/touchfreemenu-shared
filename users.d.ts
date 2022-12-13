@@ -93,7 +93,7 @@ export declare type WifiInfo = {
 export declare type LocationInfo = {
     latitude: number;
     longitude: number;
-    isVisible: boolean;
+    isVisible?: boolean;
 };
 export declare type CreateAccountRequestBody = {
     email: string;
