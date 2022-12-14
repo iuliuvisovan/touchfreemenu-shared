@@ -40,6 +40,9 @@ var UserPatchType;
 })(UserPatchType = exports.UserPatchType || (exports.UserPatchType = {}));
 function formatAddress(addressObject) {
     var _a, _b, _c, _d;
+    if (!addressObject) {
+        return '';
+    }
     var address_components = addressObject.address_components;
     var streetName = ((_a = address_components.find(function (x) { return x.types.includes('route'); })) === null || _a === void 0 ? void 0 : _a.short_name) || '';
     var streetNumber = (_b = address_components.find(function (x) { return x.types.includes('street_number'); })) === null || _b === void 0 ? void 0 : _b.short_name;

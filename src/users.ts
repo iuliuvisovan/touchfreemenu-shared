@@ -163,7 +163,11 @@ export enum UserPatchType {
   IsUsingMenuSections = 'isUsingMenuSections',
 }
 
-export function formatAddress(addressObject: AddressObject) {
+export function formatAddress(addressObject: AddressObject | undefined) {
+  if (!addressObject) {
+    return ''
+  }
+
   const { address_components } = addressObject
   const streetName = address_components.find(x => x.types.includes('route'))?.short_name || ''
   const streetNumber = address_components.find(x => x.types.includes('street_number'))?.short_name
