@@ -1,7 +1,7 @@
 "use strict";
 var _a;
 exports.__esModule = true;
-exports.UserPatchType = exports.BusinessMediumType = exports.ReferralSource = exports.EuroEquivalences = exports.CurrencyCode = void 0;
+exports.formatAddress = exports.UserPatchType = exports.BusinessMediumType = exports.ReferralSource = exports.EuroEquivalences = exports.CurrencyCode = void 0;
 var CurrencyCode;
 (function (CurrencyCode) {
     CurrencyCode["Ron"] = "ron";
@@ -38,3 +38,15 @@ var UserPatchType;
     UserPatchType["FromAdminInterface"] = "fromAdminInterface";
     UserPatchType["IsUsingMenuSections"] = "isUsingMenuSections";
 })(UserPatchType = exports.UserPatchType || (exports.UserPatchType = {}));
+function formatAddress(addressObject) {
+    var _a, _b, _c, _d;
+    var address_components = addressObject.address_components;
+    var streetName = ((_a = address_components.find(function (x) { return x.types.includes('route'); })) === null || _a === void 0 ? void 0 : _a.short_name) || '';
+    var streetNumber = (_b = address_components.find(function (x) { return x.types.includes('street_number'); })) === null || _b === void 0 ? void 0 : _b.short_name;
+    var city = (_c = address_components.find(function (x) { return x.types.includes('locality'); })) === null || _c === void 0 ? void 0 : _c.short_name;
+    var biggerCity = (((_d = address_components.find(function (x) { return x.types.includes('administrative_area_level_2'); })) === null || _d === void 0 ? void 0 : _d.short_name) || '').replace(/municipiul|comuna|orasul|orașul/i, '');
+    var streetAddress = "".concat(streetName.replace(/strada/i, 'str.').replace(/bulevardul/i, 'Bd.') || '', " ").concat(streetNumber || '');
+    var relevantCity = biggerCity || city;
+    return [streetAddress, relevantCity].filter(function (x) { var _a; return (_a = (x || '')) === null || _a === void 0 ? void 0 : _a.trim(); }).join(', ');
+}
+exports.formatAddress = formatAddress;

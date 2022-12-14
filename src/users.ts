@@ -162,3 +162,19 @@ export enum UserPatchType {
   FromAdminInterface = 'fromAdminInterface',
   IsUsingMenuSections = 'isUsingMenuSections',
 }
+
+export function formatAddress(addressObject: AddressObject) {
+  const { address_components } = addressObject
+  const streetName = address_components.find(x => x.types.includes('route'))?.short_name || ''
+  const streetNumber = address_components.find(x => x.types.includes('street_number'))?.short_name
+  const city = address_components.find(x => x.types.includes('locality'))?.short_name
+  const biggerCity = (address_components.find(x => x.types.includes('administrative_area_level_2'))?.short_name || '').replace(
+    /municipiul|comuna|orasul|orașul/i,
+    ''
+  )
+
+  const streetAddress = `${streetName.replace(/strada/i, 'str.').replace(/bulevardul/i, 'Bd.') || ''} ${streetNumber || ''}`
+  const relevantCity = biggerCity || city
+
+  return [streetAddress, relevantCity].filter(x => (x || '')?.trim()).join(', ')
+}

@@ -142,3 +142,4 @@ export declare enum UserPatchType {
     FromAdminInterface = "fromAdminInterface",
     IsUsingMenuSections = "isUsingMenuSections"
 }
+export declare function formatAddress(addressObject: AddressObject): string;
