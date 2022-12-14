@@ -105,7 +105,7 @@ export type LocationInfo = {
   latitude: number
   longitude: number
   isVisible?: boolean
-  addressObject: Object
+  addressObject?: Object
 }
 
 export type CreateAccountRequestBody = {
