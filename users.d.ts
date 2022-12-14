@@ -94,6 +94,7 @@ export declare type LocationInfo = {
     latitude: number;
     longitude: number;
     isVisible?: boolean;
+    addressObject: Object;
 };
 export declare type CreateAccountRequestBody = {
     email: string;
