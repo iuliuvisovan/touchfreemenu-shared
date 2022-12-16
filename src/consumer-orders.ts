@@ -10,9 +10,9 @@ export enum ConsumerOrderPaymentType {
 
 export type ConsumerOrderProduct<T> = {
   quantity: number
-  price: number
+  currency: CurrencyCode
   addedInOrderAt: number
-  asSeenByConsumer: T
+  product: T
 }
 
 export type ConsumerOrder = {
@@ -35,7 +35,6 @@ export type ConsumerOrder = {
     deviceId: string
     waiterName: string
   }
-  totalValue?: number
   paymentType?: ConsumerOrderPaymentType
   billingInfo?: BillingInfo
   shippingInfo?: ShippingInfo
@@ -81,16 +80,16 @@ export enum WaiterResponseType {
 
 export type ConsumerOrderPatchBody =
   | {
-    type: ClientPushTokenType.ClientPushToken
-    data: string
-  }
+      type: ClientPushTokenType.ClientPushToken
+      data: string
+    }
   | {
-    type: WaiterResponseType
-    data: undefined
-  }
+      type: WaiterResponseType
+      data: undefined
+    }
 
 export enum ClientPushTokenType {
-  ClientPushToken = 'clientPushToken'
+  ClientPushToken = 'clientPushToken',
 }
 
 export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent, isUserPartyMode = false) => {
@@ -99,11 +98,8 @@ export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent, isU
       const { product, quantity } = productIntent
       const { price, isDiscounted, discountedPrice, priceDuringEvent } = product || {}
 
-      const effectiveProductPrice = (isUserPartyMode && priceDuringEvent)
-        ? priceDuringEvent
-        : (isDiscounted && discountedPrice)
-          ? discountedPrice
-          : price
+      const effectiveProductPrice =
+        isUserPartyMode && priceDuringEvent ? priceDuringEvent : isDiscounted && discountedPrice ? discountedPrice : price
 
       return +effectiveProductPrice! * +quantity
     })

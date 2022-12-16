@@ -93,7 +93,16 @@ export declare type WifiInfo = {
 export declare type LocationInfo = {
     latitude: number;
     longitude: number;
-    isVisible: boolean;
+    isVisible?: boolean;
+    addressObject?: AddressObject;
+};
+export declare type AddressComponent = {
+    long_name: string;
+    short_name: string;
+    types: string[];
+};
+export declare type AddressObject = {
+    address_components: AddressComponent[];
 };
 export declare type CreateAccountRequestBody = {
     email: string;
@@ -124,12 +133,13 @@ export declare type UserPatchBody = {
     };
 };
 export declare enum UserPatchType {
-    WifiInfo = 0,
-    Location = 1,
-    BusinessMedium = 2,
-    DefaultCurrency = 3,
-    PartyMode = 4,
-    IsUsingPartyMode = 5,
-    FromAdminInterface = 6,
-    IsUsingMenuSections = 7
+    WifiInfo = "wifiInfo",
+    Location = "location",
+    BusinessMedium = "businessMedium",
+    DefaultCurrency = "defaultCurrency",
+    PartyMode = "partyMode",
+    IsUsingPartyMode = "isUsingPartyMode",
+    FromAdminInterface = "fromAdminInterface",
+    IsUsingMenuSections = "isUsingMenuSections"
 }
+export declare function formatAddress(addressObject: AddressObject | undefined): string;
