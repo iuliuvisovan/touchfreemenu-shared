@@ -18,19 +18,33 @@ export type ConsumerOrderProduct<T> = {
 export type ConsumerOrder = {
   id: string
   orderNumber?: string
-  totalValue: number
-  products: ConsumerOrderProduct<MenuProduct>[]
   targetUserId: string
   targetUsername?: string
-  paymentType: ConsumerOrderPaymentType
-  billingInfo: BillingInfo
-  shippingInfo: ShippingInfo
+  ip: string
+  deviceId: string
+  deviceType: string
+  deviceName: string
+  tableNumber: string
+  products: ConsumerOrderProduct<MenuProduct>[]
+  currency: CurrencyCode
+  clientCoordinates: { latitude: number; longitude: number }
+  clientPushToken?: string
+  waiterResponse?: {
+    type: WaiterResponseType
+    timestamp: number
+    deviceId: string
+    waiterName: string
+  }
+  paymentType?: ConsumerOrderPaymentType
+  billingInfo?: BillingInfo
+  shippingInfo?: ShippingInfo
   paidWithCardMask?: string
   paymentProcessorResponse?: string
   localError?: string
   extraCommentsFromUser?: string
   proformaInvoiceId?: string
   finalInvoiceId?: string
+  timestamp: number
   createdAt?: Date
 }
 
@@ -40,16 +54,52 @@ export enum ConsumerOrderType {
   PickUp = 'PICK_UP',
 }
 
-export type ConsumerOrderIntent = {
-  type: ConsumerOrderType
-  products: ConsumerOrderProduct<ProcessedMenuProduct>[]
+export type ConsumerOrderIntentProduct<T> = {
+  quantity: number
+  product: T
 }
 
-export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent) => {
+export type ConsumerOrderIntent = {
+  type: ConsumerOrderType
+  targetUserId: string
+  targetUsername: string
+  tableNumber: string
+  deviceId: string
+  deviceType: string
+  deviceName: string
+  clientCoordinates: { latitude: number; longitude: number }
+  products: ConsumerOrderIntentProduct<ProcessedMenuProduct>[]
+}
+
+export enum WaiterResponseType {
+  Accepted = 'ACCEPTED',
+  AcceptedWithModifications = 'ACCEPTED_WITH_MODIFICATIONS',
+  Confirmed = 'CONFIRMED',
+  Rejected = 'REJECTED',
+}
+
+export type ConsumerOrderPatchBody =
+  | {
+      type: ClientPushTokenType.ClientPushToken
+      data: string
+    }
+  | {
+      type: WaiterResponseType
+      data: undefined
+    }
+
+export enum ClientPushTokenType {
+  ClientPushToken = 'clientPushToken',
+}
+
+export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent, isUserPartyMode = false) => {
   const totalPrice = orderIntent.products
     .map(productIntent => {
       const { product, quantity } = productIntent
-      const effectiveProductPrice = product.isDiscounted ? product.discountedPrice : product.price
+      const { price, isDiscounted, discountedPrice, priceDuringEvent } = product || {}
+
+      const effectiveProductPrice =
+        isUserPartyMode && priceDuringEvent ? priceDuringEvent : isDiscounted && discountedPrice ? discountedPrice : price
 
       return +effectiveProductPrice! * +quantity
     })
