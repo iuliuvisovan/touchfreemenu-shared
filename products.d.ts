@@ -136,8 +136,7 @@ export declare type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
     imageUrl?: string;
     categoryId: string;
     mappedAllergens?: any[];
-    isLast?: boolean;
-    isInOddCategory?: boolean;
     childProducts?: ProcessedMenuProduct[];
+    effectivePrice: number;
 };
 export declare const computeEffectivePrice: (product: MenuProduct, user: User) => number;

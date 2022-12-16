@@ -516,9 +516,8 @@ export type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
   imageUrl?: string
   categoryId: string
   mappedAllergens?: any[]
-  isLast?: boolean
-  isInOddCategory?: boolean
   childProducts?: ProcessedMenuProduct[]
+  effectivePrice: number
 }
 
 export const computeEffectivePrice = (product: MenuProduct, user: User) => {
