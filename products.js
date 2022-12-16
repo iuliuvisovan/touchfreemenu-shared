@@ -1,7 +1,7 @@
 "use strict";
 var _a, _b;
 exports.__esModule = true;
-exports.ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = exports.ALL_PRODUCT_PROPERTIES = exports.ProductProperty = void 0;
+exports.computeEffectivePrice = exports.ALLERGENS = exports.LocalLanguageName = exports.RomanianLanguageName = exports.LanguageCode = exports.ALL_PRODUCT_PROPERTIES = exports.ProductProperty = void 0;
 var ProductProperty;
 (function (ProductProperty) {
     ProductProperty["Spicy"] = "spicy";
@@ -455,3 +455,17 @@ exports.ALLERGENS = [
         }
     },
 ];
+var computeEffectivePrice = function (product, user) {
+    var _a = product || {}, price = _a.price, isDiscounted = _a.isDiscounted, discountedPrice = _a.discountedPrice, priceDuringEvent = _a.priceDuringEvent, childProducts = _a.childProducts;
+    if (childProducts === null || childProducts === void 0 ? void 0 : childProducts.length) {
+        return undefined;
+    }
+    if (user.inPartyMode && priceDuringEvent) {
+        return priceDuringEvent;
+    }
+    if (isDiscounted && discountedPrice) {
+        return discountedPrice;
+    }
+    return price;
+};
+exports.computeEffectivePrice = computeEffectivePrice;

@@ -1,3 +1,5 @@
+import { User } from './users'
+
 export type MenuProduct = {
   names: Record<string, string>
   descriptions: Record<string, string>
@@ -506,7 +508,6 @@ export type TranslatedAllergen = {
   shortName: string
 }
 
-
 export type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
   _id: string
   name: string
@@ -518,4 +519,22 @@ export type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
   isLast?: boolean
   isInOddCategory?: boolean
   childProducts?: ProcessedMenuProduct[]
+}
+
+export const computeEffectivePrice = (product: MenuProduct, user: User) => {
+  const { price, isDiscounted, discountedPrice, priceDuringEvent, childProducts } = product || {}
+
+  if (childProducts?.length) {
+    return undefined
+  }
+
+  if (user.inPartyMode && priceDuringEvent) {
+    return priceDuringEvent
+  }
+
+  if (isDiscounted && discountedPrice) {
+    return discountedPrice
+  }
+
+  return price
 }

@@ -1,3 +1,4 @@
+import { User } from './users';
 export declare type MenuProduct = {
     names: Record<string, string>;
     descriptions: Record<string, string>;
@@ -139,3 +140,4 @@ export declare type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
     isInOddCategory?: boolean;
     childProducts?: ProcessedMenuProduct[];
 };
+export declare const computeEffectivePrice: (product: MenuProduct, user: User) => number;
