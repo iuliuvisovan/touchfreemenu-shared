@@ -515,7 +515,6 @@ export type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
   isWhiteSquare: boolean
   imageUrl?: string
   categoryId: string
-  mappedAllergens?: any[]
   childProducts?: ProcessedMenuProduct[]
   effectivePrice: number
 }
