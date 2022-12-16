@@ -15,19 +15,36 @@ export declare type ConsumerOrderProduct<T> = {
 export declare type ConsumerOrder = {
     id: string;
     orderNumber?: string;
-    totalValue: number;
-    products: ConsumerOrderProduct<MenuProduct>[];
     targetUserId: string;
     targetUsername?: string;
-    paymentType: ConsumerOrderPaymentType;
-    billingInfo: BillingInfo;
-    shippingInfo: ShippingInfo;
+    ip: string;
+    deviceId: string;
+    deviceType: string;
+    deviceName: string;
+    tableNumber: string;
+    products: ConsumerOrderProduct<MenuProduct>[];
+    currency: CurrencyCode;
+    clientCoordinates: {
+        latitude: number;
+        longitude: number;
+    };
+    clientPushToken?: string;
+    waiterResponse?: {
+        type: WaiterResponseType;
+        timestamp: number;
+        deviceId: string;
+        waiterName: string;
+    };
+    paymentType?: ConsumerOrderPaymentType;
+    billingInfo?: BillingInfo;
+    shippingInfo?: ShippingInfo;
     paidWithCardMask?: string;
     paymentProcessorResponse?: string;
     localError?: string;
     extraCommentsFromUser?: string;
     proformaInvoiceId?: string;
     finalInvoiceId?: string;
+    timestamp: number;
     createdAt?: Date;
 };
 export declare enum ConsumerOrderType {
@@ -35,8 +52,38 @@ export declare enum ConsumerOrderType {
     Delivery = "DELIVERY",
     PickUp = "PICK_UP"
 }
+export declare type ConsumerOrderIntentProduct<T> = {
+    quantity: number;
+    product: T;
+};
 export declare type ConsumerOrderIntent = {
     type: ConsumerOrderType;
-    products: ConsumerOrderProduct<ProcessedMenuProduct>[];
+    targetUserId: string;
+    targetUsername: string;
+    tableNumber: string;
+    deviceId: string;
+    deviceType: string;
+    deviceName: string;
+    clientCoordinates: {
+        latitude: number;
+        longitude: number;
+    };
+    products: ConsumerOrderIntentProduct<ProcessedMenuProduct>[];
 };
-export declare const computeConsumerIntentPrice: (orderIntent: ConsumerOrderIntent) => number;
+export declare enum WaiterResponseType {
+    Accepted = "ACCEPTED",
+    AcceptedWithModifications = "ACCEPTED_WITH_MODIFICATIONS",
+    Confirmed = "CONFIRMED",
+    Rejected = "REJECTED"
+}
+export declare type ConsumerOrderPatchBody = {
+    type: ClientPushTokenType.ClientPushToken;
+    data: string;
+} | {
+    type: WaiterResponseType;
+    data: undefined;
+};
+export declare enum ClientPushTokenType {
+    ClientPushToken = "clientPushToken"
+}
+export declare const computeConsumerIntentPrice: (orderIntent: ConsumerOrderIntent, isUserPartyMode?: boolean) => number;
