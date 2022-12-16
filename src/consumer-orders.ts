@@ -20,30 +20,34 @@ export type ConsumerOrder = {
   orderNumber?: string
   targetUserId: string
   targetUsername?: string
-  ip: string
-  deviceId: string
-  deviceType: string
-  deviceName: string
   tableNumber: string
   products: ConsumerOrderProduct<MenuProduct>[]
   currency: CurrencyCode
-  clientCoordinates: { latitude: number; longitude: number }
-  clientPushToken?: string
+  extraComments?: string
+  consumer: {
+    deviceId: string
+    deviceType: string
+    deviceName: string
+    ip: string
+    coordinates: { latitude: number; longitude: number }
+    pushToken?: string
+  }
   waiterResponse?: {
     type: WaiterResponseType
     timestamp: number
     deviceId: string
     waiterName: string
   }
-  paymentType?: ConsumerOrderPaymentType
-  billingInfo?: BillingInfo
-  shippingInfo?: ShippingInfo
-  paidWithCardMask?: string
-  paymentProcessorResponse?: string
+  payment: {
+    proformaInvoiceId?: string
+    finalInvoiceId?: string
+    type?: ConsumerOrderPaymentType
+    paidWithCardMask?: string
+    paymentProcessorResponse?: string
+  }
+  shipping?: ShippingInfo
+  billing?: BillingInfo
   localError?: string
-  extraCommentsFromUser?: string
-  proformaInvoiceId?: string
-  finalInvoiceId?: string
   timestamp: number
   createdAt?: Date
 }
@@ -64,36 +68,42 @@ export type ConsumerOrderIntent = {
   targetUserId: string
   targetUsername: string
   tableNumber: string
-  deviceId: string
-  deviceType: string
-  deviceName: string
-  clientCoordinates: { latitude: number; longitude: number }
   products: ConsumerOrderIntentProduct<ProcessedMenuProduct>[]
+  consumer: {
+    deviceId: string
+    deviceType: string
+    deviceName: string
+    coordinates: { latitude: number; longitude: number }
+  }
 }
 
 export enum WaiterResponseType {
   Accepted = 'ACCEPTED',
-  AcceptedWithModifications = 'ACCEPTED_WITH_MODIFICATIONS',
-  Confirmed = 'CONFIRMED',
   Rejected = 'REJECTED',
+}
+
+export enum ConsumerOrderPatchType {
+  ClientPushToken = 'clientPushToken',
+  WaiterResponse = 'waiterResponse',
+  NotifyConsumer = 'notifyConsumer',
 }
 
 export type ConsumerOrderPatchBody =
   | {
-      type: ClientPushTokenType.ClientPushToken
+      type: ConsumerOrderPatchType.ClientPushToken
       data: string
     }
   | {
-      type: WaiterResponseType
+      type: ConsumerOrderPatchType.WaiterResponse
+      data: WaiterResponseType
+    }
+  | {
+      type: ConsumerOrderPatchType.NotifyConsumer
       data: undefined
     }
 
-export enum ClientPushTokenType {
-  ClientPushToken = 'clientPushToken',
-}
-
-export const computeConsumerIntentPrice = (orderIntent: ConsumerOrderIntent, isUserPartyMode = false) => {
-  const totalPrice = orderIntent.products
+export const computeConsumerOrderPrice = (order: ConsumerOrderIntent, isUserPartyMode = false) => {
+  const totalPrice = order.products
     .map(productIntent => {
       const { product, quantity } = productIntent
       const { price, isDiscounted, discountedPrice, priceDuringEvent } = product || {}

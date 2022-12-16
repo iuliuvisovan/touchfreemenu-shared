@@ -1,18 +1,22 @@
+import { WaiterResponseType } from "./consumer-orders";
 export declare type WaiterCall = {
     id: string;
     targetUserId: string;
     targetUsername: string;
     tableNumber: string;
-    ip: string;
-    deviceId: string;
-    deviceType: string;
-    deviceName: string;
-    clientCoordinates: {
-        latitude: number;
-        longitude: number;
+    consumer: {
+        ip: string;
+        deviceId: string;
+        deviceType: string;
+        deviceName: string;
+        coordinates: {
+            latitude: number;
+            longitude: number;
+        };
+        pushToken?: string;
     };
-    clientPushToken?: string;
-    waiterRepliedWithOmw?: {
+    waiterResponse?: {
+        type: WaiterResponseType;
         timestamp: number;
         deviceId: string;
         waiterName: string;

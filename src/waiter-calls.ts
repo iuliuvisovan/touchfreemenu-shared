@@ -1,15 +1,20 @@
+import { WaiterResponseType } from "./consumer-orders"
+
 export type WaiterCall = {
   id: string
   targetUserId: string
   targetUsername: string
   tableNumber: string
-  ip: string
-  deviceId: string
-  deviceType: string
-  deviceName: string
-  clientCoordinates: { latitude: number; longitude: number }
-  clientPushToken?: string
-  waiterRepliedWithOmw?: {
+  consumer: {
+    ip: string
+    deviceId: string
+    deviceType: string
+    deviceName: string
+    coordinates: { latitude: number; longitude: number }
+    pushToken?: string
+  }
+  waiterResponse?: {
+    type: WaiterResponseType
     timestamp: number
     deviceId: string
     waiterName: string
