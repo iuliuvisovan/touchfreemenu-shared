@@ -1,4 +1,4 @@
-import { WaiterResponseType } from "./consumer-orders"
+import { WaiterResponseType } from './consumer-orders'
 
 export type WaiterCall = {
   id: string
@@ -29,11 +29,11 @@ export type WaiterCallPatchBody =
       data: string
     }
   | {
-      type: WaiterCallPatchType.OnMyWay
-      data: undefined
+      type: WaiterCallPatchType.WaiterResponse
+      data: WaiterResponseType
     }
 
 export enum WaiterCallPatchType {
-  ClientPushToken,
-  OnMyWay,
+  ClientPushToken = 'clientPushToken',
+  WaiterResponse = 'waiterResponse',
 }
