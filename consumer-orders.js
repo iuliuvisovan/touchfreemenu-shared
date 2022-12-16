@@ -22,10 +22,8 @@ var ConsumerOrderPatchType;
 (function (ConsumerOrderPatchType) {
     ConsumerOrderPatchType["ClientPushToken"] = "clientPushToken";
     ConsumerOrderPatchType["WaiterResponse"] = "waiterResponse";
-    ConsumerOrderPatchType["NotifyConsumer"] = "notifyConsumer";
 })(ConsumerOrderPatchType = exports.ConsumerOrderPatchType || (exports.ConsumerOrderPatchType = {}));
 var computeConsumerOrderPrice = function (order, isUserPartyMode) {
-    if (isUserPartyMode === void 0) { isUserPartyMode = false; }
     var totalPrice = order.products
         .map(function (productIntent) {
         var product = productIntent.product, quantity = productIntent.quantity;

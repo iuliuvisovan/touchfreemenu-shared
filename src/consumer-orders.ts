@@ -86,7 +86,6 @@ export enum WaiterResponseType {
 export enum ConsumerOrderPatchType {
   ClientPushToken = 'clientPushToken',
   WaiterResponse = 'waiterResponse',
-  NotifyConsumer = 'notifyConsumer',
 }
 
 export type ConsumerOrderPatchBody =
@@ -98,14 +97,10 @@ export type ConsumerOrderPatchBody =
       type: ConsumerOrderPatchType.WaiterResponse
       data: WaiterResponseType
     }
-  | {
-      type: ConsumerOrderPatchType.NotifyConsumer
-      data: undefined
-    }
 
-export const computeConsumerOrderPrice = (order: ConsumerOrderIntent, isUserPartyMode = false) => {
+export const computeConsumerOrderPrice = (order: ConsumerOrder, isUserPartyMode: boolean) => {
   const totalPrice = order.products
-    .map(productIntent => {
+    .map((productIntent: ConsumerOrderProduct<MenuProduct>) => {
       const { product, quantity } = productIntent
       const { price, isDiscounted, discountedPrice, priceDuringEvent } = product || {}
 

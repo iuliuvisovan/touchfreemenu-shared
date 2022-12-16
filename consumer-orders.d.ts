@@ -83,8 +83,7 @@ export declare enum WaiterResponseType {
 }
 export declare enum ConsumerOrderPatchType {
     ClientPushToken = "clientPushToken",
-    WaiterResponse = "waiterResponse",
-    NotifyConsumer = "notifyConsumer"
+    WaiterResponse = "waiterResponse"
 }
 export declare type ConsumerOrderPatchBody = {
     type: ConsumerOrderPatchType.ClientPushToken;
@@ -92,8 +91,5 @@ export declare type ConsumerOrderPatchBody = {
 } | {
     type: ConsumerOrderPatchType.WaiterResponse;
     data: WaiterResponseType;
-} | {
-    type: ConsumerOrderPatchType.NotifyConsumer;
-    data: undefined;
 };
-export declare const computeConsumerOrderPrice: (order: ConsumerOrderIntent, isUserPartyMode?: boolean) => number;
+export declare const computeConsumerOrderPrice: (order: ConsumerOrder, isUserPartyMode: boolean) => number;
