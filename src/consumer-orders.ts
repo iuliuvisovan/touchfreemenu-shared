@@ -1,5 +1,5 @@
 import { BillingInfo, ShippingInfo } from './holder-orders'
-import { MenuProduct, ProcessedMenuProduct } from './products'
+import { MenuProduct, ProductViewModel } from './products'
 import { CurrencyCode } from './users'
 
 export type ConsumerOrder = {
@@ -59,9 +59,9 @@ export enum ConsumerOrderType {
   PickUp = 'PICK_UP',
 }
 
-export type ConsumerOrderIntentProduct<T extends MenuProduct | ProcessedMenuProduct> = {
+export type ConsumerOrderIntentProduct = {
   quantity: number
-  product: T
+  product: ProductViewModel
 }
 
 export type ConsumerOrderIntent = {
@@ -69,7 +69,7 @@ export type ConsumerOrderIntent = {
   targetUserId: string
   targetUsername: string
   tableNumber: string
-  products: ConsumerOrderIntentProduct<ProcessedMenuProduct>[]
+  products: ConsumerOrderIntentProduct[]
   consumer: {
     deviceId: string
     deviceType: string

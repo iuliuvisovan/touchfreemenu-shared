@@ -30,9 +30,30 @@ export declare type MenuProduct = {
     allergens?: string[];
     properties?: string[];
     index: number;
-    childVariantName?: string;
     parentProductId?: string;
     childProducts?: MenuProduct[];
+};
+export declare type ProductViewModel = {
+    id: string;
+    name: string;
+    description: string;
+    categoryId: string;
+    childProducts?: ProductViewModel[];
+    safeName: string;
+    isWhiteSquare: boolean;
+    isPortrait: boolean;
+    isGeneric: boolean;
+    imageUrl: string;
+    thumbnailUrl: string;
+    isCompact: boolean;
+    quantities?: string;
+    kcalories?: string;
+    price: number;
+    index: number;
+    discountedPrice: number;
+    isDiscounted: boolean;
+    nutritionalDeclaration?: string;
+    isAvailable?: boolean;
 };
 export declare enum ProductProperty {
     Spicy = "spicy",
@@ -127,15 +148,5 @@ export declare type TranslatedAllergen = {
     letter: string;
     longName: string;
     shortName: string;
-};
-export declare type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
-    _id: string;
-    name: string;
-    description: string;
-    isWhiteSquare: boolean;
-    imageUrl?: string;
-    categoryId: string;
-    childProducts?: ProcessedMenuProduct[];
-    effectivePrice: number;
 };
 export declare const computeEffectivePrice: (product: MenuProduct, user: User) => number;

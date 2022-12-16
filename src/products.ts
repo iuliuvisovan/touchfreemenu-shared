@@ -32,9 +32,31 @@ export type MenuProduct = {
   properties?: string[]
   index: number
   // If product is child
-  childVariantName?: string
   parentProductId?: string
   childProducts?: MenuProduct[]
+}
+
+export type ProductViewModel = {
+  id: string
+  name: string
+  description: string
+  categoryId: string
+  childProducts?: ProductViewModel[]
+  safeName: string
+  isWhiteSquare: boolean
+  isPortrait: boolean
+  isGeneric: boolean
+  imageUrl: string
+  thumbnailUrl: string
+  isCompact: boolean
+  quantities?: string
+  kcalories?: string
+  price: number
+  index: number
+  discountedPrice: number
+  isDiscounted: boolean
+  nutritionalDeclaration?: string
+  isAvailable?: boolean
 }
 
 export enum ProductProperty {
@@ -506,17 +528,6 @@ export type TranslatedAllergen = {
   letter: string
   longName: string
   shortName: string
-}
-
-export type ProcessedMenuProduct = Omit<MenuProduct, 'names' | 'id'> & {
-  _id: string
-  name: string
-  description: string
-  isWhiteSquare: boolean
-  imageUrl?: string
-  categoryId: string
-  childProducts?: ProcessedMenuProduct[]
-  effectivePrice: number
 }
 
 export const computeEffectivePrice = (product: MenuProduct, user: User) => {
