@@ -25,7 +25,7 @@ export type WaiterCall = {
 
 export type WaiterCallPatchBody =
   | {
-      type: WaiterCallPatchType.ClientPushToken
+      type: WaiterCallPatchType.ConsumerPushToken
       data: string
     }
   | {
@@ -34,6 +34,6 @@ export type WaiterCallPatchBody =
     }
 
 export enum WaiterCallPatchType {
-  ClientPushToken = 'clientPushToken',
+  ConsumerPushToken = 'consumerPushToken',
   WaiterResponse = 'waiterResponse',
 }

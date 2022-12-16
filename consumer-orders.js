@@ -20,7 +20,7 @@ var WaiterResponseType;
 })(WaiterResponseType = exports.WaiterResponseType || (exports.WaiterResponseType = {}));
 var ConsumerOrderPatchType;
 (function (ConsumerOrderPatchType) {
-    ConsumerOrderPatchType["ClientPushToken"] = "clientPushToken";
+    ConsumerOrderPatchType["ConsumerPushToken"] = "consumerPushToken";
     ConsumerOrderPatchType["WaiterResponse"] = "waiterResponse";
 })(ConsumerOrderPatchType = exports.ConsumerOrderPatchType || (exports.ConsumerOrderPatchType = {}));
 var computeConsumerOrderPrice = function (order, isUserPartyMode) {

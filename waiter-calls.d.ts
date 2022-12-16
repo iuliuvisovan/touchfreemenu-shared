@@ -25,13 +25,13 @@ export declare type WaiterCall = {
     createdAt: Date;
 };
 export declare type WaiterCallPatchBody = {
-    type: WaiterCallPatchType.ClientPushToken;
+    type: WaiterCallPatchType.ConsumerPushToken;
     data: string;
 } | {
     type: WaiterCallPatchType.WaiterResponse;
     data: WaiterResponseType;
 };
 export declare enum WaiterCallPatchType {
-    ClientPushToken = "clientPushToken",
+    ConsumerPushToken = "consumerPushToken",
     WaiterResponse = "waiterResponse"
 }

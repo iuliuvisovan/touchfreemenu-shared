@@ -82,11 +82,11 @@ export declare enum WaiterResponseType {
     Rejected = "REJECTED"
 }
 export declare enum ConsumerOrderPatchType {
-    ClientPushToken = "clientPushToken",
+    ConsumerPushToken = "consumerPushToken",
     WaiterResponse = "waiterResponse"
 }
 export declare type ConsumerOrderPatchBody = {
-    type: ConsumerOrderPatchType.ClientPushToken;
+    type: ConsumerOrderPatchType.ConsumerPushToken;
     data: string;
 } | {
     type: ConsumerOrderPatchType.WaiterResponse;
