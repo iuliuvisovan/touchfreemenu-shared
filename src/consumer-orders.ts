@@ -2,19 +2,6 @@ import { BillingInfo, ShippingInfo } from './holder-orders'
 import { MenuProduct, ProcessedMenuProduct } from './products'
 import { CurrencyCode } from './users'
 
-export enum ConsumerOrderPaymentType {
-  BankTransfer = 'BankTransfer',
-  OnlineCard = 'OnlineCard',
-  Cash = 'Cash',
-}
-
-export type ConsumerOrderProduct<T> = {
-  quantity: number
-  currency: CurrencyCode
-  addedInOrderAt: number
-  product: T
-}
-
 export type ConsumerOrder = {
   id: string
   orderNumber?: string
@@ -22,6 +9,7 @@ export type ConsumerOrder = {
   targetUsername?: string
   tableNumber: string
   products: ConsumerOrderProduct<MenuProduct>[]
+  totalValue: number
   currency: CurrencyCode
   extraComments?: string
   consumer: {
@@ -52,13 +40,26 @@ export type ConsumerOrder = {
   createdAt?: Date
 }
 
+export type ConsumerOrderProduct<T> = {
+  quantity: number
+  currency: CurrencyCode
+  addedInOrderAt: number
+  product: T
+}
+
+export enum ConsumerOrderPaymentType {
+  BankTransfer = 'BankTransfer',
+  OnlineCard = 'OnlineCard',
+  Cash = 'Cash',
+}
+
 export enum ConsumerOrderType {
   AtTable = 'AT_TABLE',
   Delivery = 'DELIVERY',
   PickUp = 'PICK_UP',
 }
 
-export type ConsumerOrderIntentProduct<T> = {
+export type ConsumerOrderIntentProduct<T extends MenuProduct | ProcessedMenuProduct> = {
   quantity: number
   product: T
 }
