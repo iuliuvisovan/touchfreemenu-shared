@@ -4,6 +4,7 @@ export declare type ConsumerOrder = {
     id: string;
     orderNumber?: string;
     targetUserId: string;
+    type: ConsumerOrderType;
     targetUsername?: string;
     tableNumber: string;
     products: ConsumerOrderProduct[];
