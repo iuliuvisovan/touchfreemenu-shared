@@ -27,7 +27,7 @@ export declare type ConsumerOrder = {
         deviceId: string;
         waiterName: string;
     };
-    payment: {
+    payment?: {
         proformaInvoiceId?: string;
         finalInvoiceId?: string;
         type?: ConsumerOrderPaymentType;
@@ -56,9 +56,7 @@ export declare type CreateConsumerOrderRequestBody = {
             longitude: number;
         };
     };
-    payment: {
-        type?: ConsumerOrderPaymentType;
-    };
+    paymentType: ConsumerOrderPaymentType;
     shipping?: ShippingInfo;
     billing?: BillingInfo;
 };

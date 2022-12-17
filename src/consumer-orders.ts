@@ -25,7 +25,7 @@ export type ConsumerOrder = {
     deviceId: string
     waiterName: string
   }
-  payment: {
+  payment?: {
     proformaInvoiceId?: string
     finalInvoiceId?: string
     type?: ConsumerOrderPaymentType
@@ -52,9 +52,7 @@ export type CreateConsumerOrderRequestBody = {
     deviceName: string
     coordinates: { latitude: number; longitude: number }
   }
-  payment: {
-    type?: ConsumerOrderPaymentType
-  }
+  paymentType: ConsumerOrderPaymentType
   shipping?: ShippingInfo
   billing?: BillingInfo
 }
