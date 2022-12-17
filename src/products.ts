@@ -53,6 +53,7 @@ export type ParentProductViewModel = {
   kcalories?: string
   index: number
   allergens?: string[]
+  properties?: string[]
   nutritionalDeclaration?: string
   isAvailable?: boolean
   childProducts?: ChildProductViewModel[]
