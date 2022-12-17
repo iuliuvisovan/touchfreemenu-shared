@@ -42,7 +42,7 @@ export enum ProductType {
   Holder = 'Holder',
 }
 
-export enum PaymentType {
+export enum HolderOrderPaymentType {
   BankTransfer = 'BankTransfer',
   OnlineCard = 'OnlineCard',
 }
@@ -60,7 +60,7 @@ export type HolderOrder = {
   userId: string
   username?: string
   status: HolderOrderStatus
-  paymentType: PaymentType
+  paymentType: HolderOrderPaymentType
   requestedAmount: number
   billingInfo: BillingInfo
   shippingInfo: ShippingInfo
@@ -84,7 +84,7 @@ export type HolderOrderIntent = {
   subscriptionCode?: SubscriptionCode
   billingInfo?: BillingInfo
   shippingInfo?: ShippingInfo
-  paymentType?: PaymentType
+  paymentType?: HolderOrderPaymentType
   extraCommentsFromUser?: string
   withWifiInfo?: boolean
 }

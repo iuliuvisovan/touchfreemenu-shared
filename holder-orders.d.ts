@@ -36,7 +36,7 @@ export declare enum ProductType {
     Subscription = "Subscription",
     Holder = "Holder"
 }
-export declare enum PaymentType {
+export declare enum HolderOrderPaymentType {
     BankTransfer = "BankTransfer",
     OnlineCard = "OnlineCard"
 }
@@ -52,7 +52,7 @@ export declare type HolderOrder = {
     userId: string;
     username?: string;
     status: HolderOrderStatus;
-    paymentType: PaymentType;
+    paymentType: HolderOrderPaymentType;
     requestedAmount: number;
     billingInfo: BillingInfo;
     shippingInfo: ShippingInfo;
@@ -75,7 +75,7 @@ export declare type HolderOrderIntent = {
     subscriptionCode?: SubscriptionCode;
     billingInfo?: BillingInfo;
     shippingInfo?: ShippingInfo;
-    paymentType?: PaymentType;
+    paymentType?: HolderOrderPaymentType;
     extraCommentsFromUser?: string;
     withWifiInfo?: boolean;
 };

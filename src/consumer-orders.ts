@@ -1,5 +1,4 @@
 import { BillingInfo, ShippingInfo } from './holder-orders'
-import { MenuProduct, ProductViewModel } from './products'
 import { CurrencyCode } from './users'
 
 export type ConsumerOrder = {
@@ -8,8 +7,7 @@ export type ConsumerOrder = {
   targetUserId: string
   targetUsername?: string
   tableNumber: string
-  products: ConsumerOrderProduct<MenuProduct>[]
-  totalValue: number
+  products: ConsumerOrderProduct[]
   currency: CurrencyCode
   extraComments?: string
   consumer: {
@@ -40,11 +38,51 @@ export type ConsumerOrder = {
   createdAt?: Date
 }
 
-export type ConsumerOrderProduct<T> = {
-  quantity: number
+export type CreateConsumerOrderRequestBody = {
+  targetUserId: string
+  tableNumber: string
+  products: ConsumerOrderProduct[]
   currency: CurrencyCode
+  extraComments?: string
+  consumer: {
+    deviceId: string
+    deviceType: string
+    deviceName: string
+    coordinates: { latitude: number; longitude: number }
+  }
+  payment: {
+    type?: ConsumerOrderPaymentType
+  }
+  shipping?: ShippingInfo
+  billing?: BillingInfo
+}
+
+export type ConsumerOrderProduct = {
+  quantity: number
   addedInOrderAt: number
-  product: T
+
+  id: string
+  name: string
+
+  oldPrice?: number
+  effectivePrice?: number
+  quantities?: string
+  kcalories?: string
+} & (ChildProductInfo & ParentProductInfo)
+
+export type ParentProductInfo = {
+  imageUrl?: string
+  thumbnailUrl?: string
+  nutritionalDeclaration?: string
+  allergens?: string[]
+  properties?: string[]
+}
+
+export type ChildProductInfo = {
+  parentProduct: ParentProductInfo & {
+    id: string
+    name: string
+  }
 }
 
 export enum ConsumerOrderPaymentType {
@@ -57,25 +95,6 @@ export enum ConsumerOrderType {
   AtTable = 'AT_TABLE',
   Delivery = 'DELIVERY',
   PickUp = 'PICK_UP',
-}
-
-export type ConsumerOrderIntentProduct = {
-  quantity: number
-  product: ProductViewModel
-}
-
-export type ConsumerOrderIntent = {
-  type: ConsumerOrderType
-  targetUserId: string
-  targetUsername: string
-  tableNumber: string
-  products: ConsumerOrderIntentProduct[]
-  consumer: {
-    deviceId: string
-    deviceType: string
-    deviceName: string
-    coordinates: { latitude: number; longitude: number }
-  }
 }
 
 export enum WaiterResponseType {
@@ -98,18 +117,19 @@ export type ConsumerOrderPatchBody =
       data: WaiterResponseType
     }
 
-export const computeConsumerOrderPrice = (order: ConsumerOrder, isUserPartyMode: boolean) => {
-  const totalPrice = order.products
-    .map((productIntent: ConsumerOrderProduct<MenuProduct>) => {
-      const { product, quantity } = productIntent
-      const { price, isDiscounted, discountedPrice, priceDuringEvent } = product || {}
+export const computeConsumerOrderPrice = (order: ConsumerOrder | CreateConsumerOrderRequestBody) => {
+  const invalidProduct = order.products.find(x => typeof x.effectivePrice === 'undefined' || x.effectivePrice === null)
+  if (invalidProduct) {
+    throw new Error(`Attempted to order product ${JSON.stringify(invalidProduct)} without a price!!!`)
+  }
 
-      const effectiveProductPrice =
-        isUserPartyMode && priceDuringEvent ? priceDuringEvent : isDiscounted && discountedPrice ? discountedPrice : price
+  const totalPrice = (order?.products || [])
+    .map(orderProduct => {
+      const { effectivePrice, quantity } = orderProduct
 
-      return +effectiveProductPrice! * +quantity
+      return +effectivePrice! * +quantity
     })
-    .reduce((a, b) => a + b)
+    .reduce((a, b) => a + b, 0)
 
   return totalPrice
 }

@@ -1,5 +1,4 @@
 import { BillingInfo, ShippingInfo } from './holder-orders';
-import { MenuProduct, ProductViewModel } from './products';
 import { CurrencyCode } from './users';
 export declare type ConsumerOrder = {
     id: string;
@@ -7,8 +6,7 @@ export declare type ConsumerOrder = {
     targetUserId: string;
     targetUsername?: string;
     tableNumber: string;
-    products: ConsumerOrderProduct<MenuProduct>[];
-    totalValue: number;
+    products: ConsumerOrderProduct[];
     currency: CurrencyCode;
     extraComments?: string;
     consumer: {
@@ -41,11 +39,49 @@ export declare type ConsumerOrder = {
     timestamp: number;
     createdAt?: Date;
 };
-export declare type ConsumerOrderProduct<T> = {
-    quantity: number;
+export declare type CreateConsumerOrderRequestBody = {
+    targetUserId: string;
+    tableNumber: string;
+    products: ConsumerOrderProduct[];
     currency: CurrencyCode;
+    extraComments?: string;
+    consumer: {
+        deviceId: string;
+        deviceType: string;
+        deviceName: string;
+        coordinates: {
+            latitude: number;
+            longitude: number;
+        };
+    };
+    payment: {
+        type?: ConsumerOrderPaymentType;
+    };
+    shipping?: ShippingInfo;
+    billing?: BillingInfo;
+};
+export declare type ConsumerOrderProduct = {
+    quantity: number;
     addedInOrderAt: number;
-    product: T;
+    id: string;
+    name: string;
+    oldPrice?: number;
+    effectivePrice?: number;
+    quantities?: string;
+    kcalories?: string;
+} & (ChildProductInfo & ParentProductInfo);
+export declare type ParentProductInfo = {
+    imageUrl?: string;
+    thumbnailUrl?: string;
+    nutritionalDeclaration?: string;
+    allergens?: string[];
+    properties?: string[];
+};
+export declare type ChildProductInfo = {
+    parentProduct: ParentProductInfo & {
+        id: string;
+        name: string;
+    };
 };
 export declare enum ConsumerOrderPaymentType {
     BankTransfer = "BankTransfer",
@@ -57,26 +93,6 @@ export declare enum ConsumerOrderType {
     Delivery = "DELIVERY",
     PickUp = "PICK_UP"
 }
-export declare type ConsumerOrderIntentProduct = {
-    quantity: number;
-    product: ProductViewModel;
-};
-export declare type ConsumerOrderIntent = {
-    type: ConsumerOrderType;
-    targetUserId: string;
-    targetUsername: string;
-    tableNumber: string;
-    products: ConsumerOrderIntentProduct[];
-    consumer: {
-        deviceId: string;
-        deviceType: string;
-        deviceName: string;
-        coordinates: {
-            latitude: number;
-            longitude: number;
-        };
-    };
-};
 export declare enum WaiterResponseType {
     Accepted = "ACCEPTED",
     Rejected = "REJECTED"
@@ -92,4 +108,4 @@ export declare type ConsumerOrderPatchBody = {
     type: ConsumerOrderPatchType.WaiterResponse;
     data: WaiterResponseType;
 };
-export declare const computeConsumerOrderPrice: (order: ConsumerOrder, isUserPartyMode: boolean) => number;
+export declare const computeConsumerOrderPrice: (order: ConsumerOrder | CreateConsumerOrderRequestBody) => number;

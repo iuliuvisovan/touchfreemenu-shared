@@ -23,15 +23,17 @@ var ConsumerOrderPatchType;
     ConsumerOrderPatchType["ConsumerPushToken"] = "consumerPushToken";
     ConsumerOrderPatchType["WaiterResponse"] = "waiterResponse";
 })(ConsumerOrderPatchType = exports.ConsumerOrderPatchType || (exports.ConsumerOrderPatchType = {}));
-var computeConsumerOrderPrice = function (order, isUserPartyMode) {
-    var totalPrice = order.products
-        .map(function (productIntent) {
-        var product = productIntent.product, quantity = productIntent.quantity;
-        var _a = product || {}, price = _a.price, isDiscounted = _a.isDiscounted, discountedPrice = _a.discountedPrice, priceDuringEvent = _a.priceDuringEvent;
-        var effectiveProductPrice = isUserPartyMode && priceDuringEvent ? priceDuringEvent : isDiscounted && discountedPrice ? discountedPrice : price;
-        return +effectiveProductPrice * +quantity;
+var computeConsumerOrderPrice = function (order) {
+    var invalidProduct = order.products.find(function (x) { return typeof x.effectivePrice === 'undefined' || x.effectivePrice === null; });
+    if (invalidProduct) {
+        throw new Error("Attempted to order product ".concat(JSON.stringify(invalidProduct), " without a price!!!"));
+    }
+    var totalPrice = ((order === null || order === void 0 ? void 0 : order.products) || [])
+        .map(function (orderProduct) {
+        var effectivePrice = orderProduct.effectivePrice, quantity = orderProduct.quantity;
+        return +effectivePrice * +quantity;
     })
-        .reduce(function (a, b) { return a + b; });
+        .reduce(function (a, b) { return a + b; }, 0);
     return totalPrice;
 };
 exports.computeConsumerOrderPrice = computeConsumerOrderPrice;

@@ -1,4 +1,3 @@
-import { User } from './users';
 export declare type MenuProduct = {
     names: Record<string, string>;
     descriptions: Record<string, string>;
@@ -6,7 +5,6 @@ export declare type MenuProduct = {
     userId: string;
     username?: string;
     categoryId: string;
-    categoryName?: string;
     imageKey?: string;
     imageInfo?: {
         width?: number;
@@ -33,12 +31,13 @@ export declare type MenuProduct = {
     parentProductId?: string;
     childProducts?: MenuProduct[];
 };
-export declare type ProductViewModel = {
+export declare type ParentProductViewModel = {
     id: string;
     name: string;
     description: string;
+    oldPrice?: number;
+    effectivePrice?: number;
     categoryId: string;
-    childProducts?: ProductViewModel[];
     safeName: string;
     isWhiteSquare: boolean;
     isPortrait: boolean;
@@ -48,12 +47,19 @@ export declare type ProductViewModel = {
     isCompact: boolean;
     quantities?: string;
     kcalories?: string;
-    price: number;
     index: number;
-    discountedPrice: number;
-    isDiscounted: boolean;
     nutritionalDeclaration?: string;
     isAvailable?: boolean;
+    childProducts?: ChildProductViewModel[];
+};
+export declare type ChildProductViewModel = {
+    index: number;
+    name: string;
+    quantities?: string;
+    kcalories?: string;
+    oldPrice?: number;
+    effectivePrice: number;
+    parentProduct?: ParentProductViewModel;
 };
 export declare enum ProductProperty {
     Spicy = "spicy",
@@ -149,4 +155,3 @@ export declare type TranslatedAllergen = {
     longName: string;
     shortName: string;
 };
-export declare const computeEffectivePrice: (product: MenuProduct, user: User) => number;

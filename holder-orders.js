@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.computeIntentSummary = exports.DELIVERY_PRICE = exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE_HOLDERS = exports.HolderCode = exports.SubscriptionCode = exports.CourierCompany = exports.PaymentType = exports.ProductType = exports.BillingType = exports.HolderOrderStatus = void 0;
+exports.computeIntentSummary = exports.DELIVERY_PRICE = exports.computeIntentPrice = exports.AVAILABLE_SUBSCRIPTIONS = exports.AVAILABLE_HOLDERS = exports.HolderCode = exports.SubscriptionCode = exports.CourierCompany = exports.HolderOrderPaymentType = exports.ProductType = exports.BillingType = exports.HolderOrderStatus = void 0;
 var HolderOrderStatus;
 (function (HolderOrderStatus) {
     HolderOrderStatus["Initiated"] = "INITIATED";
@@ -22,11 +22,11 @@ var ProductType;
     ProductType["Subscription"] = "Subscription";
     ProductType["Holder"] = "Holder";
 })(ProductType = exports.ProductType || (exports.ProductType = {}));
-var PaymentType;
-(function (PaymentType) {
-    PaymentType["BankTransfer"] = "BankTransfer";
-    PaymentType["OnlineCard"] = "OnlineCard";
-})(PaymentType = exports.PaymentType || (exports.PaymentType = {}));
+var HolderOrderPaymentType;
+(function (HolderOrderPaymentType) {
+    HolderOrderPaymentType["BankTransfer"] = "BankTransfer";
+    HolderOrderPaymentType["OnlineCard"] = "OnlineCard";
+})(HolderOrderPaymentType = exports.HolderOrderPaymentType || (exports.HolderOrderPaymentType = {}));
 var CourierCompany;
 (function (CourierCompany) {
     CourierCompany["Cargus"] = "cargus";

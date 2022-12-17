@@ -7,7 +7,6 @@ export type MenuProduct = {
   userId: string
   username?: string
   categoryId: string
-  categoryName?: string
   imageKey?: string
   imageInfo?: {
     width?: number
@@ -36,12 +35,13 @@ export type MenuProduct = {
   childProducts?: MenuProduct[]
 }
 
-export type ProductViewModel = {
+export type ParentProductViewModel = {
   id: string
   name: string
   description: string
+  oldPrice?: number
+  effectivePrice?: number
   categoryId: string
-  childProducts?: ProductViewModel[]
   safeName: string
   isWhiteSquare: boolean
   isPortrait: boolean
@@ -51,12 +51,20 @@ export type ProductViewModel = {
   isCompact: boolean
   quantities?: string
   kcalories?: string
-  price: number
   index: number
-  discountedPrice: number
-  isDiscounted: boolean
   nutritionalDeclaration?: string
   isAvailable?: boolean
+  childProducts?: ChildProductViewModel[]
+}
+
+export type ChildProductViewModel = {
+  index: number
+  name: string
+  quantities?: string
+  kcalories?: string
+  oldPrice?: number
+  effectivePrice: number
+  parentProduct?: ParentProductViewModel
 }
 
 export enum ProductProperty {
@@ -528,22 +536,4 @@ export type TranslatedAllergen = {
   letter: string
   longName: string
   shortName: string
-}
-
-export const computeEffectivePrice = (product: MenuProduct, user: User) => {
-  const { price, isDiscounted, discountedPrice, priceDuringEvent, childProducts } = product || {}
-
-  if (childProducts?.length) {
-    return undefined
-  }
-
-  if (user.inPartyMode && priceDuringEvent) {
-    return priceDuringEvent
-  }
-
-  if (isDiscounted && discountedPrice) {
-    return discountedPrice
-  }
-
-  return price
 }
