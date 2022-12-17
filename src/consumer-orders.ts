@@ -42,6 +42,7 @@ export type ConsumerOrder = {
 export type CreateConsumerOrderRequestBody = {
   targetUserId: string
   tableNumber: string
+  type: ConsumerOrderType
   products: ConsumerOrderProduct[]
   currency: CurrencyCode
   extraComments?: string

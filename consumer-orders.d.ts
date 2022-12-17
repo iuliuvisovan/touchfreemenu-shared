@@ -43,6 +43,7 @@ export declare type ConsumerOrder = {
 export declare type CreateConsumerOrderRequestBody = {
     targetUserId: string;
     tableNumber: string;
+    type: ConsumerOrderType;
     products: ConsumerOrderProduct[];
     currency: CurrencyCode;
     extraComments?: string;
