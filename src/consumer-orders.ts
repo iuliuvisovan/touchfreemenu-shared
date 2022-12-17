@@ -61,7 +61,7 @@ export type ConsumerOrderProduct = {
   quantity: number
   addedInOrderAt: number
 
-  id: string
+  productId: string
   name: string
 
   oldPrice?: number
@@ -80,7 +80,7 @@ export type ParentProductInfo = {
 
 export type ChildProductInfo = {
   parentProduct: ParentProductInfo & {
-    id: string
+    productId: string
     name: string
   }
 }

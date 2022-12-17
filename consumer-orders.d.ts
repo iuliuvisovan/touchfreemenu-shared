@@ -63,7 +63,7 @@ export declare type CreateConsumerOrderRequestBody = {
 export declare type ConsumerOrderProduct = {
     quantity: number;
     addedInOrderAt: number;
-    id: string;
+    productId: string;
     name: string;
     oldPrice?: number;
     effectivePrice?: number;
@@ -79,7 +79,7 @@ export declare type ParentProductInfo = {
 };
 export declare type ChildProductInfo = {
     parentProduct: ParentProductInfo & {
-        id: string;
+        productId: string;
         name: string;
     };
 };
