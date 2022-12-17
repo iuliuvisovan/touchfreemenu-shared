@@ -48,6 +48,7 @@ export declare type ParentProductViewModel = {
     quantities?: string;
     kcalories?: string;
     index: number;
+    allergens?: string[];
     nutritionalDeclaration?: string;
     isAvailable?: boolean;
     childProducts?: ChildProductViewModel[];
