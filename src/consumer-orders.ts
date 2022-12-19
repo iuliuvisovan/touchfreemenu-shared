@@ -79,7 +79,7 @@ export type ParentProductInfo = {
 }
 
 export type ChildProductInfo = {
-  parentProduct: ParentProductInfo & {
+  parentProduct?: ParentProductInfo & {
     productId: string
     name: string
   }

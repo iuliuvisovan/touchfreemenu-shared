@@ -78,7 +78,7 @@ export declare type ParentProductInfo = {
     properties?: string[];
 };
 export declare type ChildProductInfo = {
-    parentProduct: ParentProductInfo & {
+    parentProduct?: ParentProductInfo & {
         productId: string;
         name: string;
     };
