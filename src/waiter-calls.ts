@@ -23,6 +23,18 @@ export type WaiterCall = {
   createdAt: Date
 }
 
+export type CreateWaiterCallRequestBody = {
+  targetUserId: string
+  targetUsername: string
+  tableNumber: string
+  consumer: {
+    deviceId: string
+    deviceType: string
+    deviceName: string
+    coordinates: { latitude: number; longitude: number }
+  }
+}
+
 export type WaiterCallPatchBody =
   | {
       type: WaiterCallPatchType.ConsumerPushToken
