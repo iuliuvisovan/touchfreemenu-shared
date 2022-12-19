@@ -8,15 +8,14 @@ export declare type MenuCategory = {
     isHidden?: boolean;
     type?: CategoryType;
 };
+export declare type CategoryViewModel = {
+    id: string;
+    name: string;
+    description: string;
+    index: number;
+    type?: CategoryType;
+};
 export declare enum CategoryType {
     Restaurant = "restaurant",
     Bar = "bar"
 }
-export declare type ProcessedMenuCategory = {
-    _id: string;
-    name: string;
-    index: number;
-    description: string;
-    type: CategoryType;
-    isOdd?: boolean;
-};

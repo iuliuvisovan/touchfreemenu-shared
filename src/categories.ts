@@ -9,16 +9,15 @@ export type MenuCategory = {
   type?: CategoryType
 }
 
+export type CategoryViewModel = {
+  id: string
+  name: string
+  description: string
+  index: number
+  type?: CategoryType
+}
+
 export enum CategoryType {
   Restaurant = 'restaurant',
   Bar = 'bar',
-}
-
-export type ProcessedMenuCategory = {
-  _id: string
-  name: string
-  index: number
-  description: string
-  type: CategoryType
-  isOdd?: boolean
 }
