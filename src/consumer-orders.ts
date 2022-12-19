@@ -117,13 +117,13 @@ export type ConsumerOrderPatchBody =
       data: WaiterResponseType
     }
 
-export const computeConsumerOrderPrice = (order: ConsumerOrder | CreateConsumerOrderRequestBody) => {
-  const invalidProduct = order.products.find(x => typeof x.effectivePrice === 'undefined' || x.effectivePrice === null)
+export const computeConsumerOrderPrice = ({ products }: { products: ConsumerOrderProduct[] }) => {
+  const invalidProduct = products.find(x => typeof x.effectivePrice === 'undefined' || x.effectivePrice === null)
   if (invalidProduct) {
     throw new Error(`Attempted to order product ${JSON.stringify(invalidProduct)} without a price!!!`)
   }
 
-  const totalPrice = (order?.products || [])
+  const totalPrice = (products || [])
     .map(orderProduct => {
       const { effectivePrice, quantity } = orderProduct
 

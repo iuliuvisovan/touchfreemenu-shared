@@ -23,12 +23,13 @@ var ConsumerOrderPatchType;
     ConsumerOrderPatchType["ConsumerPushToken"] = "consumerPushToken";
     ConsumerOrderPatchType["WaiterResponse"] = "waiterResponse";
 })(ConsumerOrderPatchType = exports.ConsumerOrderPatchType || (exports.ConsumerOrderPatchType = {}));
-var computeConsumerOrderPrice = function (order) {
-    var invalidProduct = order.products.find(function (x) { return typeof x.effectivePrice === 'undefined' || x.effectivePrice === null; });
+var computeConsumerOrderPrice = function (_a) {
+    var products = _a.products;
+    var invalidProduct = products.find(function (x) { return typeof x.effectivePrice === 'undefined' || x.effectivePrice === null; });
     if (invalidProduct) {
         throw new Error("Attempted to order product ".concat(JSON.stringify(invalidProduct), " without a price!!!"));
     }
-    var totalPrice = ((order === null || order === void 0 ? void 0 : order.products) || [])
+    var totalPrice = (products || [])
         .map(function (orderProduct) {
         var effectivePrice = orderProduct.effectivePrice, quantity = orderProduct.quantity;
         return +effectivePrice * +quantity;

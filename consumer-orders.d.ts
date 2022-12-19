@@ -108,4 +108,6 @@ export declare type ConsumerOrderPatchBody = {
     type: ConsumerOrderPatchType.WaiterResponse;
     data: WaiterResponseType;
 };
-export declare const computeConsumerOrderPrice: (order: ConsumerOrder | CreateConsumerOrderRequestBody) => number;
+export declare const computeConsumerOrderPrice: ({ products }: {
+    products: ConsumerOrderProduct[];
+}) => number;
