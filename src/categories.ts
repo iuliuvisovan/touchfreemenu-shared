@@ -1,3 +1,5 @@
+import { ProductViewModel } from './products'
+
 export type MenuCategory = {
   names: Record<string, string>
   descriptions: Record<string, string>
@@ -15,6 +17,8 @@ export type CategoryViewModel = {
   description: string
   index: number
   type?: CategoryType
+  products?: ProductViewModel[]
+  imageUrl?: string
 }
 
 export enum CategoryType {

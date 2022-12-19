@@ -1,3 +1,4 @@
+import { ProductViewModel } from './products';
 export declare type MenuCategory = {
     names: Record<string, string>;
     descriptions: Record<string, string>;
@@ -14,6 +15,8 @@ export declare type CategoryViewModel = {
     description: string;
     index: number;
     type?: CategoryType;
+    products?: ProductViewModel[];
+    imageUrl?: string;
 };
 export declare enum CategoryType {
     Restaurant = "restaurant",
