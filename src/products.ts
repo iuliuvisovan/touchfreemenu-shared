@@ -35,7 +35,7 @@ export type MenuProduct = {
   childProducts?: MenuProduct[]
 }
 
-export type ParentProductViewModel = {
+export type ProductViewModel = {
   id: string
   name: string
   description: string
@@ -67,7 +67,7 @@ export type ChildProductViewModel = {
   kcalories?: string
   oldPrice?: number
   effectivePrice: number
-  parentProduct?: ParentProductViewModel
+  parentProduct?: ProductViewModel
 }
 
 export enum ProductProperty {

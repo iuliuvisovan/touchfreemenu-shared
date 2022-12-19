@@ -31,7 +31,7 @@ export declare type MenuProduct = {
     parentProductId?: string;
     childProducts?: MenuProduct[];
 };
-export declare type ParentProductViewModel = {
+export declare type ProductViewModel = {
     id: string;
     name: string;
     description: string;
@@ -62,7 +62,7 @@ export declare type ChildProductViewModel = {
     kcalories?: string;
     oldPrice?: number;
     effectivePrice: number;
-    parentProduct?: ParentProductViewModel;
+    parentProduct?: ProductViewModel;
 };
 export declare enum ProductProperty {
     Spicy = "spicy",
