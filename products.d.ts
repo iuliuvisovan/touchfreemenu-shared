@@ -55,6 +55,7 @@ export declare type ParentProductViewModel = {
     childProducts?: ChildProductViewModel[];
 };
 export declare type ChildProductViewModel = {
+    id: string;
     index: number;
     name: string;
     quantities?: string;

@@ -60,6 +60,7 @@ export type ParentProductViewModel = {
 }
 
 export type ChildProductViewModel = {
+  id: string
   index: number
   name: string
   quantities?: string
