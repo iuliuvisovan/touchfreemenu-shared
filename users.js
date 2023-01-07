@@ -8,8 +8,8 @@ var CurrencyCode;
     CurrencyCode["Mdl"] = "mdl";
 })(CurrencyCode = exports.CurrencyCode || (exports.CurrencyCode = {}));
 exports.EuroEquivalences = (_a = {},
-    _a[CurrencyCode.Ron] = 4.91,
-    _a[CurrencyCode.Mdl] = 19.02,
+    _a[CurrencyCode.Ron] = 4.94,
+    _a[CurrencyCode.Mdl] = 20.52,
     _a);
 var ReferralSource;
 (function (ReferralSource) {
