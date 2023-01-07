@@ -49,6 +49,31 @@ export type User = {
   wifiInfo?: WifiInfo
   isUsingMenuSections?: boolean
 }
+export type UserViewModel = {
+  id: string
+  username: string
+  name: string
+  logoUrl?: string
+  coverPhotoUrl?: string
+  city: string
+  phoneNumber?: string
+  styling: {
+    themeColor: string
+    logoScale: number
+    logoBackgroundColor: string
+    coverPhotoScale: number
+  }
+  menuLanguages?: LanguageCode[]
+  businessInfo?: BusinessMedium[]
+  activeProductSuggestion?: ProductSuggestion
+  ordering?: {
+    isCallWaiterEnabled?: boolean
+    isTableOrderingEnabled?: boolean
+  }
+  defaultCurrency?: CurrencyCode
+  wifiInfo?: WifiInfo
+  isUsingMenuSections?: boolean
+}
 
 export enum CurrencyCode {
   Ron = 'ron',
