@@ -41,7 +41,10 @@ export type User = {
   isEmailConfirmed?: boolean
   isUsingPartyMode?: boolean
   devices: UserDevice[]
-  isCallWaiterEnabled?: boolean
+  ordering?: {
+    isCallWaiterEnabled?: boolean
+    isTableOrderingEnabled?: boolean
+  }
   defaultCurrency?: CurrencyCode
   wifiInfo?: WifiInfo
   isUsingMenuSections?: boolean
