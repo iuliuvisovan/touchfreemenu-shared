@@ -39,6 +39,7 @@ export declare type ConsumerOrder = {
     localError?: string;
     timestamp: number;
     createdAt?: Date;
+    isDeleted?: boolean;
 };
 export declare type CreateConsumerOrderRequestBody = {
     targetUserId: string;

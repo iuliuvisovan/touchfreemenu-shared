@@ -23,6 +23,7 @@ export declare type WaiterCall = {
     };
     timestamp: number;
     createdAt: Date;
+    isDeleted?: boolean;
 };
 export declare type CreateWaiterCallRequestBody = {
     targetUserId: string;

@@ -37,6 +37,7 @@ export type ConsumerOrder = {
   localError?: string
   timestamp: number
   createdAt?: Date
+  isDeleted?: boolean
 }
 
 export type CreateConsumerOrderRequestBody = {
