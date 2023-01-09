@@ -55,6 +55,10 @@ export type WaiterCallPatchBody =
       data: WaiterResponseType
     }
 
+export type WaiterCallRemoveBody = {
+  shouldReport: boolean
+}
+
 export enum WaiterCallPatchType {
   ConsumerPushToken = 'consumerPushToken',
   WaiterResponse = 'waiterResponse',
