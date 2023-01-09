@@ -40,14 +40,14 @@ export declare type ConsumerOrder = {
     timestamp: number;
     createdAt?: Date;
     deleted?: {
-        byWaiterId: string;
-        byWaiterName: string;
         at: Date;
+        byWaiterDeviceId: string;
+        byWaiterName: string;
     };
     reported?: {
-        byWaiterId: string;
-        byWaiterName: string;
         at: Date;
+        byWaiterDeviceId: string;
+        byWaiterName: string;
     };
 };
 export declare type CreateConsumerOrderRequestBody = {
