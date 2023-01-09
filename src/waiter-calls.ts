@@ -21,7 +21,16 @@ export type WaiterCall = {
   }
   timestamp: number
   createdAt: Date
-  isDeleted?: boolean
+  deleted?: {
+    byWaiterId: string
+    byWaiterName: string
+    at: Date
+  }
+  reported?: {
+    byWaiterId: string
+    byWaiterName: string
+    at: Date
+  }
 }
 
 export type CreateWaiterCallRequestBody = {
