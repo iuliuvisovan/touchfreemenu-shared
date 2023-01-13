@@ -71,6 +71,7 @@ export type UserViewModel = {
     isTableOrderingEnabled?: boolean
   }
   defaultCurrency?: CurrencyCode
+  defaultMenuLanguage?: LanguageCode
   wifiInfo?: WifiInfo
   isUsingMenuSections?: boolean
 }
