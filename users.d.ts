@@ -45,6 +45,7 @@ export declare type User = {
         isTableOrderingEnabled?: boolean;
     };
     defaultCurrency?: CurrencyCode;
+    defaultMenuLanguage?: LanguageCode;
     wifiInfo?: WifiInfo;
     isUsingMenuSections?: boolean;
 };
@@ -151,6 +152,9 @@ export declare type UserPatchBody = {
     type: UserPatchType.IsUsingMenuSections;
     data: boolean;
 } | {
+    type: UserPatchType.DefaultMenuLanguage;
+    data: LanguageCode;
+} | {
     type: UserPatchType.FromAdminInterface;
     data: {
         name: string;
@@ -169,6 +173,7 @@ export declare enum UserPatchType {
     PartyMode = "partyMode",
     IsUsingPartyMode = "isUsingPartyMode",
     FromAdminInterface = "fromAdminInterface",
-    IsUsingMenuSections = "isUsingMenuSections"
+    IsUsingMenuSections = "isUsingMenuSections",
+    DefaultMenuLanguage = "defaultMenuLanguage"
 }
 export declare function formatAddress(addressObject: AddressObject | undefined): string;

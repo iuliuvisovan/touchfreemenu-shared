@@ -46,6 +46,7 @@ export type User = {
     isTableOrderingEnabled?: boolean
   }
   defaultCurrency?: CurrencyCode
+  defaultMenuLanguage?: LanguageCode
   wifiInfo?: WifiInfo
   isUsingMenuSections?: boolean
 }
@@ -170,6 +171,10 @@ export type UserPatchBody =
       data: boolean
     }
   | {
+      type: UserPatchType.DefaultMenuLanguage
+      data: LanguageCode
+    }
+  | {
       type: UserPatchType.FromAdminInterface
       data: {
         name: string
@@ -190,6 +195,7 @@ export enum UserPatchType {
   IsUsingPartyMode = 'isUsingPartyMode',
   FromAdminInterface = 'fromAdminInterface',
   IsUsingMenuSections = 'isUsingMenuSections',
+  DefaultMenuLanguage = 'defaultMenuLanguage',
 }
 
 export function formatAddress(addressObject: AddressObject | undefined) {
