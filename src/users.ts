@@ -5,6 +5,7 @@ export type User = {
   _id?: string
   username: string
   password: string
+  passwordHash: string
   name: string
   email: string
   logoKey?: string
