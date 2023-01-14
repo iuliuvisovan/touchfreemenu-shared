@@ -157,6 +157,9 @@ export declare type UserPatchBody = {
     type: UserPatchType.DefaultMenuLanguage;
     data: LanguageCode;
 } | {
+    type: UserPatchType.DefaultCurrency;
+    data: CurrencyCode;
+} | {
     type: UserPatchType.FromAdminInterface;
     data: {
         name: string;

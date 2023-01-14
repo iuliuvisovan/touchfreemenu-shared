@@ -178,6 +178,10 @@ export type UserPatchBody =
       data: LanguageCode
     }
   | {
+      type: UserPatchType.DefaultCurrency
+      data: CurrencyCode
+    }
+  | {
       type: UserPatchType.FromAdminInterface
       data: {
         name: string
