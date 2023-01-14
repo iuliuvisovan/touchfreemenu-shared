@@ -81,11 +81,13 @@ export type UserViewModel = {
 export enum CurrencyCode {
   Ron = 'ron',
   Mdl = 'mdl',
+  Eur = 'eur',
 }
 
 export const EuroEquivalences: { [key in CurrencyCode]: number } = {
-  [CurrencyCode.Ron]: 4.94,
-  [CurrencyCode.Mdl]: 20.52,
+  [CurrencyCode.Ron]: 4.95,
+  [CurrencyCode.Mdl]: 20.66,
+  [CurrencyCode.Eur]: 1,
 }
 
 export type UserDevice = {
