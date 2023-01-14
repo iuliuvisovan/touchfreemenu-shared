@@ -78,7 +78,8 @@ export declare type UserViewModel = {
 };
 export declare enum CurrencyCode {
     Ron = "ron",
-    Mdl = "mdl"
+    Mdl = "mdl",
+    Eur = "eur"
 }
 export declare const EuroEquivalences: {
     [key in CurrencyCode]: number;

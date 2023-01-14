@@ -6,10 +6,12 @@ var CurrencyCode;
 (function (CurrencyCode) {
     CurrencyCode["Ron"] = "ron";
     CurrencyCode["Mdl"] = "mdl";
+    CurrencyCode["Eur"] = "eur";
 })(CurrencyCode = exports.CurrencyCode || (exports.CurrencyCode = {}));
 exports.EuroEquivalences = (_a = {},
-    _a[CurrencyCode.Ron] = 4.94,
-    _a[CurrencyCode.Mdl] = 20.52,
+    _a[CurrencyCode.Ron] = 4.95,
+    _a[CurrencyCode.Mdl] = 20.66,
+    _a[CurrencyCode.Eur] = 1,
     _a);
 var ReferralSource;
 (function (ReferralSource) {
