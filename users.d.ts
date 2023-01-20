@@ -29,7 +29,7 @@ export declare type User = {
         logoBackgroundColor: string;
         coverPhotoScale: number;
     };
-    usesDemoProducts: boolean;
+    usesDemoProducts?: boolean;
     shouldNotSendNavigationEmails: boolean;
     lastRemindedAboutExpiryAt?: Date;
     hasNoPassword?: boolean;
