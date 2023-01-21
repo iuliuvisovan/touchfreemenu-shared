@@ -13,6 +13,18 @@ var ProductProperty;
 })(ProductProperty = exports.ProductProperty || (exports.ProductProperty = {}));
 exports.ALL_PRODUCT_PROPERTIES = [
     {
+        type: ProductProperty.New,
+        name: 'Nou',
+        color: 'orange',
+        iconName: "new"
+    },
+    {
+        type: ProductProperty.Vegetarian,
+        name: 'Vegetarian',
+        color: 'green',
+        iconName: "vegetarian"
+    },
+    {
         type: ProductProperty.Spicy,
         name: 'Picant',
         color: 'red',
@@ -23,7 +35,7 @@ exports.ALL_PRODUCT_PROPERTIES = [
         name: 'Conține ingredient(e) dezghețate',
         color: 'blue',
         iconName: "snowflake"
-    },
+    }
 ];
 var LanguageCode;
 (function (LanguageCode) {

@@ -88,6 +88,18 @@ export type ProductPropertyDisplay = {
 
 export const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[] = [
   {
+    type: ProductProperty.New,
+    name: 'Nou',
+    color: 'orange',
+    iconName: `new`,
+  },
+  {
+    type: ProductProperty.Vegetarian,
+    name: 'Vegetarian',
+    color: 'green',
+    iconName: `vegetarian`,
+  },
+  {
     type: ProductProperty.Spicy,
     name: 'Picant',
     color: 'red',
@@ -98,7 +110,7 @@ export const ALL_PRODUCT_PROPERTIES: ProductPropertyDisplay[] = [
     name: 'Conține ingredient(e) dezghețate',
     color: 'blue',
     iconName: `snowflake`,
-  },
+  }
 ]
 
 export enum LanguageCode {
