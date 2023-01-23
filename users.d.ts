@@ -169,6 +169,12 @@ export type UserPatchBody = {
             longitude: number;
         };
     };
+} | {
+    type: UserPatchType.OrderingEnableCallWaiter;
+    data: boolean;
+} | {
+    type: UserPatchType.OrderingEnableTableOrdering;
+    data: boolean;
 };
 export declare enum UserPatchType {
     WifiInfo = "wifiInfo",

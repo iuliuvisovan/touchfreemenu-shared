@@ -192,6 +192,14 @@ export type UserPatchBody =
         }
       }
     }
+  | {
+      type: UserPatchType.OrderingEnableCallWaiter
+      data: boolean
+    }
+  | {
+      type: UserPatchType.OrderingEnableTableOrdering
+      data: boolean
+    }
 
 export enum UserPatchType {
   WifiInfo = 'wifiInfo',
