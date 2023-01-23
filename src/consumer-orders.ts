@@ -62,7 +62,7 @@ export type CreateConsumerOrderRequestBody = {
     deviceName: string
     coordinates: { latitude: number; longitude: number }
   }
-  paymentType: ConsumerOrderPaymentType
+  paymentType?: ConsumerOrderPaymentType
   shipping?: ShippingInfo
   billing?: BillingInfo
 }

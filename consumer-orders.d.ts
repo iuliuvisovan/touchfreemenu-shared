@@ -66,7 +66,7 @@ export type CreateConsumerOrderRequestBody = {
             longitude: number;
         };
     };
-    paymentType: ConsumerOrderPaymentType;
+    paymentType?: ConsumerOrderPaymentType;
     shipping?: ShippingInfo;
     billing?: BillingInfo;
 };
