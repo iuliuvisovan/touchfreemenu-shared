@@ -10,7 +10,7 @@ export type ConsumerOrder = {
   targetUsername?: string
   tableNumber: string
   products: ConsumerOrderProduct[]
-  currency: CurrencyCode
+  currencyCode: CurrencyCode
   languageCode: LanguageCode
   extraComments?: string
   consumer: {
@@ -56,7 +56,7 @@ export type CreateConsumerOrderRequestBody = {
   tableNumber: string
   type: ConsumerOrderType
   products: ConsumerOrderProduct[]
-  currency: CurrencyCode
+  currencyCode: CurrencyCode
   languageCode: LanguageCode
   extraComments?: string
   consumer: {
