@@ -58,7 +58,7 @@ export type CreateConsumerOrderRequestBody = {
     type: ConsumerOrderType;
     products: ConsumerOrderProduct[];
     currency: CurrencyCode;
-    language: LanguageCode;
+    languageCode: LanguageCode;
     extraComments?: string;
     consumer: {
         deviceId: string;
