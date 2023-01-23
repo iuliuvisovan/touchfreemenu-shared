@@ -1,4 +1,5 @@
 import { BillingInfo, ShippingInfo } from './holder-orders'
+import { LanguageCode } from './products'
 import { CurrencyCode } from './users'
 
 export type ConsumerOrder = {
@@ -55,6 +56,7 @@ export type CreateConsumerOrderRequestBody = {
   type: ConsumerOrderType
   products: ConsumerOrderProduct[]
   currency: CurrencyCode
+  language: LanguageCode
   extraComments?: string
   consumer: {
     deviceId: string
