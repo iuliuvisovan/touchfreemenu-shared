@@ -11,6 +11,7 @@ export type ConsumerOrder = {
   tableNumber: string
   products: ConsumerOrderProduct[]
   currency: CurrencyCode
+  languageCode: LanguageCode
   extraComments?: string
   consumer: {
     deviceId: string
