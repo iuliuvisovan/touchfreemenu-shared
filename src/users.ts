@@ -76,6 +76,7 @@ export type UserViewModel = {
   defaultMenuLanguage?: LanguageCode
   wifiInfo?: WifiInfo
   isUsingMenuSections?: boolean
+  hasEnoughWaiters?: boolean
 }
 
 export enum CurrencyCode {
