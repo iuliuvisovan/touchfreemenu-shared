@@ -1,5 +1,5 @@
 import { LanguageCode, MenuProduct } from './products';
-export declare type User = {
+export type User = {
     id: string;
     _id?: string;
     username: string;
@@ -50,7 +50,7 @@ export declare type User = {
     wifiInfo?: WifiInfo;
     isUsingMenuSections?: boolean;
 };
-export declare type UserViewModel = {
+export type UserViewModel = {
     id: string;
     username: string;
     name: string;
@@ -84,7 +84,7 @@ export declare enum CurrencyCode {
 export declare const EuroEquivalences: {
     [key in CurrencyCode]: number;
 };
-export declare type UserDevice = {
+export type UserDevice = {
     deviceId: string;
     deviceType: string;
     deviceName: string;
@@ -107,36 +107,36 @@ export declare enum BusinessMediumType {
     Email = "email",
     PhoneNumber = "phoneNumber"
 }
-export declare type ProductSuggestion = {
+export type ProductSuggestion = {
     isActive: boolean;
     productId: string;
     product?: MenuProduct;
 };
-export declare type BusinessMedium = {
+export type BusinessMedium = {
     url: string;
     isVisible: boolean;
     type: BusinessMediumType;
 };
-export declare type WifiInfo = {
+export type WifiInfo = {
     networkName?: string;
     password?: string;
     isVisible?: boolean;
 };
-export declare type LocationInfo = {
+export type LocationInfo = {
     latitude: number;
     longitude: number;
     isVisible?: boolean;
     addressObject?: AddressObject;
 };
-export declare type AddressComponent = {
+export type AddressComponent = {
     long_name: string;
     short_name: string;
     types: string[];
 };
-export declare type AddressObject = {
+export type AddressObject = {
     address_components: AddressComponent[];
 };
-export declare type CreateAccountRequestBody = {
+export type CreateAccountRequestBody = {
     email: string;
     name: string;
     username: string;
@@ -144,7 +144,7 @@ export declare type CreateAccountRequestBody = {
     password: string;
     captchaToken: string;
 };
-export declare type UserPatchBody = {
+export type UserPatchBody = {
     type: UserPatchType.WifiInfo;
     data: WifiInfo;
 } | {
@@ -179,6 +179,8 @@ export declare enum UserPatchType {
     IsUsingPartyMode = "isUsingPartyMode",
     FromAdminInterface = "fromAdminInterface",
     IsUsingMenuSections = "isUsingMenuSections",
-    DefaultMenuLanguage = "defaultMenuLanguage"
+    DefaultMenuLanguage = "defaultMenuLanguage",
+    OrderingEnableTableOrdering = "orderingEnableTableOrdering",
+    OrderingEnableCallWaiter = "orderingEnableCallWaiter"
 }
 export declare function formatAddress(addressObject: AddressObject | undefined): string;

@@ -1,4 +1,4 @@
-export declare type NavigationLog = {
+export type NavigationLog = {
     createdAt: Date;
     targetUsername: string;
     referrer: string;

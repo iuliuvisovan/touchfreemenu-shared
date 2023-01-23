@@ -40,6 +40,8 @@ var UserPatchType;
     UserPatchType["FromAdminInterface"] = "fromAdminInterface";
     UserPatchType["IsUsingMenuSections"] = "isUsingMenuSections";
     UserPatchType["DefaultMenuLanguage"] = "defaultMenuLanguage";
+    UserPatchType["OrderingEnableTableOrdering"] = "orderingEnableTableOrdering";
+    UserPatchType["OrderingEnableCallWaiter"] = "orderingEnableCallWaiter";
 })(UserPatchType = exports.UserPatchType || (exports.UserPatchType = {}));
 function formatAddress(addressObject) {
     var _a, _b, _c, _d;

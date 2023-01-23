@@ -203,6 +203,8 @@ export enum UserPatchType {
   FromAdminInterface = 'fromAdminInterface',
   IsUsingMenuSections = 'isUsingMenuSections',
   DefaultMenuLanguage = 'defaultMenuLanguage',
+  OrderingEnableTableOrdering = 'orderingEnableTableOrdering',
+  OrderingEnableCallWaiter = 'orderingEnableCallWaiter',
 }
 
 export function formatAddress(addressObject: AddressObject | undefined) {

@@ -1,5 +1,5 @@
 import { ProductViewModel } from './products';
-export declare type MenuCategory = {
+export type MenuCategory = {
     names: Record<string, string>;
     descriptions: Record<string, string>;
     id: string;
@@ -9,7 +9,7 @@ export declare type MenuCategory = {
     isHidden?: boolean;
     type?: CategoryType;
 };
-export declare type CategoryViewModel = {
+export type CategoryViewModel = {
     id: string;
     name: string;
     description: string;

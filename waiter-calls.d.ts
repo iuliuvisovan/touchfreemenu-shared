@@ -1,5 +1,5 @@
 import { WaiterResponseType } from './consumer-orders';
-export declare type WaiterCall = {
+export type WaiterCall = {
     id: string;
     targetUserId: string;
     targetUsername: string;
@@ -34,7 +34,7 @@ export declare type WaiterCall = {
         byWaiterName: string;
     };
 };
-export declare type CreateWaiterCallRequestBody = {
+export type CreateWaiterCallRequestBody = {
     targetUserId: string;
     targetUsername: string;
     tableNumber: string;
@@ -48,14 +48,14 @@ export declare type CreateWaiterCallRequestBody = {
         };
     };
 };
-export declare type WaiterCallPatchBody = {
+export type WaiterCallPatchBody = {
     type: WaiterCallPatchType.ConsumerPushToken;
     data: string;
 } | {
     type: WaiterCallPatchType.WaiterResponse;
     data: WaiterResponseType;
 };
-export declare type WaiterCallRemoveBody = {
+export type WaiterCallRemoveBody = {
     shouldReport: boolean;
 };
 export declare enum WaiterCallPatchType {

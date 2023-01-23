@@ -1,6 +1,6 @@
 import { BillingInfo, ShippingInfo } from './holder-orders';
 import { CurrencyCode } from './users';
-export declare type ConsumerOrder = {
+export type ConsumerOrder = {
     id: string;
     orderNumber?: string;
     targetUserId: string;
@@ -50,7 +50,7 @@ export declare type ConsumerOrder = {
         byWaiterName: string;
     };
 };
-export declare type CreateConsumerOrderRequestBody = {
+export type CreateConsumerOrderRequestBody = {
     targetUserId: string;
     tableNumber: string;
     type: ConsumerOrderType;
@@ -70,7 +70,7 @@ export declare type CreateConsumerOrderRequestBody = {
     shipping?: ShippingInfo;
     billing?: BillingInfo;
 };
-export declare type ConsumerOrderProduct = {
+export type ConsumerOrderProduct = {
     quantity: number;
     addedInOrderAt: number;
     productId: string;
@@ -80,14 +80,14 @@ export declare type ConsumerOrderProduct = {
     quantities?: string;
     kcalories?: string;
 } & (ChildProductInfo & ParentProductInfo);
-export declare type ParentProductInfo = {
+export type ParentProductInfo = {
     imageUrl?: string;
     thumbnailUrl?: string;
     nutritionalDeclaration?: string;
     allergens?: string[];
     properties?: string[];
 };
-export declare type ChildProductInfo = {
+export type ChildProductInfo = {
     parentProduct?: ParentProductInfo & {
         productId: string;
         name: string;
@@ -111,7 +111,7 @@ export declare enum ConsumerOrderPatchType {
     ConsumerPushToken = "consumerPushToken",
     WaiterResponse = "waiterResponse"
 }
-export declare type ConsumerOrderPatchBody = {
+export type ConsumerOrderPatchBody = {
     type: ConsumerOrderPatchType.ConsumerPushToken;
     data: string;
 } | {

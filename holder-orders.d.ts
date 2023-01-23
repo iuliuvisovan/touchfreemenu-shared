@@ -12,7 +12,7 @@ export declare enum BillingType {
     Company = "Company",
     NaturalPerson = "NaturalPerson"
 }
-export declare type BillingInfo = {
+export type BillingInfo = {
     billingType: BillingType;
     name: string;
     cui?: string;
@@ -22,7 +22,7 @@ export declare type BillingInfo = {
     country: string;
     phoneNumber: string;
 };
-export declare type ShippingInfo = {
+export type ShippingInfo = {
     name: string;
     address: string;
     city: string;
@@ -40,13 +40,13 @@ export declare enum HolderOrderPaymentType {
     BankTransfer = "BankTransfer",
     OnlineCard = "OnlineCard"
 }
-export declare type HolderProduct = {
+export type HolderProduct = {
     type: ProductType;
     code: ProductCode;
     quantity: number;
     currentPrice?: number;
 };
-export declare type HolderOrder = {
+export type HolderOrder = {
     id: string;
     products: HolderProduct[];
     userId: string;
@@ -68,7 +68,7 @@ export declare type HolderOrder = {
     withWifiInfo?: boolean;
     awb?: string;
 };
-export declare type HolderOrderIntent = {
+export type HolderOrderIntent = {
     laminatedHolderCount?: number;
     plexiglassHolderCount?: number;
     stickerHolderCount?: number;
@@ -97,20 +97,20 @@ export declare enum HolderCode {
     Laminated = "QRH-LAM",
     Sticker = "QRH-STICK"
 }
-export declare type ProductCode = SubscriptionCode | HolderCode;
-export declare type Subscription = {
+export type ProductCode = SubscriptionCode | HolderCode;
+export type Subscription = {
     code: SubscriptionCode;
     name: string;
     price: number;
     durationInDays: number;
 };
-export declare type Holder = {
+export type Holder = {
     code: HolderCode;
     name: string;
     price: number;
     priceIncreaseSegment?: number;
 };
-export declare type PaymentRequest = {
+export type PaymentRequest = {
     env_key: string;
     data: string;
     url: string;

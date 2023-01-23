@@ -1,4 +1,4 @@
-export declare type ActionLog = {
+export type ActionLog = {
     type: ActionType;
     createdAt: string;
     isVisitor?: boolean;

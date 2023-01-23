@@ -1,4 +1,4 @@
-export declare type MenuProduct = {
+export type MenuProduct = {
     names: Record<string, string>;
     descriptions: Record<string, string>;
     id: string;
@@ -31,7 +31,7 @@ export declare type MenuProduct = {
     parentProductId?: string;
     childProducts?: MenuProduct[];
 };
-export declare type ProductViewModel = {
+export type ProductViewModel = {
     id: string;
     name: string;
     description: string;
@@ -54,7 +54,7 @@ export declare type ProductViewModel = {
     isAvailable?: boolean;
     childProducts?: ChildProductViewModel[];
 };
-export declare type ChildProductViewModel = {
+export type ChildProductViewModel = {
     id: string;
     index: number;
     name: string;
@@ -72,7 +72,7 @@ export declare enum ProductProperty {
     Vegan = "vegan",
     Vegetarian = "vegetarian"
 }
-export declare type ProductPropertyDisplay = {
+export type ProductPropertyDisplay = {
     type: ProductProperty;
     name: string;
     color: string;
@@ -152,7 +152,7 @@ export declare const ALLERGENS: ({
         ru: string;
     };
 })[];
-export declare type TranslatedAllergen = {
+export type TranslatedAllergen = {
     id: string;
     letter: string;
     longName: string;

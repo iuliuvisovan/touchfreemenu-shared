@@ -1,4 +1,4 @@
-export declare type Attribution = {
+export type Attribution = {
     targetUsername: string;
     ip: string;
     timestamp: number;
