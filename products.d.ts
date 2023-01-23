@@ -38,7 +38,6 @@ export type ProductViewModel = {
     oldPrice?: number;
     effectivePrice?: number;
     categoryId: string;
-    safeName: string;
     isWhiteSquare: boolean;
     isPortrait: boolean;
     isGeneric: boolean;
