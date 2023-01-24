@@ -1,5 +1,5 @@
 import { BillingInfo, ShippingInfo } from './holder-orders';
-import { LanguageCode } from './products';
+import { LanguageCode, ProductViewModel } from './products';
 import { CurrencyCode } from './users';
 export type ConsumerOrder = {
     id: string;
@@ -132,3 +132,4 @@ export type ConsumerOrderPatchBody = {
 export declare const computeConsumerOrderPrice: ({ products }: {
     products: ConsumerOrderProduct[];
 }) => number;
+export declare function getOrderProductViewModel(orderProduct: ConsumerOrderProduct, fullProduct: ProductViewModel): ConsumerOrderProductViewModel;

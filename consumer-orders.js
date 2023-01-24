@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.computeConsumerOrderPrice = exports.ConsumerOrderPatchType = exports.WaiterResponseType = exports.ConsumerOrderType = exports.ConsumerOrderPaymentType = void 0;
+exports.getOrderProductViewModel = exports.computeConsumerOrderPrice = exports.ConsumerOrderPatchType = exports.WaiterResponseType = exports.ConsumerOrderType = exports.ConsumerOrderPaymentType = void 0;
 var ConsumerOrderPaymentType;
 (function (ConsumerOrderPaymentType) {
     ConsumerOrderPaymentType["BankTransfer"] = "BankTransfer";
@@ -38,3 +38,22 @@ var computeConsumerOrderPrice = function (_a) {
     return totalPrice;
 };
 exports.computeConsumerOrderPrice = computeConsumerOrderPrice;
+function getOrderProductViewModel(orderProduct, fullProduct) {
+    var viewModel = {
+        quantity: orderProduct.quantity,
+        addedInOrderAt: orderProduct.addedInOrderAt,
+        productId: orderProduct.productId,
+        name: orderProduct.name,
+        oldPrice: orderProduct.oldPrice,
+        effectivePrice: orderProduct.effectivePrice,
+        quantities: orderProduct.quantities,
+        kcalories: orderProduct.kcalories,
+        imageUrl: fullProduct.imageUrl,
+        thumbnailUrl: fullProduct.thumbnailUrl,
+        isWhiteSquare: fullProduct.isWhiteSquare,
+        isGeneric: fullProduct.isGeneric,
+        isEnriched: true
+    };
+    return viewModel;
+}
+exports.getOrderProductViewModel = getOrderProductViewModel;

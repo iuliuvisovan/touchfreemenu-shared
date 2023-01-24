@@ -1,5 +1,5 @@
 import { BillingInfo, ShippingInfo } from './holder-orders'
-import { LanguageCode } from './products'
+import { LanguageCode, ProductViewModel } from './products'
 import { CurrencyCode } from './users'
 
 export type ConsumerOrder = {
@@ -153,4 +153,25 @@ export const computeConsumerOrderPrice = ({ products }: { products: ConsumerOrde
     .reduce((a, b) => a + b, 0)
 
   return totalPrice
+}
+
+export function getOrderProductViewModel(orderProduct: ConsumerOrderProduct, fullProduct: ProductViewModel) {
+  const viewModel: ConsumerOrderProductViewModel = {
+    quantity: orderProduct.quantity,
+    addedInOrderAt: orderProduct.addedInOrderAt,
+    productId: orderProduct.productId,
+    name: orderProduct.name,
+    oldPrice: orderProduct.oldPrice,
+    effectivePrice: orderProduct.effectivePrice,
+    quantities: orderProduct.quantities,
+    kcalories: orderProduct.kcalories,
+
+    imageUrl: fullProduct.imageUrl,
+    thumbnailUrl: fullProduct.thumbnailUrl,
+    isWhiteSquare: fullProduct.isWhiteSquare,
+    isGeneric: fullProduct.isGeneric,
+    isEnriched: true,
+  }
+
+  return viewModel
 }
