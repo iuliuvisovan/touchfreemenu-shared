@@ -72,7 +72,7 @@ export type CreateConsumerOrderRequestBody = {
   billing?: BillingInfo
 }
 
-type ConsumerOrderProductViewModel = ConsumerOrderProduct & {
+export type ConsumerOrderProductViewModel = ConsumerOrderProduct & {
   imageUrl: string
   thumbnailUrl: string
   isWhiteSquare: boolean

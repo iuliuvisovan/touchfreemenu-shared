@@ -76,7 +76,7 @@ export type CreateConsumerOrderRequestBody = {
     shipping?: ShippingInfo;
     billing?: BillingInfo;
 };
-type ConsumerOrderProductViewModel = ConsumerOrderProduct & {
+export type ConsumerOrderProductViewModel = ConsumerOrderProduct & {
     imageUrl: string;
     thumbnailUrl: string;
     isWhiteSquare: boolean;
@@ -131,4 +131,3 @@ export type ConsumerOrderPatchBody = {
 export declare const computeConsumerOrderPrice: ({ products }: {
     products: ConsumerOrderProduct[];
 }) => number;
-export {};
