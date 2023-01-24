@@ -38,7 +38,8 @@ var computeConsumerOrderPrice = function (_a) {
     return totalPrice;
 };
 exports.computeConsumerOrderPrice = computeConsumerOrderPrice;
-function getOrderProductViewModel(orderProduct, fullProduct, parentProduct) {
+function getOrderProductViewModel(orderProduct, fullProduct, fullParentProduct) {
+    var productWithImage = fullParentProduct || fullProduct;
     var viewModel = {
         quantity: orderProduct.quantity,
         addedInOrderAt: orderProduct.addedInOrderAt,
@@ -49,14 +50,14 @@ function getOrderProductViewModel(orderProduct, fullProduct, parentProduct) {
         kcalories: orderProduct.kcalories,
         // Replace name so that the Waiter sees it in Romanian
         name: fullProduct.name,
-        imageUrl: fullProduct.imageUrl,
-        thumbnailUrl: fullProduct.thumbnailUrl,
-        isWhiteSquare: fullProduct.isWhiteSquare,
-        isGeneric: fullProduct.isGeneric,
+        imageUrl: productWithImage.imageUrl,
+        thumbnailUrl: productWithImage.thumbnailUrl,
+        isWhiteSquare: productWithImage.isWhiteSquare,
+        isGeneric: productWithImage.isGeneric,
         parentProduct: orderProduct.parentProduct
             ? {
                 productId: orderProduct.parentProduct.productId,
-                name: parentProduct.name
+                name: fullParentProduct.name
             }
             : undefined,
         isEnriched: true

@@ -158,8 +158,10 @@ export const computeConsumerOrderPrice = ({ products }: { products: ConsumerOrde
 export function getOrderProductViewModel(
   orderProduct: ConsumerOrderProduct,
   fullProduct: ProductViewModel,
-  parentProduct?: ProductViewModel
+  fullParentProduct?: ProductViewModel
 ) {
+  const productWithImage = fullParentProduct || fullProduct
+
   const viewModel: ConsumerOrderProductViewModel = {
     quantity: orderProduct.quantity,
     addedInOrderAt: orderProduct.addedInOrderAt,
@@ -171,17 +173,16 @@ export function getOrderProductViewModel(
 
     // Replace name so that the Waiter sees it in Romanian
     name: fullProduct.name,
-    imageUrl: fullProduct.imageUrl,
-    thumbnailUrl: fullProduct.thumbnailUrl,
-    isWhiteSquare: fullProduct.isWhiteSquare,
-    isGeneric: fullProduct.isGeneric,
+    imageUrl: productWithImage.imageUrl,
+    thumbnailUrl: productWithImage.thumbnailUrl,
+    isWhiteSquare: productWithImage.isWhiteSquare,
+    isGeneric: productWithImage.isGeneric,
     parentProduct: orderProduct.parentProduct
       ? {
           productId: orderProduct.parentProduct.productId,
-          name: parentProduct!.name,
+          name: fullParentProduct!.name,
         }
       : undefined,
-
     isEnriched: true,
   }
 
