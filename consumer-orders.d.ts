@@ -129,6 +129,9 @@ export type ConsumerOrderPatchBody = {
     type: ConsumerOrderPatchType.WaiterResponse;
     data: WaiterResponseType;
 };
+export type ConsumerOrderRemoveBody = {
+    shouldReport: boolean;
+};
 export declare const computeConsumerOrderPrice: ({ products }: {
     products: ConsumerOrderProduct[];
 }) => number;

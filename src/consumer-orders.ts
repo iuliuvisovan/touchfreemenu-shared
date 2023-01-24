@@ -138,6 +138,10 @@ export type ConsumerOrderPatchBody =
       data: WaiterResponseType
     }
 
+export type ConsumerOrderRemoveBody = {
+  shouldReport: boolean
+}
+
 export const computeConsumerOrderPrice = ({ products }: { products: ConsumerOrderProduct[] }) => {
   const invalidProduct = products.find(x => typeof x.effectivePrice === 'undefined' || x.effectivePrice === null)
   if (invalidProduct) {
