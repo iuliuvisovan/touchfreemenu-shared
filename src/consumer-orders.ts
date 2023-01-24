@@ -84,8 +84,6 @@ export type ConsumerOrderProduct = {
 } & (ChildProductInfo & ParentProductInfo)
 
 export type ParentProductInfo = {
-  imageUrl?: string
-  thumbnailUrl?: string
   nutritionalDeclaration?: string
   allergens?: string[]
   properties?: string[]

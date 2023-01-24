@@ -84,8 +84,6 @@ export type ConsumerOrderProduct = {
     kcalories?: string;
 } & (ChildProductInfo & ParentProductInfo);
 export type ParentProductInfo = {
-    imageUrl?: string;
-    thumbnailUrl?: string;
     nutritionalDeclaration?: string;
     allergens?: string[];
     properties?: string[];
