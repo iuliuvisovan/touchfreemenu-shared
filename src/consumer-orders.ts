@@ -155,7 +155,11 @@ export const computeConsumerOrderPrice = ({ products }: { products: ConsumerOrde
   return totalPrice
 }
 
-export function getOrderProductViewModel(orderProduct: ConsumerOrderProduct, fullProduct: ProductViewModel) {
+export function getOrderProductViewModel(
+  orderProduct: ConsumerOrderProduct,
+  fullProduct: ProductViewModel,
+  parentProduct?: ProductViewModel
+) {
   const viewModel: ConsumerOrderProductViewModel = {
     quantity: orderProduct.quantity,
     addedInOrderAt: orderProduct.addedInOrderAt,
@@ -171,6 +175,13 @@ export function getOrderProductViewModel(orderProduct: ConsumerOrderProduct, ful
     thumbnailUrl: fullProduct.thumbnailUrl,
     isWhiteSquare: fullProduct.isWhiteSquare,
     isGeneric: fullProduct.isGeneric,
+    parentProduct: orderProduct.parentProduct
+      ? {
+          productId: orderProduct.parentProduct.productId,
+          name: parentProduct!.name,
+        }
+      : undefined,
+
     isEnriched: true,
   }
 

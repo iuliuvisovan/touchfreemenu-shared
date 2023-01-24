@@ -132,4 +132,4 @@ export type ConsumerOrderPatchBody = {
 export declare const computeConsumerOrderPrice: ({ products }: {
     products: ConsumerOrderProduct[];
 }) => number;
-export declare function getOrderProductViewModel(orderProduct: ConsumerOrderProduct, fullProduct: ProductViewModel): ConsumerOrderProductViewModel;
+export declare function getOrderProductViewModel(orderProduct: ConsumerOrderProduct, fullProduct: ProductViewModel, parentProduct?: ProductViewModel): ConsumerOrderProductViewModel;

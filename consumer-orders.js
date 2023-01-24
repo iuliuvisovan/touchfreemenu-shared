@@ -38,7 +38,7 @@ var computeConsumerOrderPrice = function (_a) {
     return totalPrice;
 };
 exports.computeConsumerOrderPrice = computeConsumerOrderPrice;
-function getOrderProductViewModel(orderProduct, fullProduct) {
+function getOrderProductViewModel(orderProduct, fullProduct, parentProduct) {
     var viewModel = {
         quantity: orderProduct.quantity,
         addedInOrderAt: orderProduct.addedInOrderAt,
@@ -53,6 +53,12 @@ function getOrderProductViewModel(orderProduct, fullProduct) {
         thumbnailUrl: fullProduct.thumbnailUrl,
         isWhiteSquare: fullProduct.isWhiteSquare,
         isGeneric: fullProduct.isGeneric,
+        parentProduct: orderProduct.parentProduct
+            ? {
+                productId: orderProduct.parentProduct.productId,
+                name: parentProduct.name
+            }
+            : undefined,
         isEnriched: true
     };
     return viewModel;
