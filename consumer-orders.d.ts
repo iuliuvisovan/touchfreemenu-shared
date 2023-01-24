@@ -81,6 +81,7 @@ export type ConsumerOrderProductViewModel = ConsumerOrderProduct & {
     thumbnailUrl: string;
     isWhiteSquare: boolean;
     isGeneric: boolean;
+    isEnriched: boolean;
 };
 export type ConsumerOrderProduct = {
     quantity: number;
