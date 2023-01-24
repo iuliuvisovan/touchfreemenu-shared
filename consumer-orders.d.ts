@@ -52,6 +52,9 @@ export type ConsumerOrder = {
         byWaiterName: string;
     };
 };
+export type ConsumerOrderViewModel = ConsumerOrder & {
+    products: ConsumerOrderProductViewModel[];
+};
 export type CreateConsumerOrderRequestBody = {
     targetUserId: string;
     tableNumber: string;
@@ -72,6 +75,12 @@ export type CreateConsumerOrderRequestBody = {
     paymentType?: ConsumerOrderPaymentType;
     shipping?: ShippingInfo;
     billing?: BillingInfo;
+};
+type ConsumerOrderProductViewModel = ConsumerOrderProduct & {
+    imageUrl: string;
+    thumbnailUrl: string;
+    isWhiteSquare: boolean;
+    isGeneric: boolean;
 };
 export type ConsumerOrderProduct = {
     quantity: number;
@@ -122,3 +131,4 @@ export type ConsumerOrderPatchBody = {
 export declare const computeConsumerOrderPrice: ({ products }: {
     products: ConsumerOrderProduct[];
 }) => number;
+export {};
