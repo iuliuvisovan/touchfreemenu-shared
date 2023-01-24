@@ -43,11 +43,12 @@ function getOrderProductViewModel(orderProduct, fullProduct) {
         quantity: orderProduct.quantity,
         addedInOrderAt: orderProduct.addedInOrderAt,
         productId: orderProduct.productId,
-        name: orderProduct.name,
         oldPrice: orderProduct.oldPrice,
         effectivePrice: orderProduct.effectivePrice,
         quantities: orderProduct.quantities,
         kcalories: orderProduct.kcalories,
+        // Replace name so that the Waiter sees it in Romanian
+        name: fullProduct.name,
         imageUrl: fullProduct.imageUrl,
         thumbnailUrl: fullProduct.thumbnailUrl,
         isWhiteSquare: fullProduct.isWhiteSquare,
