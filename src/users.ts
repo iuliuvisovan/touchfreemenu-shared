@@ -86,8 +86,8 @@ export enum CurrencyCode {
 }
 
 export const EuroEquivalences: { [key in CurrencyCode]: number } = {
-  [CurrencyCode.Ron]: 4.95,
-  [CurrencyCode.Mdl]: 20.66,
+  [CurrencyCode.Ron]: 4.90,
+  [CurrencyCode.Mdl]: 20.10,
   [CurrencyCode.Eur]: 1,
 }
 
