@@ -235,3 +235,4 @@ export function formatAddress(addressObject: AddressObject | undefined) {
 
   return [streetAddress, relevantCity].filter(x => (x || '')?.trim()).join(', ')
 }
+
